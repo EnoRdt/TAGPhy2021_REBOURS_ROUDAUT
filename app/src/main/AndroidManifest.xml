@@ -10,7 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TAGPhy2021_REBOURS_ROUDAUT">
         <activity
+            android:name=".MonSuiviCardiaque"
+            android:exported="true" />
+        <activity
             android:name=".Profil"
+            android:exported="true" />
+        <activity
+            android:name=".MonCoeur"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
