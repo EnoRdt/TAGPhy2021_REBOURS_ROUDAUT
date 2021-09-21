@@ -9,7 +9,7 @@
     tools:layout_editor_absoluteY="-14dp">
 
     <ImageView
-        android:id="@+id/step1Img"
+        android:id="@+id/step2Img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -19,60 +19,61 @@
         app:srcCompat="@drawable/moncoeur" />
 
     <TextView
-        android:id="@+id/step1"
+        android:id="@+id/step2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Step 1"
+        android:text="@string/step2"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/step1Title"
+        app:layout_constraintStart_toStartOf="@+id/step2Title"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/step1Title"
+        android:id="@+id/step2Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/monCoeur"
+        android:text="@string/step2Title"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.12"
-        app:layout_constraintStart_toEndOf="@+id/step1Img"
-        app:layout_constraintTop_toBottomOf="@+id/step1" />
+        app:layout_constraintStart_toEndOf="@+id/step2Img"
+        app:layout_constraintTop_toBottomOf="@+id/step2" />
 
     <TextView
         android:id="@+id/Q1"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        android:layout_marginTop="-5dp"
         android:background="#FFFFFF"
         android:text="1"
         android:textAlignment="center"
         android:textColor="#E8426E"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/step1Img"
+        app:layout_constraintStart_toStartOf="@+id/step2Img"
         app:layout_constraintTop_toTopOf="@+id/Q1Ask" />
 
     <TextView
         android:id="@+id/Q1Ask"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:text="Do you have a heart condition?"
+        android:text="@string/step2Q1Ask"
         android:textAlignment="viewStart"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/Q1"
-        app:layout_constraintTop_toBottomOf="@+id/step1Title" />
+        app:layout_constraintTop_toBottomOf="@+id/step2Title" />
 
     <RadioGroup
         android:id="@+id/Q1RadioGroup"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="@+id/Q1Ask"
@@ -83,15 +84,15 @@
         <RadioButton
             android:id="@+id/Q1RbYes"
             android:layout_width="80dp"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:text="Yes" />
+            android:text="@string/RbYes" />
 
         <RadioButton
             android:id="@+id/Q1RbNo"
             android:layout_width="80dp"
-            android:layout_height="30dp"
-            android:text="No" />
+            android:layout_height="wrap_content"
+            android:text="@string/RbNo" />
 
     </RadioGroup>
 
@@ -99,6 +100,7 @@
         android:id="@+id/Q2"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        android:layout_marginTop="-5dp"
         android:background="#FFFFFF"
         android:text="2"
         android:textAlignment="center"
@@ -110,11 +112,11 @@
 
     <TextView
         android:id="@+id/Q2Ask"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:text="Do you have a cholesterol problem?"
+        android:layout_marginTop="10dp"
+        android:text="@string/step2Q2Ask"
         android:textAlignment="viewStart"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
@@ -125,7 +127,7 @@
 
     <RadioGroup
         android:id="@+id/Q2RadioGroup"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="@+id/Q2Ask"
@@ -136,20 +138,21 @@
         <RadioButton
             android:id="@+id/Q2RbYes"
             android:layout_width="80dp"
-            android:layout_height="30dp"
-            android:text="Yes" />
+            android:layout_height="wrap_content"
+            android:text="@string/RbYes" />
 
         <RadioButton
             android:id="@+id/Q2RbNo"
             android:layout_width="80dp"
-            android:layout_height="30dp"
-            android:text="No" />
+            android:layout_height="wrap_content"
+            android:text="@string/RbNo" />
     </RadioGroup>
 
     <TextView
         android:id="@+id/Q3"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        android:layout_marginTop="-5dp"
         android:background="#FFFFFF"
         android:text="3"
         android:textAlignment="center"
@@ -161,11 +164,11 @@
 
     <TextView
         android:id="@+id/Q3Ask"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:text="Are you a diabetic?"
+        android:layout_marginTop="10dp"
+        android:text="@string/step2Q3Ask"
         android:textAlignment="viewStart"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
@@ -176,7 +179,7 @@
 
     <RadioGroup
         android:id="@+id/Q3RadioGroup"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="@+id/Q3Ask"
@@ -187,20 +190,21 @@
         <RadioButton
             android:id="@+id/Q3RbYes"
             android:layout_width="80dp"
-            android:layout_height="30dp"
-            android:text="Yes" />
+            android:layout_height="wrap_content"
+            android:text="@string/RbYes" />
 
         <RadioButton
             android:id="@+id/Q3RbNo"
             android:layout_width="80dp"
-            android:layout_height="30dp"
-            android:text="No" />
+            android:layout_height="wrap_content"
+            android:text="@string/RbNo" />
     </RadioGroup>
 
     <TextView
         android:id="@+id/Q4"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        android:layout_marginTop="-5dp"
         android:background="#FFFFFF"
         android:text="4"
         android:textAlignment="center"
@@ -212,11 +216,11 @@
 
     <TextView
         android:id="@+id/Q4Ask"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:text="Do you have hypertension?"
+        android:layout_marginTop="10dp"
+        android:text="@string/step2Q4Ask"
         android:textAlignment="viewStart"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
@@ -227,7 +231,7 @@
 
     <RadioGroup
         android:id="@+id/Q4RadioGroup"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="@+id/Q4Ask"
@@ -238,20 +242,21 @@
         <RadioButton
             android:id="@+id/Q4RbYes"
             android:layout_width="80dp"
-            android:layout_height="30dp"
-            android:text="Yes" />
+            android:layout_height="wrap_content"
+            android:text="@string/RbYes" />
 
         <RadioButton
             android:id="@+id/Q4RbNo"
             android:layout_width="80dp"
-            android:layout_height="30dp"
-            android:text="No" />
+            android:layout_height="wrap_content"
+            android:text="@string/RbNo" />
     </RadioGroup>
 
     <TextView
         android:id="@+id/Q5"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        android:layout_marginTop="-5dp"
         android:background="#FFFFFF"
         android:text="5"
         android:textAlignment="center"
@@ -263,11 +268,11 @@
 
     <TextView
         android:id="@+id/Q5Ask"
-        android:layout_width="wrap_content"
-        android:layout_height="54dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:text="Do you have a first degree parent (father, mother, brother or sister) who had heart problems (heart attack, stroke, sudden death) before the age of 55 for a man or before the age of 65 for a woman?"
+        android:layout_marginTop="10dp"
+        android:text="@string/step2Q5Ask"
         android:textAlignment="viewStart"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
@@ -278,7 +283,7 @@
 
     <RadioGroup
         android:id="@+id/Q5RadioGroup"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="@+id/Q5Ask"
@@ -289,26 +294,27 @@
         <RadioButton
             android:id="@+id/Q5RbYes"
             android:layout_width="80dp"
-            android:layout_height="30dp"
-            android:text="Yes" />
+            android:layout_height="wrap_content"
+            android:text="@string/RbYes" />
 
         <RadioButton
             android:id="@+id/Q5RbNo"
             android:layout_width="80dp"
-            android:layout_height="30dp"
-            android:text="No" />
+            android:layout_height="wrap_content"
+            android:text="@string/RbNo" />
 
         <RadioButton
             android:id="@+id/Q5RbIdk"
             android:layout_width="125dp"
-            android:layout_height="30dp"
-            android:text="I don't know" />
+            android:layout_height="wrap_content"
+            android:text="@string/RbIdk" />
     </RadioGroup>
 
     <TextView
         android:id="@+id/Q6"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        android:layout_marginTop="-5dp"
         android:background="#FFFFFF"
         android:text="6"
         android:textAlignment="center"
@@ -320,11 +326,11 @@
 
     <TextView
         android:id="@+id/Q6Ask"
-        android:layout_width="wrap_content"
-        android:layout_height="32dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:text="Do you know your body mass index (BMI)?"
+        android:layout_marginTop="10dp"
+        android:text="@string/step2Q6Ask"
         android:textAlignment="viewStart"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
@@ -335,7 +341,7 @@
 
     <RadioGroup
         android:id="@+id/Q6RadioGroup"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="@+id/Q6Ask"
@@ -346,20 +352,40 @@
         <RadioButton
             android:id="@+id/Q6RbYes"
             android:layout_width="80dp"
-            android:layout_height="30dp"
-            android:text="Yes" />
+            android:layout_height="wrap_content"
+            android:text="@string/RbYes" />
 
         <RadioButton
             android:id="@+id/Q6RbNo"
             android:layout_width="80dp"
-            android:layout_height="30dp"
-            android:text="No" />
+            android:layout_height="wrap_content"
+            android:text="@string/RbNo" />
 
         <RadioButton
             android:id="@+id/Q6RbIdk"
             android:layout_width="125dp"
-            android:layout_height="30dp"
-            android:text="I don't know" />
+            android:layout_height="wrap_content"
+            android:text="@string/RbIdk" />
     </RadioGroup>
+
+    <Button
+        android:id="@+id/step2BtnPrevious"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:text="@string/BtnPrevious"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Q6RadioGroup" />
+
+    <Button
+        android:id="@+id/step2BtnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:text="@string/BtnNext"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Q6RadioGroup" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

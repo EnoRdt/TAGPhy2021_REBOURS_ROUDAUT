@@ -10,4 +10,17 @@
     <string name="btn_previous">PREVIOUS STEP</string>
     <string name="msg_name">Your Name</string>
     <string name="msg_start">Start Test</string>
+    <string name="step2">Step 2</string>
+    <string name="step2Title">MY HEART</string>
+    <string name="RbYes">Yes</string>
+    <string name="RbNo">No</string>
+    <string name="RbIdk">I don\'t know</string>
+    <string name="step2Q1Ask">Do you have a heart condition?</string>
+    <string name="step2Q2Ask">Do you have a cholesterol problem?</string>
+    <string name="step2Q3Ask">Are you a diabetic?</string>
+    <string name="step2Q4Ask">Do you have hypertension?</string>
+    <string name="step2Q5Ask">Do you have a first degree parent (father, mother, brother or sister) who had heart problems (heart attack, stroke, sudden death) before the age of 55 for a man or before the age of 65 for a woman?</string>
+    <string name="step2Q6Ask">Do you know your body mass index (BMI)?</string>
+    <string name="BtnPrevious">Previous</string>
+    <string name="BtnNext">Next</string>
 </resources>

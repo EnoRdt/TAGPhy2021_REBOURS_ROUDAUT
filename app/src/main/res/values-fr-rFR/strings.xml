@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="monCoeur">MON COEUR</string>
+    <string name="step2">Etape 2</string>
+    <string name="step2Title">MON COEUR</string>
+    <string name="RbYes">Oui</string>
+    <string name="RbNo">Non</string>
+    <string name="RbIdk">Je ne sais pas</string>
+    <string name="step2Q1Ask">Avez-vous un problème cardiaque ?</string>
+    <string name="step2Q2Ask">Avez-vous un problème de cholestérol ?</string>
+    <string name="step2Q3Ask">Êtes-vous diabétique ?</string>
+    <string name="step2Q4Ask">Avez-vous de l’hypertension ?</string>
+    <string name="step2Q5Ask">Avez-vous un parent du premier degré (père, mère, frère ou sœur) qui a eu des problèmes cardiaques (infarctus, AVC, mort subite) avant 55 ans pour un homme ou avant 65 ans chez une femme ?</string>
+    <string name="step2Q6Ask">Connaissez-vous votre indice de masse corporelle (IMC) ?</string>
+    <string name="BtnPrevious">Précédent</string>
+    <string name="BtnNext">Suivant</string>
 </resources>
