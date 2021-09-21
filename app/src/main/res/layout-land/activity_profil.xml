@@ -7,7 +7,7 @@
     android:background="#B8A5D0">
 
     <Button
-        android:id="@+id/buttonNextStep1"
+        android:id="@+id/step1BtnNext"
         android:layout_width="143dp"
         android:layout_height="52dp"
         android:layout_marginTop="35dp"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/buttonNextStep"
+        android:id="@+id/step1BtnPrevious"
         android:layout_width="143dp"
         android:layout_height="52dp"
         android:layout_marginStart="52dp"
@@ -27,7 +27,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
-        android:id="@+id/radioGroupSexe"
+        android:id="@+id/Step1RgroupSexe"
         android:layout_width="468dp"
         android:layout_height="50dp"
         android:layout_marginStart="15dp"
@@ -35,25 +35,25 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.324"
-        app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/textView4">
+        app:layout_constraintStart_toEndOf="@+id/step1Q1"
+        app:layout_constraintTop_toBottomOf="@+id/step1TitleProfile">
 
         <RadioButton
-            android:id="@+id/radioButtonH"
+            android:id="@+id/step1Q1RbtnH"
             android:layout_width="155dp"
             android:layout_height="wrap_content"
             android:text="@string/choix_h"
             android:textAlignment="textStart" />
 
         <RadioButton
-            android:id="@+id/radioButtonF"
+            android:id="@+id/step1Q1RbtnF"
             android:layout_width="155dp"
             android:layout_height="wrap_content"
             android:text="@string/choix_f"
             android:textAlignment="textStart" />
 
         <RadioButton
-            android:id="@+id/radioButtonO"
+            android:id="@+id/step1Q1RbtnO"
             android:layout_width="155dp"
             android:layout_height="wrap_content"
             android:text="@string/choix_other"
@@ -61,18 +61,18 @@
     </RadioGroup>
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/step1Q1"
         android:layout_width="108dp"
         android:layout_height="28dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="24dp"
         android:text="@string/msg_sexe"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/buttonNextStep"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintStart_toStartOf="@+id/step1BtnPrevious"
+        app:layout_constraintTop_toBottomOf="@+id/step1TitleProfile" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/step1TitleProfile"
         android:layout_width="230dp"
         android:layout_height="48dp"
         android:fontFamily="sans-serif-medium"
@@ -83,39 +83,39 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/step1ImgProfile" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/step1ImgProfile"
         android:layout_width="125dp"
         android:layout_height="83dp"
         android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toStartOf="@+id/buttonNextStep1"
-        app:layout_constraintStart_toEndOf="@+id/buttonNextStep"
+        app:layout_constraintEnd_toStartOf="@+id/step1BtnNext"
+        app:layout_constraintStart_toEndOf="@+id/step1BtnPrevious"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/monprofil" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/step1Q2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="45dp"
         android:text="@string/msg_age"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintStart_toStartOf="@+id/step1Q1"
+        app:layout_constraintTop_toBottomOf="@+id/step1Q1" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/Step1Q2EditAge"
         android:layout_width="229dp"
         android:layout_height="51dp"
         android:layout_marginEnd="232dp"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="@+id/textView7"
+        app:layout_constraintBottom_toBottomOf="@+id/step1Q2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintStart_toEndOf="@+id/step1Q2"
         tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

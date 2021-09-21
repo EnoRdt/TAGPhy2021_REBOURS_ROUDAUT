@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TAGPhy2021_REBOURS_ROUDAUT">
         <activity
+            android:name=".Profil"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
