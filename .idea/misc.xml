@@ -6,16 +6,17 @@
         <entry key="..\:/Users/alone/AndroidStudioProjects/TAGPhy2021_REBOURS_ROUDAUT/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.13541666666666666" />
         <entry key="..\:/Users/alone/AndroidStudioProjects/TAGPhy2021_REBOURS_ROUDAUT/app/src/main/res/drawable/ic_launcher_background.xml" value="0.13541666666666666" />
         <entry key="..\:/Users/alone/AndroidStudioProjects/TAGPhy2021_REBOURS_ROUDAUT/app/src/main/res/layout-land/activity_main.xml" value="0.21957671957671956" />
-        <entry key="..\:/Users/alone/AndroidStudioProjects/TAGPhy2021_REBOURS_ROUDAUT/app/src/main/res/layout/activity_main.xml" value="0.17844202898550723" />
+        <entry key="..\:/Users/alone/AndroidStudioProjects/TAGPhy2021_REBOURS_ROUDAUT/app/src/main/res/layout-land/activity_profil.xml" value="0.21957671957671956" />
+        <entry key="..\:/Users/alone/AndroidStudioProjects/TAGPhy2021_REBOURS_ROUDAUT/app/src/main/res/layout-land/jesuis.xml" value="0.21957671957671956" />
+        <entry key="..\:/Users/alone/AndroidStudioProjects/TAGPhy2021_REBOURS_ROUDAUT/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/alone/AndroidStudioProjects/TAGPhy2021_REBOURS_ROUDAUT/app/src/main/res/layout/activity_profil.xml" value="0.259375" />
+        <entry key="..\:/Users/alone/AndroidStudioProjects/TAGPhy2021_REBOURS_ROUDAUT/app/src/main/res/layout/jesuis.xml" value="0.259375" />
+        <entry key="..\:/Users/alone/AndroidStudioProjects/TAGPhy2021_REBOURS_ROUDAUT/app/src/main/res/layout/moncoeur.xml" value="0.259375" />
+        <entry key="..\:/Users/alone/AndroidStudioProjects/TAGPhy2021_REBOURS_ROUDAUT/app/src/main/res/layout/monsuivicardiaque.xml" value="0.13489583333333333" />
         <entry key="..\:/Users/salom/AndroidStudioProjects/TAGPhy2021_REBOURS_ROUDAUT/app/src/main/res/layout-land/activity_main.xml" value="0.15564373897707232" />
-        <entry key="..\:/Users/salom/AndroidStudioProjects/TAGPhy2021_REBOURS_ROUDAUT/app/src/main/res/layout-land/activity_mon_coeur.xml" value="0.3333333333333333" />
-        <entry key="..\:/Users/salom/AndroidStudioProjects/TAGPhy2021_REBOURS_ROUDAUT/app/src/main/res/layout-land/activity_mon_suivi_cardiaque.xml" value="0.3333333333333333" />
-        <entry key="..\:/Users/salom/AndroidStudioProjects/TAGPhy2021_REBOURS_ROUDAUT/app/src/main/res/layout-land/moncoeur.xml" value="0.3333333333333333" />
-        <entry key="..\:/Users/salom/AndroidStudioProjects/TAGPhy2021_REBOURS_ROUDAUT/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/Users/salom/AndroidStudioProjects/TAGPhy2021_REBOURS_ROUDAUT/app/src/main/res/layout/activity_mon_coeur.xml" value="0.3333333333333333" />
-        <entry key="..\:/Users/salom/AndroidStudioProjects/TAGPhy2021_REBOURS_ROUDAUT/app/src/main/res/layout/activity_mon_suivi_cardiaque.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/salom/AndroidStudioProjects/TAGPhy2021_REBOURS_ROUDAUT/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/salom/AndroidStudioProjects/TAGPhy2021_REBOURS_ROUDAUT/app/src/main/res/layout/jesuis.xml" value="0.18385416666666668" />
-        <entry key="..\:/Users/salom/AndroidStudioProjects/TAGPhy2021_REBOURS_ROUDAUT/app/src/main/res/layout/moncoeur.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/salom/AndroidStudioProjects/TAGPhy2021_REBOURS_ROUDAUT/app/src/main/res/layout/moncoeur.xml" value="0.4466666666666667" />
         <entry key="..\:/Users/salom/AndroidStudioProjects/TAGPhy2021_REBOURS_ROUDAUT/app/src/main/res/layout/monsuivicardiaque.xml" value="0.18385416666666668" />
       </map>
     </option>
