@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name" translatable="false">TAGPhy2021_REBOURS_ROUDAUT</string>
-    <string name="msg_monProfil">MY PROFIL</string>
+    <string name="msg_monProfil">MY PROFILE</string>
     <string name="choix_h">a man</string>
     <string name="choix_f">a woman</string>
     <string name="msg_sexe">You are:</string>

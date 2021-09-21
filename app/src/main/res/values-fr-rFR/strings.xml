@@ -1,13 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="msg_monProfil">MON PROFIL</string>
-    <string name="choix_h">un homme</string>
-    <string name="choix_f">"une femme "</string>
-    <string name="msg_sexe">"Vous êtes : "</string>
-    <string name="msg_age">"Quel âge avez-vous ? "</string>
-    <string name="btn_next">SUIVANT</string>
-    <string name="choix_other">autre</string>
-    <string name="btn_previous">PRECEDENT</string>
-    <string name="msg_name">"Votre Nom "</string>
-    <string name="msg_start">COMMENCER</string>
+    <string name="monCoeur">MON COEUR</string>
 </resources>
