@@ -27,11 +27,11 @@
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/step2Title"
+        app:layout_constraintStart_toStartOf="@+id/step3Title"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/step2Title"
+        android:id="@+id/step3Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/step2Title"
@@ -43,7 +43,7 @@
         app:layout_constraintStart_toEndOf="@+id/step3Img" />
 
     <TextView
-        android:id="@+id/Q1"
+        android:id="@+id/step3Q1"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginTop="-5dp"
@@ -54,10 +54,10 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/step3Img"
-        app:layout_constraintTop_toTopOf="@+id/Q1Ask" />
+        app:layout_constraintTop_toTopOf="@+id/step3Q1Ask" />
 
     <TextView
-        android:id="@+id/Q1Ask"
+        android:id="@+id/step3Q1Ask"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -68,22 +68,22 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/Q1"
-        app:layout_constraintTop_toBottomOf="@+id/step2Title"
+        app:layout_constraintStart_toEndOf="@+id/step3Q1"
+        app:layout_constraintTop_toBottomOf="@+id/step3Title"
         app:layout_constraintWidth_max="240dp" />
 
     <RadioGroup
-        android:id="@+id/Q1RadioGroup"
+        android:id="@+id/step3Q1RadioGroup"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/Q1Ask"
+        app:layout_constraintEnd_toEndOf="@+id/step3Q1Ask"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/Q1Ask"
-        app:layout_constraintTop_toBottomOf="@+id/Q1Ask">
+        app:layout_constraintStart_toStartOf="@+id/step3Q1Ask"
+        app:layout_constraintTop_toBottomOf="@+id/step3Q1Ask">
 
         <RadioButton
-            android:id="@+id/Q1RbYes"
+            android:id="@+id/step3Q1RbYes"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_weight="0"
@@ -92,7 +92,7 @@
             android:textColor="#FFFFFF" />
 
         <RadioButton
-            android:id="@+id/Q1RbNo"
+            android:id="@+id/step3Q1RbNo"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
@@ -102,7 +102,7 @@
     </RadioGroup>
 
     <TextView
-        android:id="@+id/Q2"
+        android:id="@+id/step3Q2"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginTop="-5dp"
@@ -112,11 +112,11 @@
         android:textColor="#E8426E"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/Q1"
-        app:layout_constraintTop_toTopOf="@+id/Q2Ask" />
+        app:layout_constraintStart_toStartOf="@+id/step3Q1"
+        app:layout_constraintTop_toTopOf="@+id/step3Q2Ask" />
 
     <TextView
-        android:id="@+id/Q2Ask"
+        android:id="@+id/step3Q2Ask"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -127,22 +127,22 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/Q2"
-        app:layout_constraintTop_toBottomOf="@+id/Q1RadioGroup"
+        app:layout_constraintStart_toEndOf="@+id/step3Q2"
+        app:layout_constraintTop_toBottomOf="@+id/step3Q1RadioGroup"
         app:layout_constraintWidth_max="240dp" />
 
     <RadioGroup
-        android:id="@+id/Q2RadioGroup"
+        android:id="@+id/step3Q2RadioGroup"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/Q2Ask"
+        app:layout_constraintEnd_toEndOf="@+id/step3Q2Ask"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/Q2Ask"
-        app:layout_constraintTop_toBottomOf="@+id/Q2Ask">
+        app:layout_constraintStart_toStartOf="@+id/step3Q2Ask"
+        app:layout_constraintTop_toBottomOf="@+id/step3Q2Ask">
 
         <RadioButton
-            android:id="@+id/Q2RbYes"
+            android:id="@+id/step3Q2RbYes"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
@@ -150,7 +150,7 @@
             android:textColor="#FFFFFF" />
 
         <RadioButton
-            android:id="@+id/Q2RbNo"
+            android:id="@+id/step3Q2RbNo"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
@@ -159,7 +159,7 @@
     </RadioGroup>
 
     <TextView
-        android:id="@+id/Q3"
+        android:id="@+id/step3Q3"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginTop="-5dp"
@@ -169,11 +169,11 @@
         android:textColor="#E8426E"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/Q2"
-        app:layout_constraintTop_toTopOf="@+id/Q3Ask" />
+        app:layout_constraintStart_toStartOf="@+id/step3Q2"
+        app:layout_constraintTop_toTopOf="@+id/step3Q3Ask" />
 
     <TextView
-        android:id="@+id/Q3Ask"
+        android:id="@+id/step3Q3Ask"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -184,22 +184,22 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/Q3"
-        app:layout_constraintTop_toBottomOf="@+id/Q2RadioGroup"
+        app:layout_constraintStart_toEndOf="@+id/step3Q3"
+        app:layout_constraintTop_toBottomOf="@+id/step3Q2RadioGroup"
         app:layout_constraintWidth_max="240dp" />
 
     <RadioGroup
-        android:id="@+id/Q3RadioGroup"
+        android:id="@+id/step3Q3RadioGroup"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/Q3Ask"
+        app:layout_constraintEnd_toEndOf="@+id/step3Q3Ask"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/Q3Ask"
-        app:layout_constraintTop_toBottomOf="@+id/Q3Ask">
+        app:layout_constraintStart_toStartOf="@+id/step3Q3Ask"
+        app:layout_constraintTop_toBottomOf="@+id/step3Q3Ask">
 
         <RadioButton
-            android:id="@+id/Q3RbYes"
+            android:id="@+id/step3Q3RbYes"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
@@ -207,7 +207,7 @@
             android:textColor="#FFFFFF" />
 
         <RadioButton
-            android:id="@+id/Q3RbNo"
+            android:id="@+id/step3Q3RbNo"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
@@ -216,17 +216,17 @@
     </RadioGroup>
 
     <RadioGroup
-        android:id="@+id/Q4RadioGroup"
+        android:id="@+id/step2Q4RadioGroup"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/Q4Ask"
+        app:layout_constraintEnd_toEndOf="@+id/step2Q4Ask"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/Q4Ask"
-        app:layout_constraintTop_toBottomOf="@+id/Q4Ask">
+        app:layout_constraintStart_toStartOf="@+id/step2Q4Ask"
+        app:layout_constraintTop_toBottomOf="@+id/step2Q4Ask">
 
         <RadioButton
-            android:id="@+id/Q4RbYes"
+            android:id="@+id/step2Q4RbYes"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
@@ -234,7 +234,7 @@
             android:textColor="#FFFFFF" />
 
         <RadioButton
-            android:id="@+id/Q4RbNo"
+            android:id="@+id/step2Q4RbNo"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
@@ -243,7 +243,7 @@
     </RadioGroup>
 
     <TextView
-        android:id="@+id/Q4Ask"
+        android:id="@+id/step2Q4Ask"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -254,12 +254,12 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/Q4"
+        app:layout_constraintStart_toEndOf="@+id/step2Q4"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_max="320dp" />
 
     <TextView
-        android:id="@+id/Q4"
+        android:id="@+id/step2Q4"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="25dp"
@@ -270,11 +270,11 @@
         android:textColor="#E8426E"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/Q1RadioGroup"
+        app:layout_constraintStart_toEndOf="@+id/step3Q1RadioGroup"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/Q5"
+        android:id="@+id/step2Q5"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginTop="12dp"
@@ -284,21 +284,21 @@
         android:textColor="#E8426E"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/Q4"
-        app:layout_constraintTop_toTopOf="@+id/Q5Ask" />
+        app:layout_constraintStart_toStartOf="@+id/step2Q4"
+        app:layout_constraintTop_toTopOf="@+id/step2Q5Ask" />
 
     <RadioGroup
-        android:id="@+id/Q5RadioGroup"
+        android:id="@+id/step2Q5RadioGroup"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/Q5Ask"
+        app:layout_constraintEnd_toEndOf="@+id/step2Q5Ask"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/Q5Ask"
-        app:layout_constraintTop_toBottomOf="@+id/Q5Ask">
+        app:layout_constraintStart_toStartOf="@+id/step2Q5Ask"
+        app:layout_constraintTop_toBottomOf="@+id/step2Q5Ask">
 
         <RadioButton
-            android:id="@+id/Q5RbYes"
+            android:id="@+id/step2Q5RbYes"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
@@ -306,7 +306,7 @@
             android:textColor="#FFFFFF" />
 
         <RadioButton
-            android:id="@+id/Q5RbNo"
+            android:id="@+id/step2Q5RbNo"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
@@ -314,7 +314,7 @@
             android:textColor="#FFFFFF" />
 
         <RadioButton
-            android:id="@+id/Q5RbIdk"
+            android:id="@+id/step2Q5RbIdk"
             android:layout_width="125dp"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
@@ -323,7 +323,7 @@
     </RadioGroup>
 
     <TextView
-        android:id="@+id/Q6Ask"
+        android:id="@+id/step2Q6Ask"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -334,12 +334,12 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/Q6"
-        app:layout_constraintTop_toBottomOf="@+id/Q5RadioGroup"
+        app:layout_constraintStart_toEndOf="@+id/step2Q6"
+        app:layout_constraintTop_toBottomOf="@+id/step2Q5RadioGroup"
         app:layout_constraintWidth_max="320dp" />
 
     <TextView
-        android:id="@+id/Q5Ask"
+        android:id="@+id/step2Q5Ask"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -350,24 +350,24 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/Q5"
-        app:layout_constraintTop_toBottomOf="@+id/Q4RadioGroup"
+        app:layout_constraintStart_toEndOf="@+id/step2Q5"
+        app:layout_constraintTop_toBottomOf="@+id/step2Q4RadioGroup"
         app:layout_constraintWidth_max="320dp" />
 
     <RadioGroup
-        android:id="@+id/Q6RadioGroup"
+        android:id="@+id/step2Q6RadioGroup"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="@+id/Q3RadioGroup"
-        app:layout_constraintEnd_toEndOf="@+id/Q6Ask"
+        app:layout_constraintBottom_toBottomOf="@+id/step3Q3RadioGroup"
+        app:layout_constraintEnd_toEndOf="@+id/step2Q6Ask"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/Q6Ask"
-        app:layout_constraintTop_toBottomOf="@+id/Q6Ask"
+        app:layout_constraintStart_toStartOf="@+id/step2Q6Ask"
+        app:layout_constraintTop_toBottomOf="@+id/step2Q6Ask"
         app:layout_constraintVertical_bias="1.0">
 
         <RadioButton
-            android:id="@+id/Q6RbYes"
+            android:id="@+id/step2Q6RbYes"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
@@ -375,7 +375,7 @@
             android:textColor="#FFFFFF" />
 
         <RadioButton
-            android:id="@+id/Q6RbNo"
+            android:id="@+id/step2Q6RbNo"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
@@ -383,7 +383,7 @@
             android:textColor="#FFFFFF" />
 
         <RadioButton
-            android:id="@+id/Q6RbIdk"
+            android:id="@+id/step2Q6RbIdk"
             android:layout_width="125dp"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
@@ -392,7 +392,7 @@
     </RadioGroup>
 
     <TextView
-        android:id="@+id/Q6"
+        android:id="@+id/step2Q6"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginTop="4dp"
@@ -402,8 +402,8 @@
         android:textColor="#E8426E"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/Q5"
-        app:layout_constraintTop_toTopOf="@+id/Q6Ask" />
+        app:layout_constraintStart_toStartOf="@+id/step2Q5"
+        app:layout_constraintTop_toTopOf="@+id/step2Q6Ask" />
 
     <Button
         android:id="@+id/step3BtnPrevious"
@@ -414,7 +414,7 @@
         android:text="@string/BtnPrevious"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Q6RadioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/step2Q6RadioGroup" />
 
     <Button
         android:id="@+id/step3BtnNext"
@@ -425,6 +425,6 @@
         android:text="@string/BtnNext"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Q6RadioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/step2Q6RadioGroup" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

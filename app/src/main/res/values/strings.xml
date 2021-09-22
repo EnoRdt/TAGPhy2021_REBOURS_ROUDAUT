@@ -1,13 +1,5 @@
 <resources>
     <string name="app_name" translatable="false">TAGPhy2021_REBOURS_ROUDAUT</string>
-    <string name="msg_monProfil">MY PROFILE</string>
-    <string name="choix_h">a man</string>
-    <string name="choix_f">a woman</string>
-    <string name="msg_sexe">You are:</string>
-    <string name="msg_age">How old are you ?</string>
-    <string name="btn_next">NEXT STEP</string>
-    <string name="choix_other">other</string>
-    <string name="btn_previous">PREVIOUS STEP</string>
     <string name="msg_name">Your Name</string>
     <string name="msg_start">Start Test</string>
     <string name="step2">Step 2</string>
@@ -28,4 +20,12 @@
     <string name="step3Q1Ask">Have you ever discussed your cardiovascular risk with your doctor?</string>
     <string name="step3Q2Ask">Have you ever done a cardiac check-up?</string>
     <string name="step3Q3Ask">Have you ever seen a cardiologist?</string>
+    <string name="inputName">Name</string>
+    <string name="step1">Step 1</string>
+    <string name="step1Title">MY PROFILE</string>
+    <string name="step1Q1Ask">You are:</string>
+    <string name="step1Q1RbMan">A man</string>
+    <string name="step1Q1RbWoman">A woman</string>
+    <string name="step1Q1RbOther">Other</string>
+    <string name="step1Q2Ask">How old are you?</string>
 </resources>

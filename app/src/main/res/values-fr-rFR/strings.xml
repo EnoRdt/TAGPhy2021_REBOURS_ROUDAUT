@@ -18,4 +18,14 @@
     <string name="step3Q1Ask">Avez-vous déjà fait le point avec votre médecin traitant à propos de votre risque cardiovasculaire ?</string>
     <string name="step3Q2Ask">Avez-vous déjà effectué un bilan cardiaque ?</string>
     <string name="step3Q3Ask">Avez-vous déjà consulté un cardiologue ?</string>
+    <string name="msg_name">Votre Nom</string>
+    <string name="inputName">Nom</string>
+    <string name="msg_start">Démarrer le test</string>
+    <string name="step1">Etape 1</string>
+    <string name="step1Title">MON PROFIL</string>
+    <string name="step1Q1Ask">"Vous êtes : "</string>
+    <string name="step1Q1RbMan">Un homme</string>
+    <string name="step1Q1RbWoman">Une femme</string>
+    <string name="step1Q1RbOther">Autre</string>
+    <string name="step1Q2Ask">"Quel âge avez-vous ? "</string>
 </resources>
