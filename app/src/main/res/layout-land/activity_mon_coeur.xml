@@ -84,7 +84,7 @@
 
         <RadioButton
             android:id="@+id/step3Q1RbYes"
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
             android:buttonTint="#FFFFFF"
@@ -93,7 +93,7 @@
 
         <RadioButton
             android:id="@+id/step3Q1RbNo"
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
             android:text="@string/RbNo"
@@ -143,7 +143,7 @@
 
         <RadioButton
             android:id="@+id/step3Q2RbYes"
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
             android:text="@string/RbYes"
@@ -151,7 +151,7 @@
 
         <RadioButton
             android:id="@+id/step3Q2RbNo"
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
             android:text="@string/RbNo"
@@ -200,7 +200,7 @@
 
         <RadioButton
             android:id="@+id/step3Q3RbYes"
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
             android:text="@string/RbYes"
@@ -208,7 +208,7 @@
 
         <RadioButton
             android:id="@+id/step3Q3RbNo"
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
             android:text="@string/RbNo"
@@ -227,7 +227,7 @@
 
         <RadioButton
             android:id="@+id/step2Q4RbYes"
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
             android:text="@string/RbYes"
@@ -235,7 +235,7 @@
 
         <RadioButton
             android:id="@+id/step2Q4RbNo"
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
             android:text="@string/RbNo"
@@ -256,7 +256,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/step2Q4"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_max="320dp" />
+        app:layout_constraintWidth_max="330dp" />
 
     <TextView
         android:id="@+id/step2Q4"
@@ -299,7 +299,7 @@
 
         <RadioButton
             android:id="@+id/step2Q5RbYes"
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
             android:text="@string/RbYes"
@@ -307,7 +307,7 @@
 
         <RadioButton
             android:id="@+id/step2Q5RbNo"
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
             android:text="@string/RbNo"
@@ -315,7 +315,7 @@
 
         <RadioButton
             android:id="@+id/step2Q5RbIdk"
-            android:layout_width="125dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
             android:text="@string/RbIdk"
@@ -336,7 +336,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/step2Q6"
         app:layout_constraintTop_toBottomOf="@+id/step2Q5RadioGroup"
-        app:layout_constraintWidth_max="320dp" />
+        app:layout_constraintWidth_max="330dp" />
 
     <TextView
         android:id="@+id/step2Q5Ask"
@@ -352,7 +352,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/step2Q5"
         app:layout_constraintTop_toBottomOf="@+id/step2Q4RadioGroup"
-        app:layout_constraintWidth_max="320dp" />
+        app:layout_constraintWidth_max="330dp" />
 
     <RadioGroup
         android:id="@+id/step2Q6RadioGroup"
@@ -368,7 +368,7 @@
 
         <RadioButton
             android:id="@+id/step2Q6RbYes"
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
             android:text="@string/RbYes"
@@ -376,7 +376,7 @@
 
         <RadioButton
             android:id="@+id/step2Q6RbNo"
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
             android:text="@string/RbNo"
@@ -384,7 +384,7 @@
 
         <RadioButton
             android:id="@+id/step2Q6RbIdk"
-            android:layout_width="125dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
             android:text="@string/RbIdk"

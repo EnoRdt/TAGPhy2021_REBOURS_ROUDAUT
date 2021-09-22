@@ -84,7 +84,7 @@
 
         <RadioButton
             android:id="@+id/step3Q1RbYes"
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
             android:buttonTint="#FFFFFF"
@@ -93,7 +93,7 @@
 
         <RadioButton
             android:id="@+id/step3Q1RbNo"
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
             android:text="@string/RbNo"
@@ -143,7 +143,7 @@
 
         <RadioButton
             android:id="@+id/step3Q2RbYes"
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
             android:text="@string/RbYes"
@@ -151,7 +151,7 @@
 
         <RadioButton
             android:id="@+id/step3Q2RbNo"
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
             android:text="@string/RbNo"
@@ -200,7 +200,7 @@
 
         <RadioButton
             android:id="@+id/step3Q3RbYes"
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
             android:text="@string/RbYes"
@@ -208,7 +208,7 @@
 
         <RadioButton
             android:id="@+id/step3Q3RbNo"
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="#FFFFFF"
             android:text="@string/RbNo"

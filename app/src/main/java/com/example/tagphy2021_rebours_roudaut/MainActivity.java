@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 // ACTIVITE : CREER UN CALCUL D'IMC SI REP NON ET JE SAIS PAS A CONNAISSEZ VOUS VOTRE IMC
 // PENSER A LAFFICHAGE DES RESULTATS AVEC LES DETAILS EN FONCTION DU SCORE
+// LIEN VERS SITE WEB A LA FIN
 
 public class MainActivity extends AppCompatActivity {
     public static final String TAG = "QuizzProject";

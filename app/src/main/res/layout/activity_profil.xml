@@ -141,7 +141,7 @@
 
         <RadioButton
             android:id="@+id/step1Q1RbMan"
-            android:layout_width="90dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
             android:buttonTint="#FFFFFF"
@@ -150,7 +150,7 @@
 
         <RadioButton
             android:id="@+id/step1Q1RbWoman"
-            android:layout_width="110dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
             android:buttonTint="#FFFFFF"
@@ -159,7 +159,7 @@
 
         <RadioButton
             android:id="@+id/step1Q1RbOther"
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
             android:buttonTint="#FFFFFF"
@@ -169,8 +169,8 @@
 
     <EditText
         android:id="@+id/step1Q2EditText"
-        android:layout_width="229dp"
-        android:layout_height="51dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
         android:textAlignment="viewStart"
