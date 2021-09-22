@@ -54,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
         //FAIRE UN TRY avec création de fichier d'erreur???
 
         // Vérifier que nom c'est un string genre msg d'erreur si pas le cas!!
-
         if (accEditName.getText().toString().isEmpty()) {
             toast("Please complete all fields");}
         else {
