@@ -7,14 +7,14 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
-public class MonSuiviCardiaque extends AppCompatActivity {
+public class Imc extends AppCompatActivity {
 
     public static final String TAG = MainActivity.TAG;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mon_suivi_cardiaque);
+        setContentView(R.layout.activity_imc);
 
         Log.d(TAG, "onCreate: ");
     }
@@ -26,7 +26,7 @@ public class MonSuiviCardiaque extends AppCompatActivity {
         // Vérifier que l'age c'est un integer genre msg d'erreur si pas le cas!!
         // Vérifier que tous les champs sont renseignés
         Log.d(TAG, "start_test: ");
-        Intent intent = new Intent(this, Imc.class);
+        Intent intent = new Intent(this, Resultats.class);
         startActivity(intent);
     }
 

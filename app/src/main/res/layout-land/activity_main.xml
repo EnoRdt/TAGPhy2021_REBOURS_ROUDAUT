@@ -35,6 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:backgroundTint="#662785"
+        android:onClick="start_test"
         android:text="@string/msg_start"
         app:layout_constraintBottom_toBottomOf="@+id/accImage"
         app:layout_constraintEnd_toEndOf="parent"

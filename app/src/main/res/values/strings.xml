@@ -28,4 +28,5 @@
     <string name="step1Q1RbWoman">A woman</string>
     <string name="step1Q1RbOther">Other</string>
     <string name="step1Q2Ask">How old are you?</string>
+    <string name="step4Title">MY IMC</string>
 </resources>

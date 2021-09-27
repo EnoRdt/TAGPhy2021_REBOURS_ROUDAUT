@@ -2,6 +2,7 @@ package com.example.tagphy2021_rebours_roudaut;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -20,6 +21,17 @@ public class MonCoeur extends AppCompatActivity {
 
     public void previous(View v) {
         this.onBackPressed();
+    }
+
+    public void next(View v){
+
+        //FAIRE UN TRY avec création de fichier d'erreur???
+
+        // Vérifier que l'age c'est un integer genre msg d'erreur si pas le cas!!
+        // Vérifier que tous les champs sont renseignés
+            Log.d(TAG, "start_test: ");
+            Intent intent = new Intent(this, MonSuiviCardiaque.class);
+            startActivity(intent);
     }
 
 

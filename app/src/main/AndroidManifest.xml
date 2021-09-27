@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.tagphy2021_rebours_roudaut">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -12,6 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TAGPhy2021_REBOURS_ROUDAUT">
+        <activity
+            android:name=".Resultats"
+            android:exported="true" />
+        <activity
+            android:name=".Imc"
+            android:exported="true" />
         <activity
             android:name=".MonSuiviCardiaque"
             android:exported="true" />
