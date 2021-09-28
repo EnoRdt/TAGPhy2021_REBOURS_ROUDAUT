@@ -6,10 +6,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class Imc extends AppCompatActivity {
 
     public static final String TAG = MainActivity.TAG;
+    private TextView step4Q4ViewResult;
+    private EditText step4Q2Weight;
+    private EditText step4Q3Size;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +24,10 @@ public class Imc extends AppCompatActivity {
         setContentView(R.layout.activity_imc);
 
         Log.d(TAG, "onCreate: ");
+
+        step4Q4ViewResult = findViewById(R.id.step4Q4ViewResult);
+        step4Q2Weight = findViewById(R.id.step4Q2Weight);
+        step4Q3Size = findViewById(R.id.step4Q3Size);
     }
 
     public void next(View v){
@@ -32,6 +43,23 @@ public class Imc extends AppCompatActivity {
 
     public void previous(View v) {
         this.onBackPressed();
+    }
+
+    public void toast(String msg) {
+        Toast.makeText(this, msg,Toast.LENGTH_SHORT).show();
+    }
+
+    public void calculImc(View v) {
+        float result;
+        String res = "RESULT";
+        if (step4Q2Weight.getText().toString().isEmpty() || step4Q3Size.getText().toString().isEmpty()) {
+            toast("Please complete all fields");
+        } else {
+            result = (Float.parseFloat(String.valueOf(step4Q2Weight.getText())) / ((Float.parseFloat(String.valueOf(step4Q3Size.getText()))/100) * (Float.parseFloat(String.valueOf(step4Q3Size.getText())))/100) );
+            //result = Float.parseFloat(String.valueOf(step4Q3Size.getText()))/100;
+            res = Float.toString(result);
+            step4Q4ViewResult.setText(res);
+        }
     }
 
     @Override

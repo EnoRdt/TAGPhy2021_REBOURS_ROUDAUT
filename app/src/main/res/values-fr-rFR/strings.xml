@@ -29,4 +29,9 @@
     <string name="step1Q1RbOther">Autre</string>
     <string name="step1Q2Ask">"Quel âge avez-vous ? "</string>
     <string name="step4Title">MON IMC</string>
+    <string name="step4">Etape 1</string>
+    <string name="step4Q1Ask">Connaissez-vous votre indice de masse corporelle (IMC) ?</string>
+    <string name="step4Q2Ask">"Quel est votre poids (en kg)? "</string>
+    <string name="step4Q3">Quelle est votre taille (en cm)?</string>
+    <string name="step4Q4Rep">"Votre IMC est "</string>
 </resources>
