@@ -42,389 +42,353 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/step2Img" />
 
-    <TextView
-        android:id="@+id/step2Q1"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="-5dp"
-        android:background="#FFFFFF"
-        android:text="1"
-        android:textAlignment="center"
-        android:textColor="#E8426E"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/step2Img"
-        app:layout_constraintTop_toTopOf="@+id/step2Q1Ask" />
-
-    <TextView
-        android:id="@+id/step2Q1Ask"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/step2Q1Ask"
-        android:textAlignment="viewStart"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
-        android:textStyle="bold"
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="384dp"
+        android:layout_height="389dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/step2Q1"
-        app:layout_constraintTop_toBottomOf="@+id/step2Title"
-        app:layout_constraintWidth_max="330dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/step2Title">
 
-    <RadioGroup
-        android:id="@+id/step2Q1RadioGroup"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/step2Q1Ask"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/step2Q1Ask"
-        app:layout_constraintTop_toBottomOf="@+id/step2Q1Ask">
-
-        <RadioButton
-            android:id="@+id/step2Q1RbYes"
-            android:layout_width="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:buttonTint="#FFFFFF"
-            android:text="@string/RbYes"
-            android:textColor="#FFFFFF" />
+            android:orientation="vertical">
 
-        <RadioButton
-            android:id="@+id/step2Q1RbNo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
-            android:text="@string/RbNo"
-            android:textColor="#FFFFFF" />
+            <TextView
+                android:id="@+id/step2Q1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="-5dp"
+                android:background="#FFFFFF"
+                android:text="1"
+                android:textAlignment="center"
+                android:textColor="#E8426E"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/step2Q1Ask" />
 
-    </RadioGroup>
+            <TextView
+                android:id="@+id/step2Q1Ask"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/step2Q1Ask"
+                android:textAlignment="viewStart"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/step2Q1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_max="330dp" />
 
-    <TextView
-        android:id="@+id/step2Q2"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="-5dp"
-        android:background="#FFFFFF"
-        android:text="2"
-        android:textAlignment="center"
-        android:textColor="#E8426E"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/step2Q1"
-        app:layout_constraintTop_toTopOf="@+id/step2Q2Ask" />
+            <RadioGroup
+                android:id="@+id/step2Q1RadioGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/step2Q1Ask"
+                app:layout_constraintStart_toStartOf="@+id/step2Q1Ask"
+                app:layout_constraintTop_toBottomOf="@+id/step2Q1Ask">
 
-    <TextView
-        android:id="@+id/step2Q2Ask"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/step2Q2Ask"
-        android:textAlignment="viewStart"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/step2Q2"
-        app:layout_constraintTop_toBottomOf="@+id/step2Q1RadioGroup"
-        app:layout_constraintWidth_max="330dp" />
+                <RadioButton
+                    android:id="@+id/step2Q1RbYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:buttonTint="#FFFFFF"
+                    android:text="@string/RbYes"
+                    android:textColor="#FFFFFF" />
 
-    <RadioGroup
-        android:id="@+id/step2Q2RadioGroup"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/step2Q2Ask"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/step2Q2Ask"
-        app:layout_constraintTop_toBottomOf="@+id/step2Q2Ask">
+                <RadioButton
+                    android:id="@+id/step2Q1RbNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#FFFFFF"
+                    android:text="@string/RbNo"
+                    android:textColor="#FFFFFF" />
 
-        <RadioButton
-            android:id="@+id/step2Q2RbYes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
-            android:text="@string/RbYes"
-            android:textColor="#FFFFFF" />
+            </RadioGroup>
 
-        <RadioButton
-            android:id="@+id/step2Q2RbNo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
-            android:text="@string/RbNo"
-            android:textColor="#FFFFFF" />
-    </RadioGroup>
+            <TextView
+                android:id="@+id/step2Q2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="-5dp"
+                android:background="#FFFFFF"
+                android:text="2"
+                android:textAlignment="center"
+                android:textColor="#E8426E"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/step2Q1"
+                app:layout_constraintTop_toTopOf="@+id/step2Q2Ask" />
 
-    <TextView
-        android:id="@+id/step2Q3"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="-5dp"
-        android:background="#FFFFFF"
-        android:text="3"
-        android:textAlignment="center"
-        android:textColor="#E8426E"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/step2Q2"
-        app:layout_constraintTop_toTopOf="@+id/step2Q3Ask" />
+            <TextView
+                android:id="@+id/step2Q2Ask"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/step2Q2Ask"
+                android:textAlignment="viewStart"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/step2Q2"
+                app:layout_constraintTop_toBottomOf="@+id/step2Q1RadioGroup"
+                app:layout_constraintWidth_max="330dp" />
 
-    <TextView
-        android:id="@+id/step2Q3Ask"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/step2Q3Ask"
-        android:textAlignment="viewStart"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/step2Q3"
-        app:layout_constraintTop_toBottomOf="@+id/step2Q2RadioGroup"
-        app:layout_constraintWidth_max="330dp" />
+            <RadioGroup
+                android:id="@+id/step2Q2RadioGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/step2Q2Ask"
+                app:layout_constraintStart_toStartOf="@+id/step2Q2Ask"
+                app:layout_constraintTop_toBottomOf="@+id/step2Q2Ask">
 
-    <RadioGroup
-        android:id="@+id/step2Q3RadioGroup"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/step2Q3Ask"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/step2Q3Ask"
-        app:layout_constraintTop_toBottomOf="@+id/step2Q3Ask">
+                <RadioButton
+                    android:id="@+id/step2Q2RbYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#FFFFFF"
+                    android:text="@string/RbYes"
+                    android:textColor="#FFFFFF" />
 
-        <RadioButton
-            android:id="@+id/step2Q3RbYes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
-            android:text="@string/RbYes"
-            android:textColor="#FFFFFF" />
+                <RadioButton
+                    android:id="@+id/step2Q2RbNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#FFFFFF"
+                    android:text="@string/RbNo"
+                    android:textColor="#FFFFFF" />
+            </RadioGroup>
 
-        <RadioButton
-            android:id="@+id/step2Q3RbNo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
-            android:text="@string/RbNo"
-            android:textColor="#FFFFFF" />
-    </RadioGroup>
+            <TextView
+                android:id="@+id/step2Q3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="-5dp"
+                android:background="#FFFFFF"
+                android:text="3"
+                android:textAlignment="center"
+                android:textColor="#E8426E"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/step2Q2"
+                app:layout_constraintTop_toTopOf="@+id/step2Q3Ask" />
 
-    <TextView
-        android:id="@+id/step2Q4"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="-5dp"
-        android:background="#FFFFFF"
-        android:text="4"
-        android:textAlignment="center"
-        android:textColor="#E8426E"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/step2Q3"
-        app:layout_constraintTop_toTopOf="@+id/step2Q4Ask" />
+            <TextView
+                android:id="@+id/step2Q3Ask"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/step2Q3Ask"
+                android:textAlignment="viewStart"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/step2Q3"
+                app:layout_constraintTop_toBottomOf="@+id/step2Q2RadioGroup"
+                app:layout_constraintWidth_max="330dp" />
 
-    <TextView
-        android:id="@+id/step2Q4Ask"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/step2Q4Ask"
-        android:textAlignment="viewStart"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/step2Q4"
-        app:layout_constraintTop_toBottomOf="@+id/step2Q3RadioGroup"
-        app:layout_constraintWidth_max="330dp" />
+            <RadioGroup
+                android:id="@+id/step2Q3RadioGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/step2Q3Ask"
+                app:layout_constraintStart_toStartOf="@+id/step2Q3Ask"
+                app:layout_constraintTop_toBottomOf="@+id/step2Q3Ask">
 
-    <RadioGroup
-        android:id="@+id/step2Q4RadioGroup"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/step2Q4Ask"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/step2Q4Ask"
-        app:layout_constraintTop_toBottomOf="@+id/step2Q4Ask">
+                <RadioButton
+                    android:id="@+id/step2Q3RbYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#FFFFFF"
+                    android:text="@string/RbYes"
+                    android:textColor="#FFFFFF" />
 
-        <RadioButton
-            android:id="@+id/step2Q4RbYes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
-            android:text="@string/RbYes"
-            android:textColor="#FFFFFF" />
+                <RadioButton
+                    android:id="@+id/step2Q3RbNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#FFFFFF"
+                    android:text="@string/RbNo"
+                    android:textColor="#FFFFFF" />
+            </RadioGroup>
 
-        <RadioButton
-            android:id="@+id/step2Q4RbNo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
-            android:text="@string/RbNo"
-            android:textColor="#FFFFFF" />
-    </RadioGroup>
+            <TextView
+                android:id="@+id/step2Q4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="-5dp"
+                android:background="#FFFFFF"
+                android:text="4"
+                android:textAlignment="center"
+                android:textColor="#E8426E"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/step2Q3"
+                app:layout_constraintTop_toTopOf="@+id/step2Q4Ask" />
 
-    <TextView
-        android:id="@+id/step2Q5"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="-5dp"
-        android:background="#FFFFFF"
-        android:text="5"
-        android:textAlignment="center"
-        android:textColor="#E8426E"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/step2Q4"
-        app:layout_constraintTop_toTopOf="@+id/step2Q5Ask" />
+            <TextView
+                android:id="@+id/step2Q4Ask"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/step2Q4Ask"
+                android:textAlignment="viewStart"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/step2Q4"
+                app:layout_constraintTop_toBottomOf="@+id/step2Q3RadioGroup"
+                app:layout_constraintWidth_max="330dp" />
 
-    <TextView
-        android:id="@+id/step2Q5Ask"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/step2Q5Ask"
-        android:textAlignment="viewStart"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/step2Q5"
-        app:layout_constraintTop_toBottomOf="@+id/step2Q4RadioGroup"
-        app:layout_constraintWidth_max="330dp" />
+            <RadioGroup
+                android:id="@+id/step2Q4RadioGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/step2Q4Ask"
+                app:layout_constraintStart_toStartOf="@+id/step2Q4Ask"
+                app:layout_constraintTop_toBottomOf="@+id/step2Q4Ask">
 
-    <RadioGroup
-        android:id="@+id/step2Q5RadioGroup"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/step2Q5Ask"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/step2Q5Ask"
-        app:layout_constraintTop_toBottomOf="@+id/step2Q5Ask">
+                <RadioButton
+                    android:id="@+id/step2Q4RbYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#FFFFFF"
+                    android:text="@string/RbYes"
+                    android:textColor="#FFFFFF" />
 
-        <RadioButton
-            android:id="@+id/step2Q5RbYes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
-            android:text="@string/RbYes"
-            android:textColor="#FFFFFF" />
+                <RadioButton
+                    android:id="@+id/step2Q4RbNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#FFFFFF"
+                    android:text="@string/RbNo"
+                    android:textColor="#FFFFFF" />
+            </RadioGroup>
 
-        <RadioButton
-            android:id="@+id/step2Q5RbNo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
-            android:text="@string/RbNo"
-            android:textColor="#FFFFFF" />
+            <TextView
+                android:id="@+id/step2Q5"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="-5dp"
+                android:background="#FFFFFF"
+                android:text="5"
+                android:textAlignment="center"
+                android:textColor="#E8426E"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/step2Q4"
+                app:layout_constraintTop_toTopOf="@+id/step2Q5Ask" />
 
-        <RadioButton
-            android:id="@+id/step2Q5RbIdk"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
-            android:text="@string/RbIdk"
-            android:textColor="#FFFFFF" />
-    </RadioGroup>
+            <TextView
+                android:id="@+id/step2Q5Ask"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/step2Q5Ask"
+                android:textAlignment="viewStart"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/step2Q5"
+                app:layout_constraintTop_toBottomOf="@+id/step2Q4RadioGroup"
+                app:layout_constraintWidth_max="330dp" />
 
-    <TextView
-        android:id="@+id/step2Q6"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="-5dp"
-        android:background="#FFFFFF"
-        android:text="6"
-        android:textAlignment="center"
-        android:textColor="#E8426E"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/step2Q5"
-        app:layout_constraintTop_toTopOf="@+id/step2Q6Ask" />
+            <TextView
+                android:id="@+id/step2Q6"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="-5dp"
+                android:background="#FFFFFF"
+                android:text="6"
+                android:textAlignment="center"
+                android:textColor="#E8426E"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/step2Q5"
+                app:layout_constraintTop_toTopOf="@+id/step2Q6Ask" />
 
-    <TextView
-        android:id="@+id/step2Q6Ask"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/step2Q6Ask"
-        android:textAlignment="viewStart"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/step2Q6"
-        app:layout_constraintTop_toBottomOf="@+id/step2Q5RadioGroup"
-        app:layout_constraintWidth_max="330dp" />
+            <TextView
+                android:id="@+id/step2Q6Ask"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/step2Q6Ask"
+                android:textAlignment="viewStart"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/step2Q6"
+                app:layout_constraintTop_toBottomOf="@+id/step2Q5Spinner"
+                app:layout_constraintWidth_max="330dp" />
 
-    <RadioGroup
-        android:id="@+id/step2Q6RadioGroup"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/step2Q6Ask"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/step2Q6Ask"
-        app:layout_constraintTop_toBottomOf="@+id/step2Q6Ask">
 
-        <RadioButton
-            android:id="@+id/step2Q6RbYes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
-            android:text="@string/RbYes"
-            android:textColor="#FFFFFF" />
+            <Spinner
+                android:id="@+id/step2Q5Spinner"
+                android:layout_width="313dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:entries="@array/spinner_no_yes_idk"
+                android:spinnerMode="dropdown"
+                app:layout_constraintEnd_toEndOf="@+id/step2Q5Ask"
+                app:layout_constraintStart_toStartOf="@+id/step2Q5Ask"
+                app:layout_constraintTop_toBottomOf="@+id/step2Q5Ask" />
 
-        <RadioButton
-            android:id="@+id/step2Q6RbNo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
-            android:text="@string/RbNo"
-            android:textColor="#FFFFFF" />
+            <Spinner
+                android:id="@+id/step2Q6Spinner"
+                android:layout_width="310dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:entries="@array/spinner_no_yes_idk"
+                app:layout_constraintEnd_toEndOf="@+id/step2Q6Ask"
+                app:layout_constraintStart_toStartOf="@+id/step2Q6Ask"
+                app:layout_constraintTop_toBottomOf="@+id/step2Q6Ask" />
 
-        <RadioButton
-            android:id="@+id/step2Q6RbIdk"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
-            android:text="@string/RbIdk"
-            android:textColor="#FFFFFF" />
-    </RadioGroup>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
     <Button
         android:id="@+id/step2BtnPrevious"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="48dp"
         android:backgroundTint="#BEAEAEAE"
         android:onClick="previous"
         android:text="@string/BtnPrevious"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/step2Q6RadioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/scrollView4"
+        app:layout_constraintVertical_bias="0.279" />
 
     <Button
         android:id="@+id/step2BtnNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="50dp"
+        android:layout_marginEnd="60dp"
         android:backgroundTint="#BEAEAEAE"
         android:onClick="next"
         android:text="@string/BtnNext"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/step2Q6RadioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/scrollView4"
+        app:layout_constraintVertical_bias="0.279" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

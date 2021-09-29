@@ -34,4 +34,5 @@
     <string name="step4Q2Ask">"Quel est votre poids (en kg)? "</string>
     <string name="step4Q3">Quelle est votre taille (en cm)?</string>
     <string name="step4Q4Rep">"Votre IMC est "</string>
+    <string name="step4Q2AskBis">Quel est votre IMC?</string>
 </resources>

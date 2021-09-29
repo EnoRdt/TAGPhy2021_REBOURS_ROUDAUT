@@ -44,12 +44,9 @@
         app:layout_constraintStart_toEndOf="@+id/step4Img" />
 
     <ScrollView
-        android:id="@+id/scrollView3"
-        android:layout_width="367dp"
-        android:layout_height="407dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="10dp"
+        android:id="@+id/scrollView2"
+        android:layout_width="714dp"
+        android:layout_height="137dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/step4Title">
@@ -63,8 +60,7 @@
                 android:id="@+id/step4Q1"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="-5dp"
+                android:layout_marginStart="44dp"
                 android:background="#FFFFFF"
                 android:text="1"
                 android:textAlignment="center"
@@ -79,7 +75,6 @@
                 android:id="@+id/step4Q1Ask"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
                 android:text="@string/step4Q1Ask"
                 android:textAlignment="viewStart"
@@ -97,6 +92,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="@+id/step4Q1Ask"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/step4Q1Ask"
                 app:layout_constraintTop_toBottomOf="@+id/step4Q1Ask">
 
@@ -199,8 +195,7 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/step4Q4Rep"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="@+id/step4Q4"
+                app:layout_constraintStart_toStartOf="@+id/step4Q4Rep"
                 app:layout_constraintTop_toBottomOf="@+id/step4Q4Rep" />
 
             <ImageButton
@@ -229,7 +224,6 @@
                 app:layout_constraintStart_toEndOf="@+id/step4Q4"
                 app:layout_constraintTop_toBottomOf="@+id/imageButton3"
                 app:layout_constraintWidth_max="330dp" />
-
 
             <TextView
                 android:id="@+id/step4Q2"
@@ -271,7 +265,7 @@
                 android:labelFor="@id/step4Q2Ask"
                 android:minHeight="48dp"
                 app:layout_constraintEnd_toEndOf="@+id/step4Q2Ask"
-                app:layout_constraintStart_toStartOf="@+id/step4Q2"
+                app:layout_constraintStart_toStartOf="@+id/step4Q2Ask"
                 app:layout_constraintTop_toBottomOf="@+id/step4Q2Ask" />
 
             <EditText
@@ -285,7 +279,7 @@
                 android:labelFor="@id/step4Q3Ask"
                 android:minHeight="48dp"
                 app:layout_constraintEnd_toEndOf="@+id/step4Q3Ask"
-                app:layout_constraintStart_toStartOf="@+id/step4Q3"
+                app:layout_constraintStart_toStartOf="@+id/step4Q3Ask"
                 app:layout_constraintTop_toBottomOf="@+id/step4Q3Ask" />
 
             <TextView
@@ -312,7 +306,7 @@
                 android:hint="ex : 19,6"
                 android:inputType="numberDecimal"
                 app:layout_constraintEnd_toEndOf="@+id/step4Q2AskBis"
-                app:layout_constraintStart_toStartOf="@+id/step4Q2Bis"
+                app:layout_constraintStart_toStartOf="@+id/step4Q2AskBis"
                 app:layout_constraintTop_toBottomOf="@+id/step4Q2AskBis" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -320,25 +314,28 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/step4BtnPrevious"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:backgroundTint="#BEAEAEAE"
-        android:onClick="previous"
-        android:text="@string/BtnPrevious"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
-
-    <Button
         android:id="@+id/step4BtnNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="64dp"
+        android:layout_marginEnd="15dp"
         android:backgroundTint="#BEAEAEAE"
         android:onClick="next"
         android:text="@string/BtnNext"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/scrollView2"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+    <Button
+        android:id="@+id/step4BtnPrevious"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:backgroundTint="#BEAEAEAE"
+        android:onClick="previous"
+        android:text="@string/BtnPrevious"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/scrollView2"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
