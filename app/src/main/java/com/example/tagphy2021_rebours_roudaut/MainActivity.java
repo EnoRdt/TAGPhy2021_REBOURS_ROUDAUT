@@ -2,10 +2,13 @@ package com.example.tagphy2021_rebours_roudaut;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Person;
+import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -23,9 +26,9 @@ public class MainActivity extends AppCompatActivity {
     public static final String TAG = "QuizzProject";
     protected EditText accEditName;
     private Button accBtnStart;
+    private Person person;
 
     private static final String KEY_USERNAME = "username";
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,18 +52,34 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, msg,Toast.LENGTH_SHORT).show();
     }
 
+    public void vibrate(long duration_ms) {
+        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        if(duration_ms < 1)
+            duration_ms = 1;
+        if(v != null && v.hasVibrator()) {
+            // Attention changement comportement avec API >= 26 (cf doc)
+            if(Build.VERSION.SDK_INT >= 26) {
+                v.vibrate(VibrationEffect.createOneShot(duration_ms,
+                        VibrationEffect.DEFAULT_AMPLITUDE));
+            }
+            else {
+                v.vibrate(duration_ms);
+            }
+        }
+        // sinon il n'y a pas de mécanisme de vibration
+    }
+
 
     public void start_test(View v){
 
-        //FAIRE UN TRY avec création de fichier d'erreur???
-
-        // Vérifier que nom c'est un string genre msg d'erreur si pas le cas!!
         if (accEditName.getText().toString().isEmpty()) {
-            toast("Please complete all fields");}
-        else {
-            Log.d(TAG, "start_test: " + accEditName.getText().toString());
+            toast("Please complete all fields");
+            vibrate(50);
+        } else {
+            person.setName(accEditName.getText().toString());
+            Log.d(TAG, "start_test: " + this.person);
             Intent intent = new Intent(this, Profil.class);
-            intent.putExtra("name", accEditName.getText().toString());
+            intent.putExtra("person", this.person);
             startActivity(intent);
         }
     }

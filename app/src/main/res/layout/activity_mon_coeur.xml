@@ -310,35 +310,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/step2Q4RadioGroup"
                 app:layout_constraintWidth_max="330dp" />
 
-            <TextView
-                android:id="@+id/step2Q6"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="-5dp"
-                android:background="#FFFFFF"
-                android:text="6"
-                android:textAlignment="center"
-                android:textColor="#E8426E"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/step2Q5"
-                app:layout_constraintTop_toTopOf="@+id/step2Q6Ask" />
-
-            <TextView
-                android:id="@+id/step2Q6Ask"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="12dp"
-                android:text="@string/step2Q6Ask"
-                android:textAlignment="viewStart"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/step2Q6"
-                app:layout_constraintTop_toBottomOf="@+id/step2Q5Spinner"
-                app:layout_constraintWidth_max="330dp" />
-
 
             <Spinner
                 android:id="@+id/step2Q5Spinner"
@@ -350,16 +321,6 @@
                 app:layout_constraintEnd_toEndOf="@+id/step2Q5Ask"
                 app:layout_constraintStart_toStartOf="@+id/step2Q5Ask"
                 app:layout_constraintTop_toBottomOf="@+id/step2Q5Ask" />
-
-            <Spinner
-                android:id="@+id/step2Q6Spinner"
-                android:layout_width="310dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="4dp"
-                android:entries="@array/spinner_no_yes_idk"
-                app:layout_constraintEnd_toEndOf="@+id/step2Q6Ask"
-                app:layout_constraintStart_toStartOf="@+id/step2Q6Ask"
-                app:layout_constraintTop_toBottomOf="@+id/step2Q6Ask" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

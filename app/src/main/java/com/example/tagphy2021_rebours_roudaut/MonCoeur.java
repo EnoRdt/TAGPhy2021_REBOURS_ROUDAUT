@@ -2,8 +2,12 @@ package com.example.tagphy2021_rebours_roudaut;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -16,6 +20,15 @@ public class MonCoeur extends AppCompatActivity {
 
     public static final String TAG = MainActivity.TAG;
 
+    private Person person;
+
+    private Spinner step2Q5Spinner;
+
+    private RadioGroup step2Q1RadioGroup;
+    private RadioGroup step2Q2RadioGroup;
+    private RadioGroup step2Q3RadioGroup;
+    private RadioGroup step2Q4RadioGroup;
+
     private RadioButton step2Q1RbYes;
     private RadioButton step2Q1RbNo;
     private RadioButton step2Q2RbYes;
@@ -25,13 +38,7 @@ public class MonCoeur extends AppCompatActivity {
     private RadioButton step2Q4RbYes;
     private RadioButton step2Q4RbNo;
 
-    private Spinner step2Q5Spinner;
-    private Spinner step2Q6Spinner;
 
-    private RadioGroup step2Q1RadioGroup;
-    private RadioGroup step2Q2RadioGroup;
-    private RadioGroup step2Q3RadioGroup;
-    private RadioGroup step2Q4RadioGroup;
 
 
     @Override
@@ -40,6 +47,13 @@ public class MonCoeur extends AppCompatActivity {
         setContentView(R.layout.activity_mon_coeur);
 
         Log.d(TAG, "onCreate: ");
+
+        step2Q5Spinner = findViewById(R.id.step2Q5Spinner);
+
+        step2Q1RadioGroup = findViewById(R.id.step2Q1RadioGroup);
+        step2Q2RadioGroup = findViewById(R.id.step2Q2RadioGroup);
+        step2Q3RadioGroup = findViewById(R.id.step2Q3RadioGroup);
+        step2Q4RadioGroup = findViewById(R.id.step2Q4RadioGroup);
 
         step2Q1RbYes = findViewById(R.id.step2Q1RbYes);
         step2Q1RbNo = findViewById(R.id.step2Q1RbNo);
@@ -50,17 +64,28 @@ public class MonCoeur extends AppCompatActivity {
         step2Q4RbYes = findViewById(R.id.step2Q4RbYes);
         step2Q4RbNo = findViewById(R.id.step2Q4RbNo);
 
-        step2Q5Spinner = findViewById(R.id.step2Q5Spinner);
-        step2Q6Spinner = findViewById(R.id.step2Q6Spinner);
 
-        step2Q1RadioGroup = findViewById(R.id.step2Q1RadioGroup);
-        step2Q2RadioGroup = findViewById(R.id.step2Q2RadioGroup);
-        step2Q3RadioGroup = findViewById(R.id.step2Q3RadioGroup);
-        step2Q4RadioGroup = findViewById(R.id.step2Q4RadioGroup);
     }
 
     public void toast(String msg) {
         Toast.makeText(this, msg,Toast.LENGTH_SHORT).show();
+    }
+
+    public void vibrate(long duration_ms) {
+        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        if(duration_ms < 1)
+            duration_ms = 1;
+        if(v != null && v.hasVibrator()) {
+            // Attention changement comportement avec API >= 26 (cf doc)
+            if(Build.VERSION.SDK_INT >= 26) {
+                v.vibrate(VibrationEffect.createOneShot(duration_ms,
+                        VibrationEffect.DEFAULT_AMPLITUDE));
+            }
+            else {
+                v.vibrate(duration_ms);
+            }
+        }
+        // sinon il n'y a pas de mécanisme de vibration
     }
 
     public void previous(View v) {
@@ -80,6 +105,7 @@ public class MonCoeur extends AppCompatActivity {
         }
         else {
             toast("Please complete all fields");
+            vibrate(50);
 
         }
     }

@@ -13,24 +13,29 @@ public class Person implements Parcelable {
     //Profile
     private String name;
     private Genre genre;
-    private int age;
-
-    ////////pour utilisation de bouton gauche - droite //////////
-    private Boolean cardiacCheckUp;
+    private String age;
 
     //mon coeur
-
-
+    private Reponse step2Q1;
+    private Reponse step2Q2;
+    private Reponse step2Q3;
+    private Reponse step2Q4;
+    private Reponse step2Q5;
 
     //mon suivi cardiaque
-
+    private Boolean step3Q1;
+    private Boolean step3Q2;
+    private Boolean step3Q3;
 
     //imc
-
-
+    private Reponse step4Q1;
+    private int step4Q2Weight;
+    private int step4Q3;
+    private float step4Imc;
 
 
     public static final String DEFAULT_NAME = "UNDEFINED";
+    public static final String DEFAULT_AGE = "UNDEFINED";
 
     /**
      * Constructor. All members get default values
@@ -38,8 +43,20 @@ public class Person implements Parcelable {
     public Person() {
         this.setName(Person.DEFAULT_NAME);
         this.setGenre(Genre.UNDEFINED);
-        this.setAge(0);
-        this.setCardiacCheckUp(false);
+        this.setAge(Person.DEFAULT_AGE);
+        this.setStep2Q1(Reponse.UNDEFINED);
+        this.setStep2Q2(Reponse.UNDEFINED);
+        this.setStep2Q3(Reponse.UNDEFINED);
+        this.setStep2Q4(Reponse.UNDEFINED);
+        this.setStep2Q5(Reponse.UNDEFINED);
+        this.setStep3Q1(false);
+        this.setStep3Q2(false);
+        this.setStep3Q3(false);
+        this.setStep4Q1(Reponse.UNDEFINED);
+        this.setStep4Q2Weight(0);
+        this.setStep4Q3(0);
+        this.setStep4Imc(0);
+
     }
     /**
      * @return the description of this class as a String
@@ -49,7 +66,18 @@ public class Person implements Parcelable {
         StringBuilder sBuilder = new StringBuilder("\t Name: " + this.getName() + "\n");
         sBuilder.append("\t Genre: ").append(this.getGenre()).append("\n");
         sBuilder.append("\t Age: ").append(this.getAge()).append("\n");
-        sBuilder.append("\t Cardiac Checkup: ").append(this.getCardiacCheckUp()).append("\n");
+        sBuilder.append("\t Heart Condition: ").append(this.getStep2Q1()).append("\n");
+        sBuilder.append("\t Cholesterol problem: ").append(this.getStep2Q2()).append("\n");
+        sBuilder.append("\t Diabetic: ").append(this.getStep2Q3()).append("\n");
+        sBuilder.append("\t Hypertension: ").append(this.getStep2Q4()).append("\n");
+        sBuilder.append("\t Parent with had heart problem?: ").append(this.getStep2Q5()).append("\n");
+        sBuilder.append("\t Discuss of cardiovascular risk?: ").append(this.getStep3Q1()).append("\n");
+        sBuilder.append("\t Cardiac check-up?: ").append(this.getStep3Q2()).append("\n");
+        sBuilder.append("\t Have you ever seen a cardiologist?: ").append(this.getStep3Q3()).append("\n");
+        sBuilder.append("\t Do you know your BMI?: ").append(this.getStep4Q1()).append("\n");
+        sBuilder.append("\t Weight: ").append(this.getStep4Q2Weight()).append("\n");
+        sBuilder.append("\t Size: ").append(this.getStep4Q3()).append("\n");
+        sBuilder.append("\t BMI: ").append(this.getStep4Imc()).append("\n");
         return sBuilder.toString();
     }
     /**
@@ -67,12 +95,34 @@ public String getName() { return this.name; }
     public void setName(String aName) { this.name = aName; }
     public Genre getGenre() { return this.genre; }
     public void setGenre(Genre aGenre) { this.genre = aGenre; }
-    public int getAge() { return this.age; }
-    public void setAge(int anAge) { this.age = anAge; }
-    public Boolean getCardiacCheckUp() { return this.cardiacCheckUp; }
-    public void setCardiacCheckUp(Boolean aCardiacCheckUp) {
-        this.cardiacCheckUp = aCardiacCheckUp;
-    }
+    public String getAge() { return this.age; }
+    public void setAge(String anAge) { this.age = anAge; }
+    public Reponse getStep2Q1() { return this.step2Q1; }
+    public void setStep2Q1(Reponse aStep2Q1) { this.step2Q1 = aStep2Q1; }
+    public Reponse getStep2Q2() { return this.step2Q2; }
+    public void setStep2Q2(Reponse aStep2Q2) { this.step2Q2 = aStep2Q2; }
+    public Reponse getStep2Q3() { return this.step2Q3; }
+    public void setStep2Q3(Reponse aStep2Q3) { this.step2Q3 = aStep2Q3; }
+    public Reponse getStep2Q4() { return this.step2Q4; }
+    public void setStep2Q4(Reponse aStep2Q4) { this.step2Q4 = aStep2Q4; }
+    public Reponse getStep2Q5() { return this.step2Q5; }
+    public void setStep2Q5(Reponse aStep2Q5) { this.step2Q5 = aStep2Q5; }
+    public Boolean getStep3Q1() { return this.step3Q1; }
+    public void setStep3Q1(Boolean aStep3Q1) { this.step3Q1 = aStep3Q1; }
+    public Boolean getStep3Q2() { return this.step3Q2; }
+    public void setStep3Q2(Boolean aStep3Q2) { this.step3Q2 = aStep3Q2; }
+    public Boolean getStep3Q3() { return this.step3Q3; }
+    public void setStep3Q3(Boolean aStep3Q3) { this.step3Q3 = aStep3Q3; }
+    public Reponse getStep4Q1() { return this.step4Q1; }
+    public void setStep4Q1(Reponse aStep4Q1) { this.step4Q1 = aStep4Q1; }
+    public int getStep4Q2Weight() { return this.step4Q2Weight; }
+    public void setStep4Q2Weight(int aStep4Q2Weight) { this.step4Q2Weight = aStep4Q2Weight; }
+    public int getStep4Q3() { return this.step4Q3; }
+    public void setStep4Q3(int aStep4Q3) { this.step4Q3 = aStep4Q3; }
+    public float getStep4Imc() { return this.step4Imc; }
+    public void setStep4Imc(float aStep4Imc) { this.step4Imc = aStep4Imc; }
+
+
     @Override // Parcelable method
     public int describeContents() { return 0;}
     @Override // Parcelable method
@@ -80,13 +130,27 @@ public String getName() { return this.name; }
 // Both reading and writing orderings must match (see Person(Parcel in) method)
         dest.writeString(this.getName());
         dest.writeInt(this.getGenre().ordinal());
-        dest.writeInt(this.getAge());
+        dest.writeString(this.getAge());
+        dest.writeInt(this.getStep2Q1().ordinal());
+        dest.writeInt(this.getStep2Q2().ordinal());
+        dest.writeInt(this.getStep2Q3().ordinal());
+        dest.writeInt(this.getStep2Q4().ordinal());
+        dest.writeInt(this.getStep2Q5().ordinal());
+        dest.writeBoolean(this.getStep3Q1());
+        dest.writeBoolean(this.getStep3Q2());
+        dest.writeBoolean(this.getStep3Q3());
+        dest.writeInt(this.getStep4Q1().ordinal());
+        dest.writeInt(this.getStep4Q2Weight());
+        dest.writeInt(this.getStep4Q3());
+        dest.writeFloat(this.getStep4Imc());
+
+
 // dest.writeBoolean() requires API 29
 // If the error "current min is set to <Number lesser than 29>"
 // => Edit Gradle scripts -> build.gradle (Module: YourApp.app)
 // ==> change "minSdK <Number lesser than 29>" to "minSdk 29"
 // (this SDK must be installed)
-        dest.writeBoolean(this.getCardiacCheckUp());
+        //dest.writeBoolean(this.getCardiacCheckUp());
     }
     /**
      * https://developer.android.com/reference/android/os/Parcelable#java
@@ -107,8 +171,19 @@ public String getName() { return this.name; }
 // Both reading and writing orderings must match (see writeToParcel method)
         this.setName(in.readString());
         this.setGenre(Genre.values()[in.readInt()]);
-        this.setAge(in.readInt());
-        this.setCardiacCheckUp(in.readBoolean());
+        this.setAge(in.readString());
+        this.setStep2Q1(Reponse.values()[in.readInt()]);
+        this.setStep2Q2(Reponse.values()[in.readInt()]);
+        this.setStep2Q3(Reponse.values()[in.readInt()]);
+        this.setStep2Q4(Reponse.values()[in.readInt()]);
+        this.setStep2Q5(Reponse.values()[in.readInt()]);
+        this.setStep3Q1(in.readBoolean());
+        this.setStep3Q2(in.readBoolean());
+        this.setStep3Q3(in.readBoolean());
+        this.setStep4Q1(Reponse.values()[in.readInt()]);
+        this.setStep4Q2Weight(in.readInt());
+        this.setStep4Q3(in.readInt());
+        this.setStep4Imc(in.readFloat());
     }
 }
 

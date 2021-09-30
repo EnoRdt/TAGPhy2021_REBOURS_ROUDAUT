@@ -16,12 +16,7 @@ public class MonSuiviCardiaque extends AppCompatActivity {
 
     public static final String TAG = MainActivity.TAG;
 
-    private RadioButton step3Q1RbYes;
-    private RadioButton step3Q1RbNo;
-    private RadioButton step3Q2RbYes;
-    private RadioButton step3Q2RbNo;
-    private RadioButton step3Q3RbYes;
-    private RadioButton step3Q3RbNo;
+    private Person person;
 
     private Switch step3Q1Switch;
     private Switch step3Q2Switch;
@@ -41,9 +36,6 @@ public class MonSuiviCardiaque extends AppCompatActivity {
         Log.d(TAG, "onCreate: ");
     }
 
-    public void toast(String msg) {
-        Toast.makeText(this, msg,Toast.LENGTH_SHORT).show();
-    }
 
     public void next(View v) {
         Log.d(TAG, "next: ");

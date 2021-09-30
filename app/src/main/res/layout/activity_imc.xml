@@ -117,14 +117,6 @@
                     android:text="@string/RbNo"
                     android:textColor="#FFFFFF" />
 
-                <RadioButton
-                    android:id="@+id/step4Q6RbIdk"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:buttonTint="#FFFFFF"
-                    android:text="@string/RbIdk"
-                    android:textColor="#FFFFFF" />
-
             </RadioGroup>
 
             <TextView
