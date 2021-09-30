@@ -17,9 +17,9 @@
     <string name="BtnNext">Next</string>
     <string name="step3">Step 3</string>
     <string name="step3Title">MY HEART FOLLOW UP</string>
-    <string name="step3Q1Ask">Have you ever discussed your cardiovascular risk with your doctor?</string>
-    <string name="step3Q2Ask">Have you ever done a cardiac check-up?</string>
-    <string name="step3Q3Ask">Have you ever seen a cardiologist?</string>
+    <string name="step3Q1Ask">Have you ever discussed your cardiovascular risk with your doctor? (Default = No)</string>
+    <string name="step3Q2Ask">Have you ever done a cardiac check-up? (Default = No)</string>
+    <string name="step3Q3Ask">Have you ever seen a cardiologist? (Default = No)</string>
     <string name="inputName">Name</string>
     <string name="step1">Step 1</string>
     <string name="step1Title">MY PROFILE</string>

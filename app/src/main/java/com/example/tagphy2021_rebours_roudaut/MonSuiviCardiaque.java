@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.Toast;
 
 public class MonSuiviCardiaque extends AppCompatActivity {
@@ -22,9 +23,9 @@ public class MonSuiviCardiaque extends AppCompatActivity {
     private RadioButton step3Q3RbYes;
     private RadioButton step3Q3RbNo;
 
-    private RadioGroup step3Q1RadioGroup;
-    private RadioGroup step3Q2RadioGroup;
-    private RadioGroup step3Q3RadioGroup;
+    private Switch step3Q1Switch;
+    private Switch step3Q2Switch;
+    private Switch step3Q3Switch;
 
 
 
@@ -33,9 +34,9 @@ public class MonSuiviCardiaque extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mon_suivi_cardiaque);
 
-        step3Q1RadioGroup = findViewById(R.id.step3Q1RadioGroup);
-        step3Q2RadioGroup = findViewById(R.id.step3Q2RadioGroup);
-        step3Q3RadioGroup = findViewById(R.id.step3Q3RadioGroup);
+        step3Q1Switch = findViewById(R.id.step3Q1Switch);
+        step3Q2Switch = findViewById(R.id.step3Q2Switch);
+        step3Q3Switch = findViewById(R.id.step3Q3Switch);
 
         Log.d(TAG, "onCreate: ");
     }
@@ -44,20 +45,10 @@ public class MonSuiviCardiaque extends AppCompatActivity {
         Toast.makeText(this, msg,Toast.LENGTH_SHORT).show();
     }
 
-    public void next(View v){
-
-        if(step3Q1RadioGroup.getCheckedRadioButtonId() != -1 &&
-                step3Q2RadioGroup.getCheckedRadioButtonId() != -1 &&
-                step3Q3RadioGroup.getCheckedRadioButtonId() != -1)
-        {
-            Log.d(TAG, "next: ");
-            Intent intent = new Intent(this, Imc.class);
-            startActivity(intent);
-        }
-        else
-        {
-            toast("Please complete all fields");
-        }
+    public void next(View v) {
+        Log.d(TAG, "next: ");
+        Intent intent = new Intent(this, Imc.class);
+        startActivity(intent);
     }
 
     public void previous(View v) {

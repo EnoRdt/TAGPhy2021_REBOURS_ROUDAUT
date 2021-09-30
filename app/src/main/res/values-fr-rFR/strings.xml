@@ -15,9 +15,9 @@
     <string name="BtnNext">Suivant</string>
     <string name="step3">Etape 3</string>
     <string name="step3Title">MON SUIVI CARDIAQUE</string>
-    <string name="step3Q1Ask">Avez-vous déjà fait le point avec votre médecin traitant à propos de votre risque cardiovasculaire ?</string>
-    <string name="step3Q2Ask">Avez-vous déjà effectué un bilan cardiaque ?</string>
-    <string name="step3Q3Ask">Avez-vous déjà consulté un cardiologue ?</string>
+    <string name="step3Q1Ask">Avez-vous déjà fait le point avec votre médecin traitant à propos de votre risque cardiovasculaire ? (Par défault = Non)</string>
+    <string name="step3Q2Ask">Avez-vous déjà effectué un bilan cardiaque ? (Par défault = Non)</string>
+    <string name="step3Q3Ask">Avez-vous déjà consulté un cardiologue ? (Par défault = Non)</string>
     <string name="msg_name">Votre Nom</string>
     <string name="inputName">Nom</string>
     <string name="msg_start">Démarrer le test</string>
