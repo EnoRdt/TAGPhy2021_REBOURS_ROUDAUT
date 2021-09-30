@@ -47,13 +47,7 @@ public class Profil extends AppCompatActivity {
 
     public void next(View v){
 
-        //FAIRE UN TRY avec création de fichier d'erreur sauf si boolean???
-
-        //if blabla pour msg d'erreur toast si pas rempli
-
         //FAIRE UN SCORE A PASSER GENRE IF TRUC --> repScore = un certain nb pour resultat final
-
-        // Vérifier que age c'est un integer genre msg d'erreur si pas le cas!!
 
         if (step1Q1RadioGroup.getCheckedRadioButtonId() != -1
             && !step1Q2EditText.getText().toString().isEmpty()) {

@@ -46,8 +46,6 @@ public class MonSuiviCardiaque extends AppCompatActivity {
 
     public void next(View v){
 
-        //FAIRE UN TRY avec création de fichier d'erreur???
-
         if(step3Q1RadioGroup.getCheckedRadioButtonId() != -1 &&
                 step3Q2RadioGroup.getCheckedRadioButtonId() != -1 &&
                 step3Q3RadioGroup.getCheckedRadioButtonId() != -1)

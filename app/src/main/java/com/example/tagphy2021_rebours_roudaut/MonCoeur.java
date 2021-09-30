@@ -69,8 +69,6 @@ public class MonCoeur extends AppCompatActivity {
 
     public void next(View v){
 
-        //FAIRE UN TRY avec création de fichier d'erreur???
-
         if (step2Q1RadioGroup.getCheckedRadioButtonId() != -1 &&
                 step2Q2RadioGroup.getCheckedRadioButtonId() != -1 &&
                 step2Q3RadioGroup.getCheckedRadioButtonId() != -1 &&

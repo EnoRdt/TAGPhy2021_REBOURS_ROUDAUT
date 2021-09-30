@@ -32,9 +32,6 @@ public class Imc extends AppCompatActivity {
 
     public void next(View v){
 
-        //FAIRE UN TRY avec création de fichier d'erreur???
-
-        // Vérifier que l'age c'est un integer genre msg d'erreur si pas le cas!!
         // Vérifier que tous les champs sont renseignés
         Log.d(TAG, "start_test: ");
         Intent intent = new Intent(this, Resultats.class);
@@ -56,7 +53,6 @@ public class Imc extends AppCompatActivity {
             toast("Please complete all fields");
         } else {
             result = (Float.parseFloat(String.valueOf(step4Q2Weight.getText())) / ((Float.parseFloat(String.valueOf(step4Q3Size.getText()))/100) * (Float.parseFloat(String.valueOf(step4Q3Size.getText())))/100) );
-            //result = Float.parseFloat(String.valueOf(step4Q3Size.getText()))/100;
             res = Float.toString(result);
             step4Q4ViewResult.setText(res);
         }
