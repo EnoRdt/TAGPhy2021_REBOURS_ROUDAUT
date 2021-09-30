@@ -6,28 +6,60 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Spinner;
+import android.widget.Toast;
 
 public class MonSuiviCardiaque extends AppCompatActivity {
 
     public static final String TAG = MainActivity.TAG;
+
+    private RadioButton step3Q1RbYes;
+    private RadioButton step3Q1RbNo;
+    private RadioButton step3Q2RbYes;
+    private RadioButton step3Q2RbNo;
+    private RadioButton step3Q3RbYes;
+    private RadioButton step3Q3RbNo;
+
+    private RadioGroup step3Q1RadioGroup;
+    private RadioGroup step3Q2RadioGroup;
+    private RadioGroup step3Q3RadioGroup;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mon_suivi_cardiaque);
 
+        step3Q1RadioGroup = findViewById(R.id.step3Q1RadioGroup);
+        step3Q2RadioGroup = findViewById(R.id.step3Q2RadioGroup);
+        step3Q3RadioGroup = findViewById(R.id.step3Q3RadioGroup);
+
         Log.d(TAG, "onCreate: ");
+    }
+
+    public void toast(String msg) {
+        Toast.makeText(this, msg,Toast.LENGTH_SHORT).show();
     }
 
     public void next(View v){
 
         //FAIRE UN TRY avec création de fichier d'erreur???
 
-        // Vérifier que l'age c'est un integer genre msg d'erreur si pas le cas!!
-        // Vérifier que tous les champs sont renseignés
-        Log.d(TAG, "start_test: ");
-        Intent intent = new Intent(this, Imc.class);
-        startActivity(intent);
+        if(step3Q1RadioGroup.getCheckedRadioButtonId() != -1 &&
+                step3Q2RadioGroup.getCheckedRadioButtonId() != -1 &&
+                step3Q3RadioGroup.getCheckedRadioButtonId() != -1)
+        {
+            Log.d(TAG, "next: ");
+            Intent intent = new Intent(this, Imc.class);
+            startActivity(intent);
+        }
+        else
+        {
+            toast("Please complete all fields");
+        }
     }
 
     public void previous(View v) {

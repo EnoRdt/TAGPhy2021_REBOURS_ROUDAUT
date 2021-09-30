@@ -6,11 +6,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class Profil extends AppCompatActivity {
 
     public static final String TAG = MainActivity.TAG;
+    private RadioButton step1Q1RbMan;
+    private RadioButton step1Q1RbWoman;
+    private RadioButton step1Q1RbOther;
+    private EditText step1Q2EditText;
+
+    private RadioGroup step1Q1RadioGroup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +27,13 @@ public class Profil extends AppCompatActivity {
         setContentView(R.layout.activity_profil);
 
         Log.d(TAG, "onCreate: ");
+
+        step1Q1RbMan = findViewById(R.id.step1Q1RbMan);
+        step1Q1RbWoman = findViewById(R.id.step1Q1RbWoman);
+        step1Q1RbOther = findViewById(R.id.step1Q1RbOther);
+        step1Q2EditText = findViewById(R.id.step1Q2EditText);
+
+        step1Q1RadioGroup = findViewById(R.id.step1Q1RadioGroup);
 
         Intent intent = getIntent();
         String name = intent.getStringExtra("name");
@@ -39,15 +55,18 @@ public class Profil extends AppCompatActivity {
 
         // Vérifier que age c'est un integer genre msg d'erreur si pas le cas!!
 
-        int finalScore = 0 ;
-        int repScore = -1;
+        if (step1Q1RadioGroup.getCheckedRadioButtonId() != -1
+            && !step1Q2EditText.getText().toString().isEmpty()) {
 
-        Intent intent = new Intent(this, MonCoeur.class);
+            Intent intent = new Intent(this, MonCoeur.class);
+            Log.d(TAG, "next: " );
+            //  intent.putExtra("score", finalScore);
+            startActivity(intent);
+        }
+        else {
+            toast("Please complete all fields");
+        }
 
-        finalScore = finalScore + repScore;
-        Log.d(TAG, "next: score : " + finalScore);
-        intent.putExtra("score", finalScore);
-        startActivity(intent);
     }
 
 
