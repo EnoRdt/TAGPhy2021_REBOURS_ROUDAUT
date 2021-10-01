@@ -28,15 +28,17 @@ public class Person implements Parcelable {
     private Boolean step3Q3;
 
     //imc
-    private Reponse step4Q1;
-    private int step4Q2Weight;
-    private int step4Q3;
-    private float step4Imc;
+    private String step4Q2Weight;
+    private String step4Q3Size;
+    private String step4Imc;
 
 
     public static final String DEFAULT_NAME = "UNDEFINED";
     public static final String DEFAULT_AGE = "UNDEFINED";
     public static final String DEFAULT_REP = "Yes";
+    public static final String DEFAULT_IMC = "UNDEFINED";
+    public static final String DEFAULT_WEIGHT = "UNDEFINED";
+    public static final String DEFAULT_SIZE = "UNDEFINED";
 
     /**
      * Constructor. All members get default values
@@ -53,10 +55,9 @@ public class Person implements Parcelable {
         this.setStep3Q1(false);
         this.setStep3Q2(false);
         this.setStep3Q3(false);
-        this.setStep4Q1(Reponse.UNDEFINED);
-        this.setStep4Q2Weight(0);
-        this.setStep4Q3(0);
-        this.setStep4Imc(0);
+        this.setStep4Q2Weight(Person.DEFAULT_WEIGHT);
+        this.setStep4Q3Size(Person.DEFAULT_SIZE);
+        this.setStep4Imc(Person.DEFAULT_IMC);
 
     }
     /**
@@ -75,9 +76,8 @@ public class Person implements Parcelable {
         sBuilder.append("\t Discuss of cardiovascular risk?: ").append(this.getStep3Q1()).append("\n");
         sBuilder.append("\t Cardiac check-up?: ").append(this.getStep3Q2()).append("\n");
         sBuilder.append("\t Have you ever seen a cardiologist?: ").append(this.getStep3Q3()).append("\n");
-        sBuilder.append("\t Do you know your BMI?: ").append(this.getStep4Q1()).append("\n");
         sBuilder.append("\t Weight: ").append(this.getStep4Q2Weight()).append("\n");
-        sBuilder.append("\t Size: ").append(this.getStep4Q3()).append("\n");
+        sBuilder.append("\t Size: ").append(this.getStep4Q3Size()).append("\n");
         sBuilder.append("\t BMI: ").append(this.getStep4Imc()).append("\n");
         return sBuilder.toString();
     }
@@ -114,14 +114,12 @@ public String getName() { return this.name; }
     public void setStep3Q2(Boolean aStep3Q2) { this.step3Q2 = aStep3Q2; }
     public Boolean getStep3Q3() { return this.step3Q3; }
     public void setStep3Q3(Boolean aStep3Q3) { this.step3Q3 = aStep3Q3; }
-    public Reponse getStep4Q1() { return this.step4Q1; }
-    public void setStep4Q1(Reponse aStep4Q1) { this.step4Q1 = aStep4Q1; }
-    public int getStep4Q2Weight() { return this.step4Q2Weight; }
-    public void setStep4Q2Weight(int aStep4Q2Weight) { this.step4Q2Weight = aStep4Q2Weight; }
-    public int getStep4Q3() { return this.step4Q3; }
-    public void setStep4Q3(int aStep4Q3) { this.step4Q3 = aStep4Q3; }
-    public float getStep4Imc() { return this.step4Imc; }
-    public void setStep4Imc(float aStep4Imc) { this.step4Imc = aStep4Imc; }
+    public String getStep4Q2Weight() { return this.step4Q2Weight; }
+    public void setStep4Q2Weight(String aStep4Q2Weight) { this.step4Q2Weight = aStep4Q2Weight; }
+    public String getStep4Q3Size() { return this.step4Q3Size; }
+    public void setStep4Q3Size(String aStep4Q3Size) { this.step4Q3Size = aStep4Q3Size; }
+    public String getStep4Imc() { return this.step4Imc; }
+    public void setStep4Imc(String aStep4Imc) { this.step4Imc = aStep4Imc; }
 
 
     @Override // Parcelable method
@@ -140,10 +138,9 @@ public String getName() { return this.name; }
         dest.writeBoolean(this.getStep3Q1());
         dest.writeBoolean(this.getStep3Q2());
         dest.writeBoolean(this.getStep3Q3());
-        dest.writeInt(this.getStep4Q1().ordinal());
-        dest.writeInt(this.getStep4Q2Weight());
-        dest.writeInt(this.getStep4Q3());
-        dest.writeFloat(this.getStep4Imc());
+        dest.writeString(this.getStep4Q2Weight());
+        dest.writeString(this.getStep4Q3Size());
+        dest.writeString(this.getStep4Imc());
 
 
 // dest.writeBoolean() requires API 29
@@ -181,10 +178,9 @@ public String getName() { return this.name; }
         this.setStep3Q1(in.readBoolean());
         this.setStep3Q2(in.readBoolean());
         this.setStep3Q3(in.readBoolean());
-        this.setStep4Q1(Reponse.values()[in.readInt()]);
-        this.setStep4Q2Weight(in.readInt());
-        this.setStep4Q3(in.readInt());
-        this.setStep4Imc(in.readFloat());
+        this.setStep4Q2Weight(in.readString());
+        this.setStep4Q3Size(in.readString());
+        this.setStep4Imc(in.readString());
     }
 }
 

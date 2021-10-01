@@ -44,10 +44,14 @@
         app:layout_constraintStart_toEndOf="@+id/step4Img" />
 
     <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="714dp"
-        android:layout_height="137dp"
+        android:id="@+id/scrollView3"
+        android:layout_width="716dp"
+        android:layout_height="127dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/step4Title">
 
@@ -60,7 +64,8 @@
                 android:id="@+id/step4Q1"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_marginStart="44dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="-5dp"
                 android:background="#FFFFFF"
                 android:text="1"
                 android:textAlignment="center"
@@ -75,6 +80,7 @@
                 android:id="@+id/step4Q1Ask"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
                 android:text="@string/step4Q1Ask"
                 android:textAlignment="viewStart"
@@ -92,7 +98,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="@+id/step4Q1Ask"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/step4Q1Ask"
                 app:layout_constraintTop_toBottomOf="@+id/step4Q1Ask">
 
@@ -102,6 +107,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:buttonTint="#FFFFFF"
+                    android:onClick="check"
                     android:text="@string/RbYes"
                     android:textColor="#FFFFFF" />
 
@@ -110,6 +116,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:buttonTint="#FFFFFF"
+                    android:onClick="check"
                     android:text="@string/RbNo"
                     android:textColor="#FFFFFF" />
 
@@ -120,11 +127,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="112dp"
+                android:layout_marginTop="8dp"
                 android:text="@string/step4Q2Ask"
                 android:textAlignment="viewStart"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/step4Q2"
                 app:layout_constraintTop_toBottomOf="@+id/step4Q1RadioGroup"
@@ -135,11 +143,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="8dp"
                 android:text="@string/step4Q2AskBis"
                 android:textAlignment="viewStart"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/step4Q2Bis"
                 app:layout_constraintTop_toBottomOf="@+id/step4Q1RadioGroup"
@@ -157,6 +166,7 @@
                 android:textAlignment="viewStart"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/step4Q3"
                 app:layout_constraintTop_toBottomOf="@+id/step4Q2Weight"
@@ -173,6 +183,7 @@
                 android:textColor="#D3D803"
                 android:textSize="20sp"
                 android:textStyle="bold"
+                android:visibility="invisible"
                 app:layout_constraintStart_toStartOf="@+id/step4Q3"
                 app:layout_constraintTop_toTopOf="@+id/step4Q4Rep"
                 tools:ignore="TextContrastCheck" />
@@ -181,11 +192,12 @@
                 android:id="@+id/step4Q4ViewResult"
                 android:layout_width="87dp"
                 android:layout_height="33dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="8dp"
                 android:text="RESULT"
                 android:textAlignment="center"
                 android:textSize="20sp"
                 android:textStyle="bold"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="@+id/step4Q4Rep"
                 app:layout_constraintStart_toStartOf="@+id/step4Q4Rep"
                 app:layout_constraintTop_toBottomOf="@+id/step4Q4Rep" />
@@ -196,6 +208,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:onClick="calculImc"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="@+id/step4Q3Size"
                 app:layout_constraintStart_toStartOf="@+id/step4Q3Size"
                 app:layout_constraintTop_toBottomOf="@+id/step4Q3Size"
@@ -206,16 +219,19 @@
                 android:id="@+id/step4Q4Rep"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
                 android:labelFor="@id/step4Q3Size"
                 android:text="@string/step4Q4Rep"
                 android:textAlignment="viewStart"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/step4Q4"
                 app:layout_constraintTop_toBottomOf="@+id/step4ImgButton"
                 app:layout_constraintWidth_max="330dp" />
+
 
             <TextView
                 android:id="@+id/step4Q2"
@@ -228,6 +244,7 @@
                 android:textColor="#D3D803"
                 android:textSize="20sp"
                 android:textStyle="bold"
+                android:visibility="invisible"
                 app:layout_constraintStart_toStartOf="@+id/step4Q1"
                 app:layout_constraintTop_toTopOf="@+id/step4Q2Ask"
                 tools:ignore="TextContrastCheck" />
@@ -242,6 +259,7 @@
                 android:textColor="#D3D803"
                 android:textSize="20sp"
                 android:textStyle="bold"
+                android:visibility="invisible"
                 app:layout_constraintStart_toStartOf="@+id/step4Q1"
                 app:layout_constraintTop_toTopOf="@+id/step4Q2AskBis"
                 tools:ignore="TextContrastCheck" />
@@ -250,12 +268,13 @@
                 android:id="@+id/step4Q2Weight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="3dp"
                 android:ems="10"
                 android:hint="ex : 56"
                 android:inputType="number"
                 android:labelFor="@id/step4Q2Ask"
                 android:minHeight="48dp"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="@+id/step4Q2Ask"
                 app:layout_constraintStart_toStartOf="@+id/step4Q2Ask"
                 app:layout_constraintTop_toBottomOf="@+id/step4Q2Ask" />
@@ -264,12 +283,13 @@
                 android:id="@+id/step4Q3Size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="3dp"
                 android:ems="10"
                 android:hint="ex : 168"
                 android:inputType="number"
                 android:labelFor="@id/step4Q3Ask"
                 android:minHeight="48dp"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="@+id/step4Q3Ask"
                 app:layout_constraintStart_toStartOf="@+id/step4Q3Ask"
                 app:layout_constraintTop_toBottomOf="@+id/step4Q3Ask" />
@@ -285,6 +305,7 @@
                 android:textColor="#D3D803"
                 android:textSize="20sp"
                 android:textStyle="bold"
+                android:visibility="invisible"
                 app:layout_constraintStart_toStartOf="@+id/step4Q2"
                 app:layout_constraintTop_toTopOf="@+id/step4Q3Ask"
                 tools:ignore="TextContrastCheck" />
@@ -293,12 +314,13 @@
                 android:id="@+id/step4Q2Imc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="3dp"
                 android:ems="10"
                 android:hint="ex : 19,6"
                 android:inputType="numberDecimal"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="@+id/step4Q2AskBis"
-                app:layout_constraintStart_toStartOf="@+id/step4Q2AskBis"
+                app:layout_constraintStart_toStartOf="@+id/step4Q2Ask"
                 app:layout_constraintTop_toBottomOf="@+id/step4Q2AskBis" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -306,28 +328,25 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/step4BtnNext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
-        android:backgroundTint="#BEAEAEAE"
-        android:onClick="next"
-        android:text="@string/BtnNext"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/scrollView2"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
-
-    <Button
         android:id="@+id/step4BtnPrevious"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="36dp"
         android:backgroundTint="#BEAEAEAE"
         android:onClick="previous"
         android:text="@string/BtnPrevious"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/scrollView2"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
 
+    <Button
+        android:id="@+id/step4BtnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:backgroundTint="#BEAEAEAE"
+        android:onClick="next"
+        android:text="@string/BtnNext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

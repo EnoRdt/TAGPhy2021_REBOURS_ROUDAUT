@@ -106,6 +106,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:buttonTint="#FFFFFF"
+                    android:onClick="check"
                     android:text="@string/RbYes"
                     android:textColor="#FFFFFF" />
 
@@ -114,170 +115,55 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:buttonTint="#FFFFFF"
+                    android:onClick="check"
                     android:text="@string/RbNo"
                     android:textColor="#FFFFFF" />
 
             </RadioGroup>
 
-            <TextView
-                android:id="@+id/step4Q2Ask"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="28dp"
-                android:text="@string/step4Q2Ask"
-                android:textAlignment="viewStart"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/step4Q2"
-                app:layout_constraintTop_toBottomOf="@+id/step4Q1RadioGroup"
-                app:layout_constraintWidth_max="330dp" />
-
-            <TextView
-                android:id="@+id/step4Q2AskBis"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="28dp"
-                android:text="@string/step4Q2AskBis"
-                android:textAlignment="viewStart"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/step4Q2Bis"
-                app:layout_constraintTop_toBottomOf="@+id/step4Q1RadioGroup"
-                app:layout_constraintWidth_max="330dp" />
-
-
-            <TextView
-                android:id="@+id/step4Q3Ask"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="8dp"
-                android:labelFor="@id/step4Q3Size"
-                android:text="@string/step4Q3"
-                android:textAlignment="viewStart"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/step4Q3"
-                app:layout_constraintTop_toBottomOf="@+id/step4Q2Weight"
-                app:layout_constraintWidth_max="330dp" />
-
-            <TextView
-                android:id="@+id/step4Q4"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="4dp"
-                android:background="#FFFFFF"
-                android:text="4"
-                android:textAlignment="center"
-                android:textColor="#D3D803"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/step4Q3"
-                app:layout_constraintTop_toTopOf="@+id/step4Q4Rep"
-                tools:ignore="TextContrastCheck" />
 
             <TextView
                 android:id="@+id/step4Q4ViewResult"
                 android:layout_width="87dp"
                 android:layout_height="33dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="3dp"
                 android:text="RESULT"
                 android:textAlignment="center"
                 android:textSize="20sp"
                 android:textStyle="bold"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="@+id/step4Q4Rep"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="@+id/step4Q4"
                 app:layout_constraintTop_toBottomOf="@+id/step4Q4Rep" />
 
-            <ImageButton
-                android:id="@+id/step4ImgButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:onClick="calculImc"
-                app:layout_constraintEnd_toEndOf="@+id/step4Q3Size"
-                app:layout_constraintStart_toStartOf="@+id/step4Q3Size"
-                app:layout_constraintTop_toBottomOf="@+id/step4Q3Size"
-                app:srcCompat="@android:drawable/ic_menu_slideshow"
-                tools:ignore="SpeakableTextPresentCheck" />
-
-            <TextView
-                android:id="@+id/step4Q4Rep"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:labelFor="@id/step4Q3Size"
-                android:text="@string/step4Q4Rep"
-                android:textAlignment="viewStart"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/step4Q4"
-                app:layout_constraintTop_toBottomOf="@+id/step4ImgButton"
-                app:layout_constraintWidth_max="330dp" />
-
-
-            <TextView
-                android:id="@+id/step4Q2"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="4dp"
-                android:background="#FFFFFF"
-                android:text="2"
-                android:textAlignment="center"
-                android:textColor="#D3D803"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/step4Q1"
-                app:layout_constraintTop_toTopOf="@+id/step4Q2Ask"
-                tools:ignore="TextContrastCheck" />
-
-            <TextView
-                android:id="@+id/step4Q2Bis"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:background="#FFFFFF"
-                android:text="2"
-                android:textAlignment="center"
-                android:textColor="#D3D803"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/step4Q1"
-                app:layout_constraintTop_toTopOf="@+id/step4Q2AskBis"
-                tools:ignore="TextContrastCheck" />
-
             <EditText
-                android:id="@+id/step4Q2Weight"
+                android:id="@+id/step4Q2Imc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="3dp"
                 android:ems="10"
-                android:hint="ex : 56"
-                android:inputType="number"
-                android:labelFor="@id/step4Q2Ask"
-                android:minHeight="48dp"
-                app:layout_constraintEnd_toEndOf="@+id/step4Q2Ask"
-                app:layout_constraintStart_toStartOf="@+id/step4Q2"
-                app:layout_constraintTop_toBottomOf="@+id/step4Q2Ask" />
+                android:hint="ex : 19,6"
+                android:inputType="numberDecimal"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/step4Q2AskBis"
+                app:layout_constraintHorizontal_bias="0.503"
+                app:layout_constraintStart_toStartOf="@+id/step4Q2Bis"
+                app:layout_constraintTop_toBottomOf="@+id/step4Q2AskBis" />
 
             <EditText
                 android:id="@+id/step4Q3Size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="3dp"
                 android:ems="10"
                 android:hint="ex : 168"
                 android:inputType="number"
                 android:labelFor="@id/step4Q3Ask"
                 android:minHeight="48dp"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="@+id/step4Q3Ask"
+                app:layout_constraintHorizontal_bias="0.503"
                 app:layout_constraintStart_toStartOf="@+id/step4Q3"
                 app:layout_constraintTop_toBottomOf="@+id/step4Q3Ask" />
 
@@ -292,21 +178,158 @@
                 android:textColor="#D3D803"
                 android:textSize="20sp"
                 android:textStyle="bold"
+                android:visibility="invisible"
                 app:layout_constraintStart_toStartOf="@+id/step4Q2"
                 app:layout_constraintTop_toTopOf="@+id/step4Q3Ask"
                 tools:ignore="TextContrastCheck" />
 
             <EditText
-                android:id="@+id/step4Q2Imc"
+                android:id="@+id/step4Q2Weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:ems="10"
+                android:hint="ex : 56"
+                android:inputType="number"
+                android:labelFor="@id/step4Q2Ask"
+                android:minHeight="48dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/step4Q2Ask"
+                app:layout_constraintHorizontal_bias="0.503"
+                app:layout_constraintStart_toStartOf="@+id/step4Q2"
+                app:layout_constraintTop_toBottomOf="@+id/step4Q2Ask" />
+
+            <TextView
+                android:id="@+id/step4Q2Bis"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="#FFFFFF"
+                android:text="2"
+                android:textAlignment="center"
+                android:textColor="#D3D803"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="@+id/step4Q1"
+                app:layout_constraintTop_toTopOf="@+id/step4Q2AskBis"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/step4Q2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="4dp"
+                android:background="#FFFFFF"
+                android:text="2"
+                android:textAlignment="center"
+                android:textColor="#D3D803"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="@+id/step4Q1"
+                app:layout_constraintTop_toTopOf="@+id/step4Q2Ask"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/step4Q4Rep"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:labelFor="@id/step4Q3Size"
+                android:text="@string/step4Q4Rep"
+                android:textAlignment="viewStart"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/step4Q4"
+                app:layout_constraintTop_toBottomOf="@+id/step4ImgButton"
+                app:layout_constraintWidth_max="330dp" />
+
+            <TextView
+                android:id="@+id/step4Q2Ask"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/step4Q2Ask"
+                android:textAlignment="viewStart"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/step4Q2"
+                app:layout_constraintTop_toBottomOf="@+id/step4Q1RadioGroup"
+                app:layout_constraintWidth_max="330dp" />
+
+            <TextView
+                android:id="@+id/step4Q2AskBis"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/step4Q2AskBis"
+                android:textAlignment="viewStart"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/step4Q2Bis"
+                app:layout_constraintTop_toBottomOf="@+id/step4Q1RadioGroup"
+                app:layout_constraintWidth_max="330dp" />
+
+            <TextView
+                android:id="@+id/step4Q3Ask"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:labelFor="@id/step4Q3Size"
+                android:text="@string/step4Q3"
+                android:textAlignment="viewStart"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/step4Q3"
+                app:layout_constraintTop_toBottomOf="@+id/step4Q2Weight"
+                app:layout_constraintWidth_max="330dp" />
+
+            <TextView
+                android:id="@+id/step4Q4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="12dp"
+                android:background="#FFFFFF"
+                android:text="4"
+                android:textAlignment="center"
+                android:textColor="#D3D803"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="@+id/step4Q3"
+                app:layout_constraintTop_toTopOf="@+id/step4Q4Rep"
+                tools:ignore="TextContrastCheck" />
+
+            <ImageButton
+                android:id="@+id/step4ImgButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:ems="10"
-                android:hint="ex : 19,6"
-                android:inputType="numberDecimal"
-                app:layout_constraintEnd_toEndOf="@+id/step4Q2AskBis"
-                app:layout_constraintStart_toStartOf="@+id/step4Q2Bis"
-                app:layout_constraintTop_toBottomOf="@+id/step4Q2AskBis" />
+                android:onClick="calculImc"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/step4Q3Size"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="@+id/step4Q3Size"
+                app:layout_constraintTop_toBottomOf="@+id/step4Q3Size"
+                app:srcCompat="@android:drawable/ic_menu_slideshow"
+                tools:ignore="SpeakableTextPresentCheck" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

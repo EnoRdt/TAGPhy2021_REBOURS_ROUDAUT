@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private Button accBtnStart;
     private Person person;
 
+
     private static final String KEY_USERNAME = "username";
 
     @Override
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
             String username = savedInstanceState.getString(KEY_USERNAME);
             accEditName.setText(username);
         }
+
     }
 
     public void toast(String msg) {
@@ -76,8 +78,8 @@ public class MainActivity extends AppCompatActivity {
             toast("Please complete all fields");
             vibrate(50);
         } else {
-            person.setName(accEditName.getText().toString());
-            Log.d(TAG, "start_test: " + this.person);
+           // person.setName(accEditName.getText().toString());
+            Log.d(TAG, "start_test: " );
             Intent intent = new Intent(this, Profil.class);
             intent.putExtra("person", this.person);
             startActivity(intent);

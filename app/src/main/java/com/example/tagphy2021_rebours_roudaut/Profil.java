@@ -74,13 +74,13 @@ public class Profil extends AppCompatActivity {
         if (step1Q1RadioGroup.getCheckedRadioButtonId() != -1
             && !step1Q2EditText.getText().toString().isEmpty())
         {
-
+/*
             if(step1Q1RbMan.isChecked()){person.setGenre(Genre.MAN);}
             else if(step1Q1RbWoman.isChecked()){person.setGenre(Genre.WOMAN);}
             else {person.setGenre(Genre.OTHER);}
 
             person.setAge(step1Q2EditText.getText().toString());
-
+*/
             Intent intent = new Intent(this, MonCoeur.class);
             Log.d(TAG, "next: " );
             intent.putExtra("person", this.person);

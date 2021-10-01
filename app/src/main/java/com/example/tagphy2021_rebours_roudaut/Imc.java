@@ -93,38 +93,87 @@ public class Imc extends AppCompatActivity {
         // sinon il n'y a pas de mécanisme de vibration
     }
 
+    public void check(View v) {
+        if (step4Q1RadioGroup.getCheckedRadioButtonId() != -1) {
+            if (step4Q1RbYes.isChecked()) {
 
-    public void next(View v){
+                step4Q2Bis.setVisibility(View.VISIBLE);
+                step4Q2AskBis.setVisibility(View.VISIBLE);
+                step4Q2Imc.setVisibility(View.VISIBLE);
+                step4Q2.setVisibility(View.GONE);
+                step4Q3.setVisibility(View.GONE);
+                step4Q4.setVisibility(View.GONE);
+                step4Q2Ask.setVisibility(View.GONE);
+                step4Q3Ask.setVisibility(View.GONE);
+                step4Q4Rep.setVisibility(View.GONE);
+                step4Q2Weight.setVisibility(View.GONE);
+                step4Q3Size.setVisibility(View.GONE);
+                step4ImgButton.setVisibility(View.GONE);
+                step4Q4ViewResult.setVisibility(View.GONE);
+            }
+            else if (step4Q1RbNo.isChecked()){
+
+                step4Q2Bis.setVisibility(View.GONE);
+                step4Q2AskBis.setVisibility(View.GONE);
+                step4Q2Imc.setVisibility(View.GONE);
+                step4Q2.setVisibility(View.VISIBLE);
+                step4Q3.setVisibility(View.VISIBLE);
+                step4Q4.setVisibility(View.VISIBLE);
+                step4Q2Ask.setVisibility(View.VISIBLE);
+                step4Q3Ask.setVisibility(View.VISIBLE);
+                step4Q2Weight.setVisibility(View.VISIBLE);
+                step4Q3Size.setVisibility(View.VISIBLE);
+                step4ImgButton.setVisibility(View.VISIBLE);
+                step4Q4ViewResult.setVisibility(View.VISIBLE);
+                step4Q4Rep.setVisibility(View.VISIBLE);
+            }
+        }
+    }
+
+    public void calculImc(View v){
         float result;
         String res = "RESULT";
+
+        if (step4Q2Weight.getText().toString().isEmpty() || step4Q3Size.getText().toString().isEmpty()) {
+            toast("Please complete all fields");
+            vibrate(50);
+        } else {
+            result = (Float.parseFloat(String.valueOf(step4Q2Weight.getText())) / ((Float.parseFloat(String.valueOf(step4Q3Size.getText())) / 100) * (Float.parseFloat(String.valueOf(step4Q3Size.getText()))) / 100));
+            res = Float.toString(result);
+            step4Q4ViewResult.setText(res);
+        }
+    }
+
+    public void next(View v){
 
         if (step4Q1RadioGroup.getCheckedRadioButtonId() != -1) {
             if (step4Q1RbYes.isChecked()){
 
-                //FAIRE APPARAITRE IMC ET DONNER VALEUR
-
-                Log.d(TAG, "start_test: ");
-                Intent intent = new Intent(this, Resultats.class);
-                intent.putExtra("person", this.person);
-                startActivity(intent);
-            }
-            else {
-                if (step4Q2Weight.getText().toString().isEmpty() || step4Q3Size.getText().toString().isEmpty()) {
+                if (step4Q2Imc.getText().toString().isEmpty()){
                     toast("Please complete all fields");
                     vibrate(50);
-                } else {
-                    //Faire apparaitre les champs de size taille
-                    //attribuer toutes les valeurs
-                    result = (Float.parseFloat(String.valueOf(step4Q2Weight.getText())) / ((Float.parseFloat(String.valueOf(step4Q3Size.getText())) / 100) * (Float.parseFloat(String.valueOf(step4Q3Size.getText()))) / 100));
-                    res = Float.toString(result);
-                    step4Q4ViewResult.setText(res);
+                }
+                else {
+                    //person.setStep4Imc(step4Q2Imc.getText().toString());
 
                     Log.d(TAG, "start_test: ");
                     Intent intent = new Intent(this, Resultats.class);
                     intent.putExtra("person", this.person);
                     startActivity(intent);
                 }
-
+            }
+            else {
+                if (step4Q2Weight.getText().toString().isEmpty() || step4Q3Size.getText().toString().isEmpty()) {
+                    toast("Please complete all fields");
+                    vibrate(50);
+                } else {
+                    //person.setStep4Q2Weight(step4Q2Weight.getText().toString());
+                   // person.setStep4Q3Size(step4Q3Size.getText().toString());
+                    Log.d(TAG, "start_test: ");
+                    Intent intent = new Intent(this, Resultats.class);
+                    intent.putExtra("person", this.person);
+                    startActivity(intent);
+                }
             }
         }
         else {

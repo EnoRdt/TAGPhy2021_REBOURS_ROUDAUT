@@ -6,4 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".Resultats">
 
+    <Button
+        android:id="@+id/resBtnWeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WebSite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/resBtnFinish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quit"
+        tools:layout_editor_absoluteX="229dp"
+        tools:layout_editor_absoluteY="203dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
