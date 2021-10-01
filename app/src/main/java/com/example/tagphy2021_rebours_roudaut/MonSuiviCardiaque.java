@@ -38,8 +38,14 @@ public class MonSuiviCardiaque extends AppCompatActivity {
 
 
     public void next(View v) {
+
+        if (step3Q1Switch.isChecked()){person.setStep3Q1(true);}
+        if (step3Q1Switch.isChecked()){person.setStep3Q2(true);}
+        if (step3Q1Switch.isChecked()){person.setStep3Q3(true);}
+
         Log.d(TAG, "next: ");
         Intent intent = new Intent(this, Imc.class);
+        intent.putExtra("person", this.person);
         startActivity(intent);
     }
 

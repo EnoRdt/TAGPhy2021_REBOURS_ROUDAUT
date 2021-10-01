@@ -191,7 +191,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/step4Q4Rep" />
 
             <ImageButton
-                android:id="@+id/imageButton3"
+                android:id="@+id/step4ImgButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
@@ -214,7 +214,7 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/step4Q4"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton3"
+                app:layout_constraintTop_toBottomOf="@+id/step4ImgButton"
                 app:layout_constraintWidth_max="330dp" />
 
             <TextView
@@ -290,7 +290,7 @@
                 tools:ignore="TextContrastCheck" />
 
             <EditText
-                android:id="@+id/editTextNumberDecimal"
+                android:id="@+id/step4Q2Imc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"

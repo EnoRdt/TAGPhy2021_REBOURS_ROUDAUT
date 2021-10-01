@@ -12,16 +12,40 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class Imc extends AppCompatActivity {
 
     public static final String TAG = MainActivity.TAG;
+
+    private RadioGroup step4Q1RadioGroup;
+    private RadioButton step4Q1RbYes;
+    private RadioButton step4Q1RbNo;
+
+    private TextView step4Q1;
+    private TextView step4Q1Ask;
     private TextView step4Q4ViewResult;
+    private TextView step4Q2;
+    private TextView step4Q2Bis;
+    private TextView step4Q3;
+    private TextView step4Q4;
+    private TextView step4Q2Ask;
+    private TextView step4Q2AskBis;
+    private TextView step4Q3Ask;
+    private TextView step4Q4Rep;
+
     private EditText step4Q2Weight;
     private EditText step4Q3Size;
+    private EditText step4Q2Imc;
+
+    private ImageButton step4ImgButton;
+
     private Person person;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,21 +54,25 @@ public class Imc extends AppCompatActivity {
 
         Log.d(TAG, "onCreate: ");
 
+        step4Q1RadioGroup = findViewById(R.id.step4Q1RadioGroup);
+        step4Q1RbYes = findViewById(R.id.step4Q1RbYes);
+        step4Q1RbNo = findViewById(R.id.step4Q1RbNo);
+        step4Q1 = findViewById(R.id.step4Q1);
+        step4Q1Ask = findViewById(R.id.step4Q1Ask);
         step4Q4ViewResult = findViewById(R.id.step4Q4ViewResult);
+        step4Q2 = findViewById(R.id.step4Q2);
+        step4Q2Bis = findViewById(R.id.step4Q2Bis);
+        step4Q3 = findViewById(R.id.step4Q3);
+        step4Q4 = findViewById(R.id.step4Q4);
+        step4Q2Ask = findViewById(R.id.step4Q2Ask);
+        step4Q2AskBis = findViewById(R.id.step4Q2AskBis);
+        step4Q3Ask = findViewById(R.id.step4Q3Ask);
+        step4Q4Rep = findViewById(R.id.step4Q4Rep);
         step4Q2Weight = findViewById(R.id.step4Q2Weight);
         step4Q3Size = findViewById(R.id.step4Q3Size);
-    }
+        step4Q2Imc = findViewById(R.id.step4Q2Imc);
+        step4ImgButton = findViewById(R.id.step4ImgButton);
 
-    public void next(View v){
-
-        // Vérifier que tous les champs sont renseignés
-        Log.d(TAG, "start_test: ");
-        Intent intent = new Intent(this, Resultats.class);
-        startActivity(intent);
-    }
-
-    public void previous(View v) {
-        this.onBackPressed();
     }
 
     public void toast(String msg) { Toast.makeText(this, msg,Toast.LENGTH_SHORT).show(); }
@@ -64,18 +92,51 @@ public class Imc extends AppCompatActivity {
         }
         // sinon il n'y a pas de mécanisme de vibration
     }
-    public void calculImc(View v) {
+
+
+    public void next(View v){
         float result;
         String res = "RESULT";
-        if (step4Q2Weight.getText().toString().isEmpty() || step4Q3Size.getText().toString().isEmpty()) {
+
+        if (step4Q1RadioGroup.getCheckedRadioButtonId() != -1) {
+            if (step4Q1RbYes.isChecked()){
+
+                //FAIRE APPARAITRE IMC ET DONNER VALEUR
+
+                Log.d(TAG, "start_test: ");
+                Intent intent = new Intent(this, Resultats.class);
+                intent.putExtra("person", this.person);
+                startActivity(intent);
+            }
+            else {
+                if (step4Q2Weight.getText().toString().isEmpty() || step4Q3Size.getText().toString().isEmpty()) {
+                    toast("Please complete all fields");
+                    vibrate(50);
+                } else {
+                    //Faire apparaitre les champs de size taille
+                    //attribuer toutes les valeurs
+                    result = (Float.parseFloat(String.valueOf(step4Q2Weight.getText())) / ((Float.parseFloat(String.valueOf(step4Q3Size.getText())) / 100) * (Float.parseFloat(String.valueOf(step4Q3Size.getText()))) / 100));
+                    res = Float.toString(result);
+                    step4Q4ViewResult.setText(res);
+
+                    Log.d(TAG, "start_test: ");
+                    Intent intent = new Intent(this, Resultats.class);
+                    intent.putExtra("person", this.person);
+                    startActivity(intent);
+                }
+
+            }
+        }
+        else {
             toast("Please complete all fields");
             vibrate(50);
-        } else {
-            result = (Float.parseFloat(String.valueOf(step4Q2Weight.getText())) / ((Float.parseFloat(String.valueOf(step4Q3Size.getText()))/100) * (Float.parseFloat(String.valueOf(step4Q3Size.getText())))/100) );
-            res = Float.toString(result);
-            step4Q4ViewResult.setText(res);
         }
     }
+
+    public void previous(View v) {
+        this.onBackPressed();
+    }
+
 
     @Override
     protected void onStart() {

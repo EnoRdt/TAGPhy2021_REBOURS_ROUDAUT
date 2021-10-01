@@ -20,7 +20,7 @@ public class Person implements Parcelable {
     private Reponse step2Q2;
     private Reponse step2Q3;
     private Reponse step2Q4;
-    private Reponse step2Q5;
+    private String step2Q5;
 
     //mon suivi cardiaque
     private Boolean step3Q1;
@@ -36,6 +36,7 @@ public class Person implements Parcelable {
 
     public static final String DEFAULT_NAME = "UNDEFINED";
     public static final String DEFAULT_AGE = "UNDEFINED";
+    public static final String DEFAULT_REP = "Yes";
 
     /**
      * Constructor. All members get default values
@@ -48,7 +49,7 @@ public class Person implements Parcelable {
         this.setStep2Q2(Reponse.UNDEFINED);
         this.setStep2Q3(Reponse.UNDEFINED);
         this.setStep2Q4(Reponse.UNDEFINED);
-        this.setStep2Q5(Reponse.UNDEFINED);
+        this.setStep2Q5(Person.DEFAULT_REP);
         this.setStep3Q1(false);
         this.setStep3Q2(false);
         this.setStep3Q3(false);
@@ -105,8 +106,8 @@ public String getName() { return this.name; }
     public void setStep2Q3(Reponse aStep2Q3) { this.step2Q3 = aStep2Q3; }
     public Reponse getStep2Q4() { return this.step2Q4; }
     public void setStep2Q4(Reponse aStep2Q4) { this.step2Q4 = aStep2Q4; }
-    public Reponse getStep2Q5() { return this.step2Q5; }
-    public void setStep2Q5(Reponse aStep2Q5) { this.step2Q5 = aStep2Q5; }
+    public String getStep2Q5() { return this.step2Q5; }
+    public void setStep2Q5(String aStep2Q5) { this.step2Q5 = aStep2Q5; }
     public Boolean getStep3Q1() { return this.step3Q1; }
     public void setStep3Q1(Boolean aStep3Q1) { this.step3Q1 = aStep3Q1; }
     public Boolean getStep3Q2() { return this.step3Q2; }
@@ -135,7 +136,7 @@ public String getName() { return this.name; }
         dest.writeInt(this.getStep2Q2().ordinal());
         dest.writeInt(this.getStep2Q3().ordinal());
         dest.writeInt(this.getStep2Q4().ordinal());
-        dest.writeInt(this.getStep2Q5().ordinal());
+        dest.writeString(this.getStep2Q5());
         dest.writeBoolean(this.getStep3Q1());
         dest.writeBoolean(this.getStep3Q2());
         dest.writeBoolean(this.getStep3Q3());
@@ -176,7 +177,7 @@ public String getName() { return this.name; }
         this.setStep2Q2(Reponse.values()[in.readInt()]);
         this.setStep2Q3(Reponse.values()[in.readInt()]);
         this.setStep2Q4(Reponse.values()[in.readInt()]);
-        this.setStep2Q5(Reponse.values()[in.readInt()]);
+        this.setStep2Q5(in.readString());
         this.setStep3Q1(in.readBoolean());
         this.setStep3Q2(in.readBoolean());
         this.setStep3Q3(in.readBoolean());

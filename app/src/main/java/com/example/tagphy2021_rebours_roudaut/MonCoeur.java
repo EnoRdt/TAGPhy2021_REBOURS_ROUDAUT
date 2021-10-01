@@ -99,8 +99,20 @@ public class MonCoeur extends AppCompatActivity {
                 step2Q3RadioGroup.getCheckedRadioButtonId() != -1 &&
                 step2Q4RadioGroup.getCheckedRadioButtonId() != -1)
         {
+            if(step2Q1RbYes.isChecked()){person.setStep2Q1(Reponse.YES);}
+            else {person.setStep2Q1(Reponse.NO);}
+            if(step2Q2RbYes.isChecked()){person.setStep2Q2(Reponse.YES);}
+            else {person.setStep2Q2(Reponse.NO);}
+            if(step2Q3RbYes.isChecked()){person.setStep2Q3(Reponse.YES);}
+            else {person.setStep2Q3(Reponse.NO);}
+            if(step2Q4RbYes.isChecked()){person.setStep2Q4(Reponse.YES);}
+            else {person.setStep2Q4(Reponse.NO);}
+
+            person.setStep2Q5(step2Q5Spinner.getSelectedItem().toString());
+
             Log.d(TAG, "next: ");
             Intent intent = new Intent(this, MonSuiviCardiaque.class);
+            intent.putExtra("person", this.person);
             startActivity(intent);
         }
         else {
