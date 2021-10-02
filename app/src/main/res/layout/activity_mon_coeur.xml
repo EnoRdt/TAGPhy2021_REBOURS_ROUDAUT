@@ -44,10 +44,9 @@
 
     <ScrollView
         android:id="@+id/scrollView4"
-        android:layout_width="384dp"
-        android:layout_height="389dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/step2Title">
@@ -315,10 +314,10 @@
                 android:id="@+id/step2Q5Spinner"
                 android:layout_width="313dp"
                 android:layout_height="48dp"
-                android:layout_marginTop="4dp"
                 android:entries="@array/spinner_no_yes_idk"
                 android:spinnerMode="dropdown"
                 app:layout_constraintEnd_toEndOf="@+id/step2Q5Ask"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/step2Q5Ask"
                 app:layout_constraintTop_toBottomOf="@+id/step2Q5Ask" />
 
@@ -330,26 +329,26 @@
         android:id="@+id/step2BtnPrevious"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="50dp"
         android:backgroundTint="#BEAEAEAE"
         android:onClick="previous"
         android:text="@string/BtnPrevious"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView4"
-        app:layout_constraintVertical_bias="0.279" />
+        app:layout_constraintVertical_bias="0.20999998" />
 
     <Button
         android:id="@+id/step2BtnNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="60dp"
+        android:layout_marginEnd="50dp"
         android:backgroundTint="#BEAEAEAE"
         android:onClick="next"
         android:text="@string/BtnNext"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView4"
-        app:layout_constraintVertical_bias="0.279" />
+        app:layout_constraintVertical_bias="0.20999998" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

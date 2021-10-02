@@ -28,11 +28,11 @@
     <string name="step1Q1RbWoman">A woman</string>
     <string name="step1Q1RbOther">Other</string>
     <string name="step1Q2Ask">How old are you?</string>
-    <string name="step4Title">MY IMC</string>
+    <string name="step4Title">MY BMI</string>
     <string name="step4">Step 4</string>
     <string name="step4Q1Ask">Do you know your body mass index (BMI)?</string>
     <string name="step4Q2Ask">What is your weight (in kg)?</string>
     <string name="step4Q3">What is your size (in cm)?</string>
-    <string name="step4Q4Rep">Your IMC is</string>
-    <string name="step4Q2AskBis">What is your IMC?</string>
+    <string name="step4Q4Rep">Your BMI is</string>
+    <string name="step4Q2AskBis">What is your BMI?</string>
 </resources>

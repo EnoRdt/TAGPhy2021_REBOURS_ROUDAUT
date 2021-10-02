@@ -4,21 +4,338 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D1C2C2"
     tools:context=".Resultats">
+
+
+
+    <TextView
+        android:id="@+id/ResultsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="REVIEW"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/resBtnWeb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:backgroundTint="#662785"
         android:text="WebSite"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        app:layout_constraintVertical_bias="0.19999999" />
 
     <Button
         android:id="@+id/resBtnFinish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:backgroundTint="#BEE64A4A"
         android:text="Quit"
-        tools:layout_editor_absoluteX="229dp"
-        tools:layout_editor_absoluteY="203dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        app:layout_constraintVertical_bias="0.198" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infosPersos">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/resultsStep2"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="25dp"
+                android:background="#FFFFFF"
+                android:text="Step 2 - MY HEART"
+                android:textAlignment="center"
+                android:textColor="#A1887F"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/resultsStep3"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="#FFFFFF"
+                android:text="Step 3 - MY HEART FOLLOW UP"
+                android:textAlignment="center"
+                android:textColor="#A1887F"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/resultsStep2Tips"
+                app:layout_constraintTop_toBottomOf="@+id/resultsStep2Tips" />
+
+            <TextView
+                android:id="@+id/resultsStep4"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="#FFFFFF"
+                android:text="Step 4 - BODY MASS INDEX"
+                android:textAlignment="center"
+                android:textColor="#A1887F"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/resultsStep3Tips"
+                app:layout_constraintTop_toBottomOf="@+id/resultsStep3Tips" />
+
+            <TextView
+                android:id="@+id/resultsStep2Q1Ask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Heart problem?"
+                android:textStyle="bold"
+                app:layout_constraintHeight_max="270dp"
+                app:layout_constraintStart_toStartOf="@+id/resultsStep2"
+                app:layout_constraintTop_toBottomOf="@+id/resultsStep2" />
+
+            <TextView
+                android:id="@+id/resultsStep2Q1Rep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Response"
+                app:layout_constraintBottom_toBottomOf="@+id/resultsStep2Q1Ask"
+                app:layout_constraintHeight_max="270dp"
+                app:layout_constraintStart_toEndOf="@+id/resultsStep2Q1Ask" />
+
+            <TextView
+                android:id="@+id/resultsStep3Q3Rep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Response"
+                app:layout_constraintBottom_toBottomOf="@+id/resultsStep4IMC"
+                app:layout_constraintHeight_max="270dp"
+                app:layout_constraintStart_toEndOf="@+id/resultsStep4IMC" />
+
+            <TextView
+                android:id="@+id/resultsStep3Q3Rep2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Response"
+                app:layout_constraintBottom_toBottomOf="@+id/resultsStep3Q3Ask"
+                app:layout_constraintHeight_max="270dp"
+                app:layout_constraintStart_toEndOf="@+id/resultsStep3Q3Ask" />
+
+            <TextView
+                android:id="@+id/resultsStep3Tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Tips"
+                app:layout_constraintStart_toStartOf="@+id/resultsStep3Q3Ask"
+                app:layout_constraintTop_toBottomOf="@+id/resultsStep3Q3Ask"
+                app:layout_constraintWidth_max="370dp" />
+
+            <TextView
+                android:id="@+id/resultsStep4Tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Tips"
+                app:layout_constraintStart_toStartOf="@+id/resultsStep4IMC"
+                app:layout_constraintTop_toBottomOf="@+id/resultsStep4IMC"
+                app:layout_constraintWidth_max="370dp" />
+
+            <TextView
+                android:id="@+id/resultsStep2Tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Tips"
+                app:layout_constraintStart_toStartOf="@+id/resultsStep2Q5Ask"
+                app:layout_constraintTop_toBottomOf="@+id/resultsStep2Q5Ask"
+                app:layout_constraintWidth_max="370dp" />
+
+            <TextView
+                android:id="@+id/resultsStep3Q2Rep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Response"
+                app:layout_constraintBottom_toBottomOf="@+id/resultsStep3Q2Ask"
+                app:layout_constraintHeight_max="270dp"
+                app:layout_constraintStart_toEndOf="@+id/resultsStep3Q2Ask" />
+
+            <TextView
+                android:id="@+id/resultsStep3Q1Rep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Response"
+                app:layout_constraintBottom_toBottomOf="@+id/resultsStep3Q1Ask"
+                app:layout_constraintHeight_max="270dp"
+                app:layout_constraintStart_toEndOf="@+id/resultsStep3Q1Ask" />
+
+            <TextView
+                android:id="@+id/resultsStep2Q5Rep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Response"
+                app:layout_constraintBottom_toBottomOf="@+id/resultsStep2Q5Ask"
+                app:layout_constraintHeight_max="270dp"
+                app:layout_constraintStart_toEndOf="@+id/resultsStep2Q5Ask" />
+
+            <TextView
+                android:id="@+id/resultsStep2Q4Rep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Response"
+                app:layout_constraintBottom_toBottomOf="@+id/resultsStep2Q4Ask"
+                app:layout_constraintHeight_max="270dp"
+                app:layout_constraintStart_toEndOf="@+id/resultsStep2Q4Ask" />
+
+            <TextView
+                android:id="@+id/resultsStep2Q3Rep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Response"
+                app:layout_constraintBottom_toBottomOf="@+id/resultsStep2Q3Ask"
+                app:layout_constraintHeight_max="270dp"
+                app:layout_constraintStart_toEndOf="@+id/resultsStep2Q3Ask" />
+
+            <TextView
+                android:id="@+id/resultsStep2Q2Rep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Response"
+                app:layout_constraintBottom_toBottomOf="@+id/resultsStep2Q2Ask"
+                app:layout_constraintHeight_max="270dp"
+                app:layout_constraintStart_toEndOf="@+id/resultsStep2Q2Ask" />
+
+            <TextView
+                android:id="@+id/resultsStep2Q2Ask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Cholesterol?"
+                android:textStyle="bold"
+                app:layout_constraintHeight_max="270dp"
+                app:layout_constraintStart_toStartOf="@+id/resultsStep2Q1Ask"
+                app:layout_constraintTop_toBottomOf="@+id/resultsStep2Q1Ask" />
+
+            <TextView
+                android:id="@+id/resultsStep2Q3Ask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Diabets?"
+                android:textStyle="bold"
+                app:layout_constraintHeight_max="270dp"
+                app:layout_constraintStart_toStartOf="@+id/resultsStep2Q2Ask"
+                app:layout_constraintTop_toBottomOf="@+id/resultsStep2Q2Ask" />
+
+            <TextView
+                android:id="@+id/resultsStep2Q4Ask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Hypertension?"
+                android:textStyle="bold"
+                app:layout_constraintHeight_max="270dp"
+                app:layout_constraintStart_toStartOf="@+id/resultsStep2Q3Ask"
+                app:layout_constraintTop_toBottomOf="@+id/resultsStep2Q3Ask" />
+
+            <TextView
+                android:id="@+id/resultsStep2Q5Ask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Parent with heart problem?"
+                android:textStyle="bold"
+                app:layout_constraintHeight_max="270dp"
+                app:layout_constraintStart_toStartOf="@+id/resultsStep2Q4Ask"
+                app:layout_constraintTop_toBottomOf="@+id/resultsStep2Q4Ask" />
+
+            <TextView
+                android:id="@+id/resultsStep3Q1Ask"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Have you ever discussed your cardiovascular risk with your doctor?"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/resultsStep3"
+                app:layout_constraintTop_toBottomOf="@+id/resultsStep3"
+                app:layout_constraintWidth_max="270dp" />
+
+            <TextView
+                android:id="@+id/resultsStep3Q3Ask"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Have you ever seen a cardiologist?"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/resultsStep3Q2Ask"
+                app:layout_constraintTop_toBottomOf="@+id/resultsStep3Q2Ask"
+                app:layout_constraintWidth_max="270dp" />
+
+            <TextView
+                android:id="@+id/resultsStep3Q2Ask"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Have you ever done a cardiac check-up?"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/resultsStep3Q1Ask"
+                app:layout_constraintTop_toBottomOf="@+id/resultsStep3Q1Ask"
+                app:layout_constraintWidth_max="270dp" />
+
+            <TextView
+                android:id="@+id/resultsStep4IMC"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="My BMI"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/resultsStep4"
+                app:layout_constraintTop_toBottomOf="@+id/resultsStep4"
+                app:layout_constraintWidth_max="270dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/infosPersos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Machin, H, 22 ans"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ResultsTitle" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

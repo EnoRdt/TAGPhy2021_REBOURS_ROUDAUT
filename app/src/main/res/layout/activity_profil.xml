@@ -30,21 +30,20 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView4"
-        app:layout_constraintVertical_bias="0.102" />
+        app:layout_constraintVertical_bias="0.19999999" />
 
     <Button
         android:id="@+id/step1BtnPrevious"
         android:layout_width="124dp"
         android:layout_height="50dp"
         android:layout_marginStart="50dp"
-        android:layout_marginBottom="44dp"
         android:backgroundTint="#BEAEAEAE"
         android:onClick="previous"
         android:text="@string/BtnPrevious"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView4"
-        app:layout_constraintVertical_bias="0.115" />
+        app:layout_constraintVertical_bias="0.19999999" />
 
     <TextView
         android:id="@+id/step1Title"
@@ -72,11 +71,9 @@
 
     <ScrollView
         android:id="@+id/scrollView4"
-        android:layout_width="361dp"
-        android:layout_height="151dp"
-        android:layout_marginStart="15dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/step1Title">
