@@ -79,22 +79,6 @@ public class Imc extends AppCompatActivity {
 
     }
 
-    //Sauvegarde :
-    @Override
-    protected void onSaveInstanceState(@NonNull Bundle outState) {
-        super.onSaveInstanceState(outState);
-        //outState.putString(KEY_TRANSFER, editName.getText().toString());
-    }
-
-    //Restauration :
-    @Override
-    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        if(savedInstanceState.containsKey(KEY_TRANSFER)) {
-            String pokename = savedInstanceState.getString(KEY_TRANSFER);
-            //editName.setText(pokename);
-        }
-    }
 
     private void processIntentData() {
         Intent intent = getIntent();

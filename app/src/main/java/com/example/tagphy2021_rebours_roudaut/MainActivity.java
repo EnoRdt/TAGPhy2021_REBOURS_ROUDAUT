@@ -64,22 +64,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    //Sauvegarde :
-    @Override
-    protected void onSaveInstanceState(@NonNull Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putString(KEY_TRANSFER, accEditName.getText().toString());
-    }
 
-    //Restauration :
-    @Override
-    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        if(savedInstanceState.containsKey(KEY_TRANSFER)) {
-            String userName = savedInstanceState.getString(KEY_TRANSFER);
-            accEditName.setText(userName);
-        }
-    }
 
             public void toast(String msg) {
         Toast.makeText(this, msg,Toast.LENGTH_SHORT).show();
