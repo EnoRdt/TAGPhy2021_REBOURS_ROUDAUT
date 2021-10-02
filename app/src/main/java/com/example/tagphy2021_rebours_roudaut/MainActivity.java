@@ -38,12 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         processIntentData();
         if (person == null){person = new Person();}
-
-        //on restaure suite à onCreate
-        if(savedInstanceState != null && savedInstanceState.containsKey(KEY_TRANSFER)) {
-            String username = savedInstanceState.getString(KEY_TRANSFER);
-            accEditName.setText(username);
-        }
+        else {accEditName.setText(person.getName());}
 
     }
 

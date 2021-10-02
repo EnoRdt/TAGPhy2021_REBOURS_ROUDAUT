@@ -68,9 +68,25 @@ public class MonCoeur extends AppCompatActivity {
 
         processIntentData();
 
+        if(person.getStep2Q1()==Reponse.YES){step2Q1RbYes.setChecked(true);}
+        else if(person.getStep2Q1()==Reponse.NO){step2Q1RbNo.setChecked(true);}
+
+        if(person.getStep2Q2()==Reponse.YES){step2Q2RbYes.setChecked(true);}
+        else if(person.getStep2Q2()==Reponse.NO){step2Q2RbNo.setChecked(true);}
+
+        if(person.getStep2Q3()==Reponse.YES){step2Q3RbYes.setChecked(true);}
+        else if(person.getStep2Q3()==Reponse.NO){step2Q3RbNo.setChecked(true);}
+
+        if(person.getStep2Q4()==Reponse.YES){step2Q4RbYes.setChecked(true);}
+        else if(person.getStep2Q4()==Reponse.NO){step2Q4RbNo.setChecked(true);}
+
+
+        if(person.getStep2Q5()=="Yes" || person.getStep2Q5()=="Non"){step2Q5Spinner.setSelection(1);}
+        else if(person.getStep2Q5()=="I do not know" || person.getStep2Q5()=="Je ne sais pas"){step2Q5Spinner.setSelection(2);}
+        else{step2Q5Spinner.setSelection(0);};
+
+
     }
-
-
 
     private void processIntentData() {
         Intent intent = getIntent();

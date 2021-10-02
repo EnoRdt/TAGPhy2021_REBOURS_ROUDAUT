@@ -45,6 +45,12 @@ public class Profil extends AppCompatActivity {
 
         processIntentData();
 
+        if(person.getGenre()==Genre.WOMAN){step1Q1RbWoman.setChecked(true);}
+        else if(person.getGenre()==Genre.MAN){step1Q1RbMan.setChecked(true);}
+        else if(person.getGenre()==Genre.OTHER){step1Q1RbOther.setChecked(true);}
+
+        if(!person.getAge().equals(person.DEFAULT_AGE)){step1Q2EditText.setText(person.getAge());}
+
 
         Log.d(TAG, "onCreate: " );
     }

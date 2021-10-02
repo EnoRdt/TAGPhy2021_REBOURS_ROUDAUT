@@ -28,6 +28,7 @@ public class Person implements Parcelable {
     private Boolean step3Q3;
 
     //imc
+    private Reponse step4Q1;
     private String step4Q2Weight;
     private String step4Q3Size;
     private String step4Imc;
@@ -39,6 +40,7 @@ public class Person implements Parcelable {
     public static final String DEFAULT_IMC = "UNDEFINED";
     public static final String DEFAULT_WEIGHT = "UNDEFINED";
     public static final String DEFAULT_SIZE = "UNDEFINED";
+
 
     /**
      * Constructor. All members get default values
@@ -55,6 +57,7 @@ public class Person implements Parcelable {
         this.setStep3Q1(false);
         this.setStep3Q2(false);
         this.setStep3Q3(false);
+        this.setStep4Q1(Reponse.UNDEFINED);
         this.setStep4Q2Weight(Person.DEFAULT_WEIGHT);
         this.setStep4Q3Size(Person.DEFAULT_SIZE);
         this.setStep4Imc(Person.DEFAULT_IMC);
@@ -114,6 +117,8 @@ public String getName() { return this.name; }
     public void setStep3Q2(Boolean aStep3Q2) { this.step3Q2 = aStep3Q2; }
     public Boolean getStep3Q3() { return this.step3Q3; }
     public void setStep3Q3(Boolean aStep3Q3) { this.step3Q3 = aStep3Q3; }
+    public Reponse getStep4Q1() { return this.step4Q1; }
+    public void setStep4Q1(Reponse aStep4Q1) { this.step4Q1 = aStep4Q1; }
     public String getStep4Q2Weight() { return this.step4Q2Weight; }
     public void setStep4Q2Weight(String aStep4Q2Weight) { this.step4Q2Weight = aStep4Q2Weight; }
     public String getStep4Q3Size() { return this.step4Q3Size; }
@@ -138,6 +143,7 @@ public String getName() { return this.name; }
         dest.writeBoolean(this.getStep3Q1());
         dest.writeBoolean(this.getStep3Q2());
         dest.writeBoolean(this.getStep3Q3());
+        dest.writeInt(this.getStep4Q1().ordinal());
         dest.writeString(this.getStep4Q2Weight());
         dest.writeString(this.getStep4Q3Size());
         dest.writeString(this.getStep4Imc());
@@ -178,6 +184,7 @@ public String getName() { return this.name; }
         this.setStep3Q1(in.readBoolean());
         this.setStep3Q2(in.readBoolean());
         this.setStep3Q3(in.readBoolean());
+        this.setStep4Q1(Reponse.values()[in.readInt()]);
         this.setStep4Q2Weight(in.readString());
         this.setStep4Q3Size(in.readString());
         this.setStep4Imc(in.readString());
