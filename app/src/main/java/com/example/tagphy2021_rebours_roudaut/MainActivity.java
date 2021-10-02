@@ -1,5 +1,6 @@
 package com.example.tagphy2021_rebours_roudaut;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -16,12 +17,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 
-
-
-// ACTIVITE : CREER UN CALCUL D'IMC SI REP NON ET JE SAIS PAS A CONNAISSEZ VOUS VOTRE IMC
-// PENSER A LAFFICHAGE DES RESULTATS AVEC LES DETAILS EN FONCTION DU SCORE
-// LIEN VERS SITE WEB A LA FIN
-
 public class MainActivity extends AppCompatActivity {
     public static final String TAG = "QuizzProject";
     protected EditText accEditName;
@@ -29,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private Person person;
 
 
-    private static final String KEY_USERNAME = "username";
+    public static final String KEY_TRANSFER = "TransferPerson";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,16 +36,52 @@ public class MainActivity extends AppCompatActivity {
         accEditName = findViewById(R.id.accEditName);
         accBtnStart = findViewById(R.id.accBtnStart);
 
+        processIntentData();
+        if (person == null){person = new Person();}
 
         //on restaure suite à onCreate
-        if(savedInstanceState != null && savedInstanceState.containsKey(KEY_USERNAME)) {
-            String username = savedInstanceState.getString(KEY_USERNAME);
+        if(savedInstanceState != null && savedInstanceState.containsKey(KEY_TRANSFER)) {
+            String username = savedInstanceState.getString(KEY_TRANSFER);
             accEditName.setText(username);
         }
 
     }
 
-    public void toast(String msg) {
+    private void processIntentData() {
+        Intent intent = getIntent();
+        if(intent != null) {
+            Person transferredPerson = intent.getParcelableExtra(KEY_TRANSFER);
+            if (transferredPerson != null) {
+                this.person = transferredPerson;
+                this.person.print();
+            }
+            else {
+                Log.d(TAG, "No Person found after transfer from Next or Previous Activity");
+            }
+        }
+        else {
+            Log.d(TAG, "Error when transferring from Next or Previous Activity");
+        }
+    }
+
+    //Sauvegarde :
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(KEY_TRANSFER, accEditName.getText().toString());
+    }
+
+    //Restauration :
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        if(savedInstanceState.containsKey(KEY_TRANSFER)) {
+            String userName = savedInstanceState.getString(KEY_TRANSFER);
+            accEditName.setText(userName);
+        }
+    }
+
+            public void toast(String msg) {
         Toast.makeText(this, msg,Toast.LENGTH_SHORT).show();
     }
 
@@ -78,10 +109,10 @@ public class MainActivity extends AppCompatActivity {
             toast("Please complete all fields");
             vibrate(50);
         } else {
-           // person.setName(accEditName.getText().toString());
+            person.setName(accEditName.getText().toString());
             Log.d(TAG, "start_test: " );
             Intent intent = new Intent(this, Profil.class);
-            intent.putExtra("person", this.person);
+            intent.putExtra(KEY_TRANSFER, this.person);
             startActivity(intent);
         }
     }

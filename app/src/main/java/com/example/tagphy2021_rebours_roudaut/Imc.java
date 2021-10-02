@@ -1,5 +1,6 @@
 package com.example.tagphy2021_rebours_roudaut;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -21,6 +22,7 @@ import android.widget.Toast;
 public class Imc extends AppCompatActivity {
 
     public static final String TAG = MainActivity.TAG;
+    private static final String KEY_TRANSFER = MainActivity.KEY_TRANSFER;
 
     private RadioGroup step4Q1RadioGroup;
     private RadioButton step4Q1RbYes;
@@ -73,6 +75,42 @@ public class Imc extends AppCompatActivity {
         step4Q2Imc = findViewById(R.id.step4Q2Imc);
         step4ImgButton = findViewById(R.id.step4ImgButton);
 
+        processIntentData();
+
+    }
+
+    //Sauvegarde :
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        //outState.putString(KEY_TRANSFER, editName.getText().toString());
+    }
+
+    //Restauration :
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        if(savedInstanceState.containsKey(KEY_TRANSFER)) {
+            String pokename = savedInstanceState.getString(KEY_TRANSFER);
+            //editName.setText(pokename);
+        }
+    }
+
+    private void processIntentData() {
+        Intent intent = getIntent();
+        if(intent != null) {
+            Person transferredPerson = intent.getParcelableExtra(KEY_TRANSFER);
+            if (transferredPerson != null) {
+                this.person = transferredPerson;
+                this.person.print();
+            }
+            else {
+                Log.d(TAG, "No Person found after transfer from Next or Previous Activity");
+            }
+        }
+        else {
+            Log.d(TAG, "Error when transferring from Next or Previous Activity");
+        }
     }
 
     public void toast(String msg) { Toast.makeText(this, msg,Toast.LENGTH_SHORT).show(); }
@@ -154,11 +192,11 @@ public class Imc extends AppCompatActivity {
                     vibrate(50);
                 }
                 else {
-                    //person.setStep4Imc(step4Q2Imc.getText().toString());
+                    person.setStep4Imc(step4Q2Imc.getText().toString());
 
-                    Log.d(TAG, "start_test: ");
+                    Log.d(TAG, "next_test: ");
                     Intent intent = new Intent(this, Resultats.class);
-                    intent.putExtra("person", this.person);
+                    intent.putExtra(KEY_TRANSFER, this.person);
                     startActivity(intent);
                 }
             }
@@ -167,11 +205,11 @@ public class Imc extends AppCompatActivity {
                     toast("Please complete all fields");
                     vibrate(50);
                 } else {
-                    //person.setStep4Q2Weight(step4Q2Weight.getText().toString());
-                   // person.setStep4Q3Size(step4Q3Size.getText().toString());
-                    Log.d(TAG, "start_test: ");
+                    person.setStep4Q2Weight(step4Q2Weight.getText().toString());
+                    person.setStep4Q3Size(step4Q3Size.getText().toString());
+                    Log.d(TAG, "next_test: ");
                     Intent intent = new Intent(this, Resultats.class);
-                    intent.putExtra("person", this.person);
+                    intent.putExtra(KEY_TRANSFER, this.person);
                     startActivity(intent);
                 }
             }
@@ -183,7 +221,10 @@ public class Imc extends AppCompatActivity {
     }
 
     public void previous(View v) {
-        this.onBackPressed();
+        Intent intent = new Intent(this, MonSuiviCardiaque.class);
+        Log.d(TAG, "previous_test: " );
+        intent.putExtra(KEY_TRANSFER, this.person);
+        startActivity(intent);
     }
 
 

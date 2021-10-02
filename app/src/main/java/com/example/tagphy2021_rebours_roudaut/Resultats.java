@@ -1,5 +1,6 @@
 package com.example.tagphy2021_rebours_roudaut;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -11,6 +12,7 @@ import android.widget.Button;
 
 public class Resultats extends AppCompatActivity {
     public static final String TAG = MainActivity.TAG;
+    private static final String KEY_TRANSFER = MainActivity.KEY_TRANSFER;
     private Person person;
     private Button resBtnWeb;
     private Button resBtnFinish;
@@ -26,6 +28,8 @@ public class Resultats extends AppCompatActivity {
 
         Log.d(TAG, "onCreate: ");
 
+        processIntentData();
+
         resBtnWeb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -37,7 +41,40 @@ public class Resultats extends AppCompatActivity {
         });
 
     }
-    
+
+    //Sauvegarde :
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+       // outState.putString(KEY_TRANSFER, editName.getText().toString());
+    }
+
+    //Restauration :
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        if(savedInstanceState.containsKey(KEY_TRANSFER)) {
+            String pokename = savedInstanceState.getString(KEY_TRANSFER);
+            //editName.setText(pokename);
+        }
+    }
+
+    private void processIntentData() {
+        Intent intent = getIntent();
+        if(intent != null) {
+            Person transferredPerson = intent.getParcelableExtra(KEY_TRANSFER);
+            if (transferredPerson != null) {
+                this.person = transferredPerson;
+                this.person.print();
+            }
+            else {
+                Log.d(TAG, "No Person found after transfer from Next or Previous Activity");
+            }
+        }
+        else {
+            Log.d(TAG, "Error when transferring from Next or Previous Activity");
+        }
+    }
 
     @Override
     protected void onStart() {

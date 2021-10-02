@@ -1,5 +1,6 @@
 package com.example.tagphy2021_rebours_roudaut;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -18,6 +19,7 @@ import android.widget.Toast;
 public class Profil extends AppCompatActivity {
 
     public static final String TAG = MainActivity.TAG;
+    private static final String KEY_TRANSFER = MainActivity.KEY_TRANSFER;
 
     private Person person;
 
@@ -41,10 +43,44 @@ public class Profil extends AppCompatActivity {
         step1Q1RbWoman = findViewById(R.id.step1Q1RbWoman);
         step1Q1RbOther = findViewById(R.id.step1Q1RbOther);
 
-        Intent intent = getIntent();
-        String name = intent.getStringExtra("name");
+        processIntentData();
 
-        Log.d(TAG, "onCreate: User name :" + name);
+
+        Log.d(TAG, "onCreate: " );
+    }
+
+    //Sauvegarde :
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+       // outState.putString(KEY_TRANSFER, editName.getText().toString());
+    }
+
+    //Restauration :
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        if(savedInstanceState.containsKey(KEY_TRANSFER)) {
+            String pokename = savedInstanceState.getString(KEY_TRANSFER);
+           // editName.setText(pokename);
+        }
+    }
+
+    private void processIntentData() {
+        Intent intent = getIntent();
+        if(intent != null) {
+            Person transferredPerson = intent.getParcelableExtra(KEY_TRANSFER);
+            if (transferredPerson != null) {
+                this.person = transferredPerson;
+                this.person.print();
+            }
+            else {
+                Log.d(TAG, "No Person found after transfer from Next or Previous Activity");
+            }
+        }
+        else {
+            Log.d(TAG, "Error when transferring from Next or Previous Activity");
+        }
     }
 
     public void toast(String msg) {
@@ -74,16 +110,16 @@ public class Profil extends AppCompatActivity {
         if (step1Q1RadioGroup.getCheckedRadioButtonId() != -1
             && !step1Q2EditText.getText().toString().isEmpty())
         {
-/*
+
             if(step1Q1RbMan.isChecked()){person.setGenre(Genre.MAN);}
             else if(step1Q1RbWoman.isChecked()){person.setGenre(Genre.WOMAN);}
             else {person.setGenre(Genre.OTHER);}
 
             person.setAge(step1Q2EditText.getText().toString());
-*/
+
             Intent intent = new Intent(this, MonCoeur.class);
-            Log.d(TAG, "next: " );
-            intent.putExtra("person", this.person);
+            Log.d(TAG, "next_test: " );
+            intent.putExtra(KEY_TRANSFER, this.person);
             startActivity(intent);
         }
         else {
@@ -95,7 +131,10 @@ public class Profil extends AppCompatActivity {
 
 
     public void previous(View v) {
-        this.onBackPressed();
+        Intent intent = new Intent(this, MainActivity.class);
+        Log.d(TAG, "previous_test: " );
+        intent.putExtra(KEY_TRANSFER, this.person);
+        startActivity(intent);
     }
 
     @Override
