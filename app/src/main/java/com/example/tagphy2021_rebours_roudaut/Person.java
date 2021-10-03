@@ -21,6 +21,7 @@ public class Person implements Parcelable {
     private Reponse step2Q3;
     private Reponse step2Q4;
     private String step2Q5;
+    private int step2Q5Position;
 
     //mon suivi cardiaque
     private Boolean step3Q1;
@@ -54,9 +55,10 @@ public class Person implements Parcelable {
         this.setStep2Q3(Reponse.UNDEFINED);
         this.setStep2Q4(Reponse.UNDEFINED);
         this.setStep2Q5(Person.DEFAULT_REP);
-        this.setStep3Q1(false);
-        this.setStep3Q2(false);
-        this.setStep3Q3(false);
+        this.setStep2Q5Position(0);
+        this.setStep3Q1(Boolean.FALSE);
+        this.setStep3Q2(Boolean.FALSE);
+        this.setStep3Q3(Boolean.FALSE);
         this.setStep4Q1(Reponse.UNDEFINED);
         this.setStep4Q2Weight(Person.DEFAULT_WEIGHT);
         this.setStep4Q3Size(Person.DEFAULT_SIZE);
@@ -111,6 +113,8 @@ public String getName() { return this.name; }
     public void setStep2Q4(Reponse aStep2Q4) { this.step2Q4 = aStep2Q4; }
     public String getStep2Q5() { return this.step2Q5; }
     public void setStep2Q5(String aStep2Q5) { this.step2Q5 = aStep2Q5; }
+    public int getStep2Q5Position() { return this.step2Q5Position; }
+    public void setStep2Q5Position(int aStep2Q5Position) { this.step2Q5Position = aStep2Q5Position; }
     public Boolean getStep3Q1() { return this.step3Q1; }
     public void setStep3Q1(Boolean aStep3Q1) { this.step3Q1 = aStep3Q1; }
     public Boolean getStep3Q2() { return this.step3Q2; }
@@ -140,6 +144,7 @@ public String getName() { return this.name; }
         dest.writeInt(this.getStep2Q3().ordinal());
         dest.writeInt(this.getStep2Q4().ordinal());
         dest.writeString(this.getStep2Q5());
+        dest.writeInt(this.getStep2Q5Position());
         dest.writeBoolean(this.getStep3Q1());
         dest.writeBoolean(this.getStep3Q2());
         dest.writeBoolean(this.getStep3Q3());
@@ -181,6 +186,7 @@ public String getName() { return this.name; }
         this.setStep2Q3(Reponse.values()[in.readInt()]);
         this.setStep2Q4(Reponse.values()[in.readInt()]);
         this.setStep2Q5(in.readString());
+        this.setStep2Q5Position(in.readInt());
         this.setStep3Q1(in.readBoolean());
         this.setStep3Q2(in.readBoolean());
         this.setStep3Q3(in.readBoolean());

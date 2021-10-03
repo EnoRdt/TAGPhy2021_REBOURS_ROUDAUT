@@ -152,7 +152,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/step3Q2Switch"
                 app:layout_constraintWidth_max="330dp" />
 
-            <Switch
+            <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/step3Q2Switch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -160,13 +160,15 @@
                 android:text="@string/RbYes"
                 android:textAlignment="viewStart"
                 android:textColor="#FFFFFF"
+                android:textOff="@string/RbNo"
+                android:textOn="@string/RbYes"
                 app:layout_constraintEnd_toEndOf="@+id/step3Q2Ask"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/step3Q2Ask"
                 app:layout_constraintTop_toBottomOf="@+id/step3Q2Ask"
                 tools:ignore="DuplicateSpeakableTextCheck" />
 
-            <Switch
+            <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/step3Q1Switch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -174,12 +176,14 @@
                 android:text="@string/RbYes"
                 android:textAlignment="viewStart"
                 android:textColor="#FFFFFF"
+                android:textOff="@string/RbNo"
+                android:textOn="@string/RbYes"
                 app:layout_constraintEnd_toEndOf="@+id/step3Q1Ask"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/step3Q1Ask"
                 app:layout_constraintTop_toBottomOf="@+id/step3Q1Ask" />
 
-            <Switch
+            <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/step3Q3Switch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -187,6 +191,8 @@
                 android:text="@string/RbYes"
                 android:textAlignment="viewStart"
                 android:textColor="#FFFFFF"
+                android:textOff="@string/RbNo"
+                android:textOn="@string/RbYes"
                 app:layout_constraintEnd_toEndOf="@+id/step3Q3Ask"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/step3Q3Ask"

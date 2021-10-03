@@ -32,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
         accEditName = findViewById(R.id.accEditName);
 
         processIntentData();
-        if (person == null){person = new Person();}
-        else {accEditName.setText(person.getName());}
+        if (this.person == null){this.person = new Person();}
+        else {accEditName.setText(this.person.getName());}
 
     }
 
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
             toast(R.string.toast);
             vibrate(50);
         } else {
-            person.setName(accEditName.getText().toString());
+            this.person.setName(accEditName.getText().toString());
             Log.d(TAG, "start_test: " );
             Intent intent = new Intent(this, Profil.class);
             intent.putExtra(KEY_TRANSFER, this.person);

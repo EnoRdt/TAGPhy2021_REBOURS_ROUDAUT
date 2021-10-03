@@ -1,12 +1,13 @@
 package com.example.tagphy2021_rebours_roudaut;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Switch;
+
 
 public class MonSuiviCardiaque extends AppCompatActivity {
 
@@ -15,9 +16,9 @@ public class MonSuiviCardiaque extends AppCompatActivity {
 
     private Person person;
 
-    private Switch step3Q1Switch;
-    private Switch step3Q2Switch;
-    private Switch step3Q3Switch;
+    private SwitchCompat step3Q1Switch;
+    private SwitchCompat step3Q2Switch;
+    private SwitchCompat step3Q3Switch;
 
 
 
@@ -26,17 +27,19 @@ public class MonSuiviCardiaque extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mon_suivi_cardiaque);
 
+        Log.d(TAG, "onCreate: ");
+
         step3Q1Switch = findViewById(R.id.step3Q1Switch);
         step3Q2Switch = findViewById(R.id.step3Q2Switch);
         step3Q3Switch = findViewById(R.id.step3Q3Switch);
 
         processIntentData();
 
-        Log.d(TAG, "onCreate: ");
+        step3Q1Switch.setChecked(this.person.getStep3Q1());
+        step3Q2Switch.setChecked(this.person.getStep3Q2());
+        step3Q3Switch.setChecked(this.person.getStep3Q3());
 
-        step3Q1Switch.setChecked(person.getStep3Q1());
-        step3Q2Switch.setChecked(person.getStep3Q2());
-        step3Q3Switch.setChecked(person.getStep3Q3());
+
     }
 
 
@@ -60,9 +63,12 @@ public class MonSuiviCardiaque extends AppCompatActivity {
 
     public void next(View v) {
 
-        if (step3Q1Switch.isChecked()){person.setStep3Q1(true);}
-        if (step3Q1Switch.isChecked()){person.setStep3Q2(true);}
-        if (step3Q1Switch.isChecked()){person.setStep3Q3(true);}
+        if (step3Q1Switch.isChecked()){this.person.setStep3Q1(Boolean.TRUE);}
+        else{this.person.setStep3Q1(Boolean.FALSE);}
+        if (step3Q2Switch.isChecked()){this.person.setStep3Q2(Boolean.TRUE);}
+        else{this.person.setStep3Q2(Boolean.FALSE);}
+        if (step3Q3Switch.isChecked()){this.person.setStep3Q3(Boolean.TRUE);}
+        else{this.person.setStep3Q3(Boolean.FALSE);}
 
         Log.d(TAG, "next_test: ");
         Intent intent = new Intent(this, Imc.class);

@@ -64,22 +64,19 @@ public class MonCoeur extends AppCompatActivity {
 
         processIntentData();
 
-        if(person.getStep2Q1()==Reponse.YES){step2Q1RbYes.setChecked(true);}
-        else if(person.getStep2Q1()==Reponse.NO){step2Q1RbNo.setChecked(true);}
+        if(this.person.getStep2Q1()==Reponse.YES){step2Q1RbYes.setChecked(true);}
+        else if(this.person.getStep2Q1()==Reponse.NO){step2Q1RbNo.setChecked(true);}
 
-        if(person.getStep2Q2()==Reponse.YES){step2Q2RbYes.setChecked(true);}
-        else if(person.getStep2Q2()==Reponse.NO){step2Q2RbNo.setChecked(true);}
+        if(this.person.getStep2Q2()==Reponse.YES){step2Q2RbYes.setChecked(true);}
+        else if(this.person.getStep2Q2()==Reponse.NO){step2Q2RbNo.setChecked(true);}
 
-        if(person.getStep2Q3()==Reponse.YES){step2Q3RbYes.setChecked(true);}
-        else if(person.getStep2Q3()==Reponse.NO){step2Q3RbNo.setChecked(true);}
+        if(this.person.getStep2Q3()==Reponse.YES){step2Q3RbYes.setChecked(true);}
+        else if(this.person.getStep2Q3()==Reponse.NO){step2Q3RbNo.setChecked(true);}
 
-        if(person.getStep2Q4()==Reponse.YES){step2Q4RbYes.setChecked(true);}
-        else if(person.getStep2Q4()==Reponse.NO){step2Q4RbNo.setChecked(true);}
+        if(this.person.getStep2Q4()==Reponse.YES){step2Q4RbYes.setChecked(true);}
+        else if(this.person.getStep2Q4()==Reponse.NO){step2Q4RbNo.setChecked(true);}
 
-
-        if(person.getStep2Q5().equals("Yes") || person.getStep2Q5().equals("Non")){step2Q5Spinner.setSelection(1);}
-        else if(person.getStep2Q5().equals("I do not know") || person.getStep2Q5().equals("Je ne sais pas")){step2Q5Spinner.setSelection(2);}
-        else{step2Q5Spinner.setSelection(0);}
+        step2Q5Spinner.setSelection(this.person.getStep2Q5Position());
 
     }
 
@@ -136,16 +133,17 @@ public class MonCoeur extends AppCompatActivity {
                 step2Q4RadioGroup.getCheckedRadioButtonId() != -1)
         {
 
-            if(step2Q1RbYes.isChecked()){person.setStep2Q1(Reponse.YES);}
-            else {person.setStep2Q1(Reponse.NO);}
-            if(step2Q2RbYes.isChecked()){person.setStep2Q2(Reponse.YES);}
-            else {person.setStep2Q2(Reponse.NO);}
-            if(step2Q3RbYes.isChecked()){person.setStep2Q3(Reponse.YES);}
-            else {person.setStep2Q3(Reponse.NO);}
-            if(step2Q4RbYes.isChecked()){person.setStep2Q4(Reponse.YES);}
-            else {person.setStep2Q4(Reponse.NO);}
+            if(step2Q1RbYes.isChecked()){this.person.setStep2Q1(Reponse.YES);}
+            else {this.person.setStep2Q1(Reponse.NO);}
+            if(step2Q2RbYes.isChecked()){this.person.setStep2Q2(Reponse.YES);}
+            else {this.person.setStep2Q2(Reponse.NO);}
+            if(step2Q3RbYes.isChecked()){this.person.setStep2Q3(Reponse.YES);}
+            else {this.person.setStep2Q3(Reponse.NO);}
+            if(step2Q4RbYes.isChecked()){this.person.setStep2Q4(Reponse.YES);}
+            else {this.person.setStep2Q4(Reponse.NO);}
 
-            person.setStep2Q5(step2Q5Spinner.getSelectedItem().toString());
+            this.person.setStep2Q5(step2Q5Spinner.getSelectedItem().toString());
+            this.person.setStep2Q5Position(step2Q5Spinner.getSelectedItemPosition());
 
             Log.d(TAG, "next_test: ");
             Intent intent = new Intent(this, MonSuiviCardiaque.class);

@@ -71,12 +71,12 @@ public class Imc extends AppCompatActivity {
 
         processIntentData();
 
-        if(person.getStep4Q1()==Reponse.YES){step4Q1RbYes.setChecked(true);}
-        else if(person.getStep4Q1()==Reponse.NO){step4Q1RbNo.setChecked(true);}
+        if(this.person.getStep4Q1()==Reponse.YES){step4Q1RbYes.setChecked(true);}
+        else if(this.person.getStep4Q1()==Reponse.NO){step4Q1RbNo.setChecked(true);}
 
-        if(!person.getStep4Imc().equals(Person.DEFAULT_IMC)){step4Q2Imc.setText(person.getStep4Imc());}
-        if(!person.getStep4Q2Weight().equals(Person.DEFAULT_WEIGHT)){step4Q2Weight.setText(person.getStep4Q2Weight());}
-        if(!person.getStep4Q3Size().equals(Person.DEFAULT_SIZE)){step4Q3Size.setText(person.getStep4Q3Size());}
+        if(!this.person.getStep4Imc().equals(Person.DEFAULT_IMC)){step4Q2Imc.setText(this.person.getStep4Imc());}
+        if(!this.person.getStep4Q2Weight().equals(Person.DEFAULT_WEIGHT)){step4Q2Weight.setText(this.person.getStep4Q2Weight());}
+        if(!this.person.getStep4Q3Size().equals(Person.DEFAULT_SIZE)){step4Q3Size.setText(this.person.getStep4Q3Size());}
     }
 
 
@@ -177,8 +177,8 @@ public class Imc extends AppCompatActivity {
                 }
                 else {
                     if(step4Q1RbYes.isChecked()){person.setStep4Q1(Reponse.YES);}
-                    else {person.setStep4Q1(Reponse.NO);}
-                    person.setStep4Imc(step4Q2Imc.getText().toString());
+                    else {this.person.setStep4Q1(Reponse.NO);}
+                    this.person.setStep4Imc(step4Q2Imc.getText().toString());
 
                     Log.d(TAG, "next_test: ");
                     Intent intent = new Intent(this, Resultats.class);
@@ -192,9 +192,9 @@ public class Imc extends AppCompatActivity {
                     toast(R.string.toast);
                     vibrate(50);
                 } else {
-                    person.setStep4Q2Weight(step4Q2Weight.getText().toString());
-                    person.setStep4Q3Size(step4Q3Size.getText().toString());
-                    person.setStep4Imc(step4Q4ViewResult.getText().toString());
+                    this.person.setStep4Q2Weight(step4Q2Weight.getText().toString());
+                    this.person.setStep4Q3Size(step4Q3Size.getText().toString());
+                    this.person.setStep4Imc(step4Q4ViewResult.getText().toString());
                     Log.d(TAG, "next_test: ");
                     Intent intent = new Intent(this, Resultats.class);
                     intent.putExtra(KEY_TRANSFER, this.person);

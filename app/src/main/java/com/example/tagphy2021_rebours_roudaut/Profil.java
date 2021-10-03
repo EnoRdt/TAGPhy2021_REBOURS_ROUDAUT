@@ -45,11 +45,11 @@ public class Profil extends AppCompatActivity {
 
         processIntentData();
 
-        if(person.getGenre()==Genre.WOMAN){step1Q1RbWoman.setChecked(true);}
-        else if(person.getGenre()==Genre.MAN){step1Q1RbMan.setChecked(true);}
-        else if(person.getGenre()==Genre.OTHER){step1Q1RbOther.setChecked(true);}
+        if(this.person.getGenre().equals(Genre.WOMAN)){step1Q1RbWoman.setChecked(true);}
+        else if(this.person.getGenre().equals(Genre.MAN)){step1Q1RbMan.setChecked(true);}
+        else if(this.person.getGenre().equals(Genre.OTHER)){step1Q1RbOther.setChecked(true);}
 
-        if(!person.getAge().equals(Person.DEFAULT_AGE)){step1Q2EditText.setText(person.getAge());}
+        if(!this.person.getAge().equals(Person.DEFAULT_AGE)){step1Q2EditText.setText(this.person.getAge());}
 
 
         Log.d(TAG, "onCreate: " );
@@ -101,11 +101,11 @@ public class Profil extends AppCompatActivity {
             && !step1Q2EditText.getText().toString().isEmpty())
         {
 
-            if(step1Q1RbMan.isChecked()){person.setGenre(Genre.MAN);}
-            else if(step1Q1RbWoman.isChecked()){person.setGenre(Genre.WOMAN);}
-            else {person.setGenre(Genre.OTHER);}
+            if(step1Q1RbMan.isChecked()){this.person.setGenre(Genre.MAN);}
+            else if(step1Q1RbWoman.isChecked()){this.person.setGenre(Genre.WOMAN);}
+            else {this.person.setGenre(Genre.OTHER);}
 
-            person.setAge(step1Q2EditText.getText().toString());
+            this.person.setAge(step1Q2EditText.getText().toString());
 
             Intent intent = new Intent(this, MonCoeur.class);
             Log.d(TAG, "next_test: " );
