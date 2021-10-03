@@ -105,7 +105,7 @@ public class MonCoeur extends AppCompatActivity {
         }
     }
 
-    public void toast(String msg) {
+    public void toast(int msg) {
         Toast.makeText(this, msg,Toast.LENGTH_SHORT).show();
     }
 
@@ -155,10 +155,11 @@ public class MonCoeur extends AppCompatActivity {
             Log.d(TAG, "next_test: ");
             Intent intent = new Intent(this, MonSuiviCardiaque.class);
             intent.putExtra(KEY_TRANSFER, this.person);
+            MonCoeur.this.finish();
             startActivity(intent);
         }
         else {
-            toast("Please complete all fields");
+            toast(R.string.toast);
             vibrate(50);
 
         }

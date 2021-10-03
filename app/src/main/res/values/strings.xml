@@ -35,4 +35,5 @@
     <string name="step4Q3">What is your size (in cm)?</string>
     <string name="step4Q4Rep">Your BMI is</string>
     <string name="step4Q2AskBis">What is your BMI?</string>
+    <string name="toast">Please complete all fields</string>
 </resources>

@@ -3,6 +3,7 @@ package com.example.tagphy2021_rebours_roudaut;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
@@ -61,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-            public void toast(String msg) {
+    public void toast(int msg) {
         Toast.makeText(this, msg,Toast.LENGTH_SHORT).show();
     }
 
@@ -86,16 +87,18 @@ public class MainActivity extends AppCompatActivity {
     public void start_test(View v){
 
         if (accEditName.getText().toString().isEmpty()) {
-            toast("Please complete all fields");
+            toast(R.string.toast);
             vibrate(50);
         } else {
             person.setName(accEditName.getText().toString());
             Log.d(TAG, "start_test: " );
             Intent intent = new Intent(this, Profil.class);
             intent.putExtra(KEY_TRANSFER, this.person);
+            MainActivity.this.finish();
             startActivity(intent);
         }
     }
+
 
     @Override
     protected void onStart() {

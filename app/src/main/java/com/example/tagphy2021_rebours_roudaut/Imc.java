@@ -1,6 +1,5 @@
 package com.example.tagphy2021_rebours_roudaut;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -11,7 +10,6 @@ import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
@@ -103,7 +101,7 @@ public class Imc extends AppCompatActivity {
         }
     }
 
-    public void toast(String msg) { Toast.makeText(this, msg,Toast.LENGTH_SHORT).show(); }
+    public void toast(int msg) { Toast.makeText(this, msg,Toast.LENGTH_SHORT).show(); }
     public void vibrate(long duration_ms) {
         Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         if(duration_ms < 1)
@@ -163,7 +161,7 @@ public class Imc extends AppCompatActivity {
         String res = "RESULT";
 
         if (step4Q2Weight.getText().toString().isEmpty() || step4Q3Size.getText().toString().isEmpty()) {
-            toast("Please complete all fields");
+            toast(R.string.toast);
             vibrate(50);
         } else {
             result = (Float.parseFloat(String.valueOf(step4Q2Weight.getText())) / ((Float.parseFloat(String.valueOf(step4Q3Size.getText())) / 100) * (Float.parseFloat(String.valueOf(step4Q3Size.getText()))) / 100));
@@ -178,7 +176,7 @@ public class Imc extends AppCompatActivity {
             if (step4Q1RbYes.isChecked()){
 
                 if (step4Q2Imc.getText().toString().isEmpty()){
-                    toast("Please complete all fields");
+                    toast(R.string.toast);
                     vibrate(50);
                 }
                 else {
@@ -189,12 +187,13 @@ public class Imc extends AppCompatActivity {
                     Log.d(TAG, "next_test: ");
                     Intent intent = new Intent(this, Resultats.class);
                     intent.putExtra(KEY_TRANSFER, this.person);
+                    Imc.this.finish();
                     startActivity(intent);
                 }
             }
             else {
                 if (step4Q2Weight.getText().toString().isEmpty() || step4Q3Size.getText().toString().isEmpty()) {
-                    toast("Please complete all fields");
+                    toast(R.string.toast);
                     vibrate(50);
                 } else {
                     person.setStep4Q2Weight(step4Q2Weight.getText().toString());
@@ -203,12 +202,13 @@ public class Imc extends AppCompatActivity {
                     Log.d(TAG, "next_test: ");
                     Intent intent = new Intent(this, Resultats.class);
                     intent.putExtra(KEY_TRANSFER, this.person);
+                    Imc.this.finish();
                     startActivity(intent);
                 }
             }
         }
         else {
-            toast("Please complete all fields");
+            toast(R.string.toast);
             vibrate(50);
         }
     }

@@ -1,17 +1,12 @@
 package com.example.tagphy2021_rebours_roudaut;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.Spinner;
 import android.widget.Switch;
-import android.widget.Toast;
 
 public class MonSuiviCardiaque extends AppCompatActivity {
 
@@ -39,9 +34,14 @@ public class MonSuiviCardiaque extends AppCompatActivity {
 
         Log.d(TAG, "onCreate: ");
 
-        step3Q1Switch.setChecked(person.getStep3Q1());
-        step3Q2Switch.setChecked(person.getStep3Q2());
-        step3Q3Switch.setChecked(person.getStep3Q3());
+        if(person.getStep3Q1()){step3Q1Switch.setChecked(true);}
+        else{step3Q1Switch.setChecked(false);}
+
+        if(person.getStep3Q2()){step3Q2Switch.setChecked(true);}
+        else{step3Q2Switch.setChecked(false);}
+
+        if(person.getStep3Q3()){step3Q3Switch.setChecked(true);}
+        else{step3Q3Switch.setChecked(false);}
     }
 
 
@@ -72,6 +72,7 @@ public class MonSuiviCardiaque extends AppCompatActivity {
         Log.d(TAG, "next_test: ");
         Intent intent = new Intent(this, Imc.class);
         intent.putExtra(KEY_TRANSFER, this.person);
+        MonSuiviCardiaque.this.finish();
         startActivity(intent);
     }
 
