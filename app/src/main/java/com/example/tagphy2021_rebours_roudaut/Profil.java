@@ -1,6 +1,6 @@
 package com.example.tagphy2021_rebours_roudaut;
 
-import androidx.annotation.NonNull;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -49,7 +49,7 @@ public class Profil extends AppCompatActivity {
         else if(person.getGenre()==Genre.MAN){step1Q1RbMan.setChecked(true);}
         else if(person.getGenre()==Genre.OTHER){step1Q1RbOther.setChecked(true);}
 
-        if(!person.getAge().equals(person.DEFAULT_AGE)){step1Q2EditText.setText(person.getAge());}
+        if(!person.getAge().equals(Person.DEFAULT_AGE)){step1Q2EditText.setText(person.getAge());}
 
 
         Log.d(TAG, "onCreate: " );

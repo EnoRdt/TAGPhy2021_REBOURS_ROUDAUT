@@ -26,8 +26,6 @@ public class Imc extends AppCompatActivity {
     private RadioButton step4Q1RbYes;
     private RadioButton step4Q1RbNo;
 
-    private TextView step4Q1;
-    private TextView step4Q1Ask;
     private TextView step4Q4ViewResult;
     private TextView step4Q2;
     private TextView step4Q2Bis;
@@ -57,8 +55,6 @@ public class Imc extends AppCompatActivity {
         step4Q1RadioGroup = findViewById(R.id.step4Q1RadioGroup);
         step4Q1RbYes = findViewById(R.id.step4Q1RbYes);
         step4Q1RbNo = findViewById(R.id.step4Q1RbNo);
-        step4Q1 = findViewById(R.id.step4Q1);
-        step4Q1Ask = findViewById(R.id.step4Q1Ask);
         step4Q4ViewResult = findViewById(R.id.step4Q4ViewResult);
         step4Q2 = findViewById(R.id.step4Q2);
         step4Q2Bis = findViewById(R.id.step4Q2Bis);
@@ -78,9 +74,9 @@ public class Imc extends AppCompatActivity {
         if(person.getStep4Q1()==Reponse.YES){step4Q1RbYes.setChecked(true);}
         else if(person.getStep4Q1()==Reponse.NO){step4Q1RbNo.setChecked(true);}
 
-        if(!person.getStep4Imc().equals(person.DEFAULT_IMC)){step4Q2Imc.setText(person.getStep4Imc());}
-        if(!person.getStep4Q2Weight().equals(person.DEFAULT_WEIGHT)){step4Q2Weight.setText(person.getStep4Q2Weight());}
-        if(!person.getStep4Q3Size().equals(person.DEFAULT_SIZE)){step4Q3Size.setText(person.getStep4Q3Size());}
+        if(!person.getStep4Imc().equals(Person.DEFAULT_IMC)){step4Q2Imc.setText(person.getStep4Imc());}
+        if(!person.getStep4Q2Weight().equals(Person.DEFAULT_WEIGHT)){step4Q2Weight.setText(person.getStep4Q2Weight());}
+        if(!person.getStep4Q3Size().equals(Person.DEFAULT_SIZE)){step4Q3Size.setText(person.getStep4Q3Size());}
     }
 
 
@@ -158,7 +154,7 @@ public class Imc extends AppCompatActivity {
 
     public void calculImc(View v){
         float result;
-        String res = "RESULT";
+        String res;
 
         if (step4Q2Weight.getText().toString().isEmpty() || step4Q3Size.getText().toString().isEmpty()) {
             toast(R.string.toast);

@@ -1,6 +1,5 @@
 package com.example.tagphy2021_rebours_roudaut;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -11,7 +10,6 @@ import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
@@ -39,8 +37,6 @@ public class MonCoeur extends AppCompatActivity {
     private RadioButton step2Q3RbNo;
     private RadioButton step2Q4RbYes;
     private RadioButton step2Q4RbNo;
-
-
 
 
     @Override
@@ -81,10 +77,9 @@ public class MonCoeur extends AppCompatActivity {
         else if(person.getStep2Q4()==Reponse.NO){step2Q4RbNo.setChecked(true);}
 
 
-        if(person.getStep2Q5()=="Yes" || person.getStep2Q5()=="Non"){step2Q5Spinner.setSelection(1);}
-        else if(person.getStep2Q5()=="I do not know" || person.getStep2Q5()=="Je ne sais pas"){step2Q5Spinner.setSelection(2);}
-        else{step2Q5Spinner.setSelection(0);};
-
+        if(person.getStep2Q5().equals("Yes") || person.getStep2Q5().equals("Non")){step2Q5Spinner.setSelection(1);}
+        else if(person.getStep2Q5().equals("I do not know") || person.getStep2Q5().equals("Je ne sais pas")){step2Q5Spinner.setSelection(2);}
+        else{step2Q5Spinner.setSelection(0);}
 
     }
 

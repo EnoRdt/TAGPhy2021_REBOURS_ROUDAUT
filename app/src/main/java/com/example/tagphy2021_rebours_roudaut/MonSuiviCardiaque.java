@@ -34,14 +34,9 @@ public class MonSuiviCardiaque extends AppCompatActivity {
 
         Log.d(TAG, "onCreate: ");
 
-        if(person.getStep3Q1()){step3Q1Switch.setChecked(true);}
-        else{step3Q1Switch.setChecked(false);}
-
-        if(person.getStep3Q2()){step3Q2Switch.setChecked(true);}
-        else{step3Q2Switch.setChecked(false);}
-
-        if(person.getStep3Q3()){step3Q3Switch.setChecked(true);}
-        else{step3Q3Switch.setChecked(false);}
+        step3Q1Switch.setChecked(person.getStep3Q1());
+        step3Q2Switch.setChecked(person.getStep3Q2());
+        step3Q3Switch.setChecked(person.getStep3Q3());
     }
 
 

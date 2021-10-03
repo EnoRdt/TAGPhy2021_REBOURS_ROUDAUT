@@ -1,19 +1,15 @@
 package com.example.tagphy2021_rebours_roudaut;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -21,7 +17,6 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     public static final String TAG = "QuizzProject";
     protected EditText accEditName;
-    private Button accBtnStart;
     private Person person;
 
 
@@ -35,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "onCreate: ");
 
         accEditName = findViewById(R.id.accEditName);
-        accBtnStart = findViewById(R.id.accBtnStart);
 
         processIntentData();
         if (person == null){person = new Person();}
