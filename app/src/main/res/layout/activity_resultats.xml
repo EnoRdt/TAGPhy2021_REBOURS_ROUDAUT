@@ -125,7 +125,7 @@
                 app:layout_constraintStart_toEndOf="@+id/resultsStep2Q1Ask" />
 
             <TextView
-                android:id="@+id/resultsStep3Q3Rep"
+                android:id="@+id/resultsStep4IMCRep"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -135,7 +135,7 @@
                 app:layout_constraintStart_toEndOf="@+id/resultsStep4IMC" />
 
             <TextView
-                android:id="@+id/resultsStep3Q3Rep2"
+                android:id="@+id/resultsStep3Q3Rep"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -331,7 +331,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Machin, H, 22 ans"
+        android:text="Name, Gender, Age"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
