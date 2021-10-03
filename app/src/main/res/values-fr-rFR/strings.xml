@@ -52,4 +52,27 @@
     <string name="imgstep3">imgstep3</string>
     <string name="ex_22">ex : 22</string>
     <string name="imgstep1">imgstep1</string>
+    <string name="BMI18.5">Insuffisance pondérale. Cela pourrait être un signe que vous ne mangez pas assez ou que vous pourriez être malade.</string>
+    <string name="BMI25">"Poids normal. Continuez votre bon travail! "</string>
+    <string name="BMI30">Surpoids. La meilleure façon de perdre du poids si vous êtes en surpoids est par une combinaison de régime alimentaire et d’exercice.</string>
+    <string name="BMI30more">Obésité. La meilleure façon de perdre du poids si vous êtes obèse est de combiner l’alimentation et l’exercice et, dans certains cas, les médicaments.</string>
+    <string name="Step2TipsNotOk">"Vous avez répondu oui (ou je ne sais pas) à au moins une question. Continuez de vous faire suivre par votre médecin et tout ira bien. "</string>
+    <string name="Step2TipsOk">"Vous avez répondu non à toutes les questions. Tout va bien, n'hésitez pas à consulter si vous en ressentez le besoin. "</string>
+    <string name="Step3TipsOk">Parfait ! N’hésitez pas à demander régulièrement à votre médecin si vous avez besoin de faire un examen cardiaque.</string>
+    <string name="Step3TipsNotOk">Soyez prudent ! N’hésitez pas à demander régulièrement à votre médecin si vous avez besoin de faire un examen cardiaque.</string>
+    <string name="review">BILAN</string>
+    <string name="ReviewStep2Title">Etape 2 - MON COEUR</string>
+    <string name="ReviewStep3Title">Etape 3 - MON SUIVI CARDIAQUE</string>
+    <string name="ReviewStep4Title">Etape 4 - INDICE DE MASSE CORPORELLE</string>
+    <string name="ReviewStep2Q1">Problème cardiaque ?</string>
+    <string name="ReviewStep2Q2">Cholestérol ?</string>
+    <string name="ReviewStep2Q3">Diabète ?</string>
+    <string name="ReviewStep2Q4">Hypertension ?</string>
+    <string name="ReviewStep2Q5">Parent avec un problème cardiaque ?</string>
+    <string name="ReviewStep3Q1">Avez-vous déjà fait le point avec votre médecin traitant à propos de votre risque cardiovasculaire ?</string>
+    <string name="ReviewStep3Q2">Avez-vous déjà effectué un bilan cardiaque ?</string>
+    <string name="ReviewStep3Q3">Avez-vous déjà consulté un cardiologue ?</string>
+    <string name="ReviewBMI">"Votre IMC : "</string>
+    <string name="quit">Quitter</string>
+    <string name="websiteLink">SITE</string>
 </resources>

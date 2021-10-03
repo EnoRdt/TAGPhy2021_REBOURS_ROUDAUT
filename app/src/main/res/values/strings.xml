@@ -52,4 +52,27 @@
     <string name="imgstep3">imgstep3</string>
     <string name="ex_22">ex : 22</string>
     <string name="imgstep1">imgstep1</string>
+    <string name="BMI18.5">Underweight. This could be a sign you\'re not eating enough or you may be ill.</string>
+    <string name="BMI25">Normal weight. Keep up the good work!</string>
+    <string name="BMI30">Overweight. The best way to lose weight if you\'re overweight is through a combination of diet and exercise.</string>
+    <string name="BMI30more">Obesity. The best way to lose weight if you\'re obese is through a combination of diet and exercise, and, in some cases, medicines.</string>
+    <string name="Step2TipsNotOk">You answered yes (or I don’t know) to at least one question. Continue to be followed by your doctor and everything will be fine.</string>
+    <string name="Step2TipsOk">You answered no to all the questions. Everything is fine, do not hesitate to consult if you feel the need.</string>
+    <string name="Step3TipsOk">Perfect! Do not hesitate to ask your doctor regularly if you need to do a cardiac check-up.</string>
+    <string name="Step3TipsNotOk">Be careful! Do not hesitate to ask your doctor regularly if you need to do a cardiac check-up.</string>
+    <string name="review">REVIEW</string>
+    <string name="ReviewStep2Title">Step 2 - MY HEART</string>
+    <string name="ReviewStep3Title">Step 3 - MY HEART FOLLOW UP</string>
+    <string name="ReviewStep4Title">Step 4 - BODY MASS INDEX</string>
+    <string name="ReviewStep2Q1">Heart problem?</string>
+    <string name="ReviewStep2Q2">Cholesterol?</string>
+    <string name="ReviewStep2Q3">Diabets?</string>
+    <string name="ReviewStep2Q4">Hypertension?</string>
+    <string name="ReviewStep2Q5">Parent with heart problem?</string>
+    <string name="ReviewStep3Q1">Have you ever discussed your cardiovascular risk with your doctor?</string>
+    <string name="ReviewStep3Q2">Have you ever done a cardiac check-up?</string>
+    <string name="ReviewStep3Q3">Have you ever seen a cardiologist?</string>
+    <string name="ReviewBMI">Your BMI:</string>
+    <string name="quit">Quit</string>
+    <string name="websiteLink">WEBSITE</string>
 </resources>

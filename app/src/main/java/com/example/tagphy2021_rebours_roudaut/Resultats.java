@@ -65,35 +65,61 @@ public class Resultats extends AppCompatActivity {
         resultsStep3Q3Rep = findViewById(R.id.resultsStep3Q3Rep);
         resultsStep3Tips = findViewById(R.id.resultsStep3Tips);
 
-        resultsStep4IMC = findViewById(R.id.resultsStep4IMC);
         resultsStep4IMCRep = findViewById(R.id.resultsStep4IMCRep);
         resultsStep4Tips = findViewById(R.id.resultsStep4Tips);
 
         processIntentData();
 
-        infosPersos.setText(person.getName()+", "+this.person.getGenre().toString()+", "+person.getAge()+" ans");
+        // Step 1 - PROFILE management
 
+        infosPersos.setText(person.getName()+", "+person.getAge()+" ans");
+
+        // Step 2 - MY HEART management
         resultsStep2Q1Rep.setText(this.person.getStep2Q1().toString());
         resultsStep2Q2Rep.setText(this.person.getStep2Q2().toString());
         resultsStep2Q3Rep.setText(this.person.getStep2Q3().toString());
         resultsStep2Q4Rep.setText(this.person.getStep2Q4().toString());
         resultsStep2Q5Rep.setText(person.getStep2Q5());
-
-        if (this.person.getStep3Q1() == true) {
-            resultsStep3Q1Rep.setText("Yes");
-            //R.string.clé
-        }
-        if (this.person.getStep3Q2() == true) {
-            resultsStep3Q1Rep.setText("Yes");
-            //R.string.clé
-        }
-        if (this.person.getStep3Q3() == true) {
-            resultsStep3Q1Rep.setText("Yes");
-            //R.string.clé
+        if (this.person.getStep2Q1().toString().equals("NO")
+                && this.person.getStep2Q2().toString().equals("NO")
+                && this.person.getStep2Q3().toString().equals("NO")
+                && this.person.getStep2Q4().toString().equals("NO")
+                && this.person.getStep2Q5().equals("NO")) {
+            resultsStep2Tips.setText(R.string.Step2TipsOk);
+        } else {
+            resultsStep2Tips.setText(R.string.Step2TipsNotOk);
         }
 
-        resultsStep4IMC.setText(this.person.getStep4Imc());
+        // Step 3 - HEART FOLLOW UP management
+        if (this.person.getStep3Q1()) {
+            resultsStep3Q1Rep.setText(R.string.RbYes);
+        } else {
+            resultsStep3Q1Rep.setText(R.string.RbNo);
+        }
+        if (this.person.getStep3Q2()) {
+            resultsStep3Q2Rep.setText(R.string.RbYes);
+        } else {
+            resultsStep3Q2Rep.setText(R.string.RbNo);
+        }
+        if (this.person.getStep3Q3()) {
+            resultsStep3Q3Rep.setText(R.string.RbYes);
+            resultsStep3Tips.setText(R.string.Step3TipsOk);
+        } else {
+            resultsStep3Q3Rep.setText(R.string.RbNo);
+            resultsStep3Tips.setText(R.string.Step3TipsNotOk);
+        }
 
+        // Step 4 - BMI management
+        resultsStep4IMCRep.setText(this.person.getStep4Imc());
+        if (Float.parseFloat(this.person.getStep4Imc()) < 18.5) {
+            resultsStep4Tips.setText(R.string.BMI18_5);
+        } else if (Float.parseFloat(this.person.getStep4Imc()) < 25) {
+            resultsStep4Tips.setText(R.string.BMI25);
+        } else if (Float.parseFloat(this.person.getStep4Imc()) < 30) {
+            resultsStep4Tips.setText(R.string.BMI30);
+        } else {
+            resultsStep4Tips.setText(R.string.BMI30more);
+        }
 
         resBtnWeb.setOnClickListener(new View.OnClickListener() {
             @Override
