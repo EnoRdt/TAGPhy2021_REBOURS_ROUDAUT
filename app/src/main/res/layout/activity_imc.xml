@@ -129,7 +129,7 @@
 
             <TextView
                 android:id="@+id/step4Q4ViewResult"
-                android:layout_width="87dp"
+                android:layout_width="100dp"
                 android:layout_height="33dp"
                 android:layout_marginTop="3dp"
                 android:text="@string/result"
