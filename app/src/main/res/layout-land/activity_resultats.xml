@@ -25,7 +25,7 @@
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="139dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="10dp"
@@ -62,7 +62,8 @@
                 android:textStyle="bold"
                 app:layout_constraintHeight_max="270dp"
                 app:layout_constraintStart_toStartOf="@+id/resultsStep2"
-                app:layout_constraintTop_toBottomOf="@+id/resultsStep2" />
+                app:layout_constraintTop_toBottomOf="@+id/resultsStep2"
+                app:layout_constraintWidth_max="400dp" />
 
             <TextView
                 android:id="@+id/resultsStep2Q1Rep"
@@ -83,7 +84,8 @@
                 android:textStyle="bold"
                 app:layout_constraintHeight_max="270dp"
                 app:layout_constraintStart_toStartOf="@+id/resultsStep2Q1Ask"
-                app:layout_constraintTop_toBottomOf="@+id/resultsStep2Q1Ask" />
+                app:layout_constraintTop_toBottomOf="@+id/resultsStep2Q1Ask"
+                app:layout_constraintWidth_max="400dp" />
 
             <TextView
                 android:id="@+id/resultsStep2Q2Rep"
@@ -104,7 +106,8 @@
                 android:textStyle="bold"
                 app:layout_constraintHeight_max="270dp"
                 app:layout_constraintStart_toStartOf="@+id/resultsStep2Q2Ask"
-                app:layout_constraintTop_toBottomOf="@+id/resultsStep2Q2Ask" />
+                app:layout_constraintTop_toBottomOf="@+id/resultsStep2Q2Ask"
+                app:layout_constraintWidth_max="400dp" />
 
             <TextView
                 android:id="@+id/resultsStep2Q3Rep"
@@ -125,7 +128,8 @@
                 android:textStyle="bold"
                 app:layout_constraintHeight_max="270dp"
                 app:layout_constraintStart_toStartOf="@+id/resultsStep2Q3Ask"
-                app:layout_constraintTop_toBottomOf="@+id/resultsStep2Q3Ask" />
+                app:layout_constraintTop_toBottomOf="@+id/resultsStep2Q3Ask"
+                app:layout_constraintWidth_max="400dp" />
 
             <TextView
                 android:id="@+id/resultsStep2Q4Rep"
@@ -146,7 +150,8 @@
                 android:textStyle="bold"
                 app:layout_constraintHeight_max="270dp"
                 app:layout_constraintStart_toStartOf="@+id/resultsStep2Q4Ask"
-                app:layout_constraintTop_toBottomOf="@+id/resultsStep2Q4Ask" />
+                app:layout_constraintTop_toBottomOf="@+id/resultsStep2Q4Ask"
+                app:layout_constraintWidth_max="400dp" />
 
             <TextView
                 android:id="@+id/resultsStep2Q5Rep"
@@ -165,7 +170,7 @@
                 android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="@+id/resultsStep2Q5Ask"
                 app:layout_constraintTop_toBottomOf="@+id/resultsStep2Q5Ask"
-                app:layout_constraintWidth_max="350dp"
+                app:layout_constraintWidth_max="400dp"
                 tools:ignore="TextContrastCheck" />
 
             <TextView
@@ -191,7 +196,7 @@
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/resultsStep3"
                 app:layout_constraintTop_toBottomOf="@+id/resultsStep3"
-                app:layout_constraintWidth_max="280dp" />
+                app:layout_constraintWidth_max="550dp" />
 
             <TextView
                 android:id="@+id/resultsStep3Q1Rep"
@@ -212,7 +217,7 @@
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/resultsStep3Q1Ask"
                 app:layout_constraintTop_toBottomOf="@+id/resultsStep3Q1Ask"
-                app:layout_constraintWidth_max="280dp" />
+                app:layout_constraintWidth_max="550dp" />
 
             <TextView
                 android:id="@+id/resultsStep3Q2Rep"
@@ -233,7 +238,7 @@
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/resultsStep3Q2Ask"
                 app:layout_constraintTop_toBottomOf="@+id/resultsStep3Q2Ask"
-                app:layout_constraintWidth_max="280dp" />
+                app:layout_constraintWidth_max="550dp" />
 
             <TextView
                 android:id="@+id/resultsStep3Q3Rep"
@@ -252,7 +257,7 @@
                 android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="@+id/resultsStep3Q3Ask"
                 app:layout_constraintTop_toBottomOf="@+id/resultsStep3Q3Ask"
-                app:layout_constraintWidth_max="350dp"
+                app:layout_constraintWidth_max="400dp"
                 tools:ignore="TextContrastCheck" />
 
             <TextView
@@ -297,7 +302,7 @@
                 android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="@+id/resultsStep4IMC"
                 app:layout_constraintTop_toBottomOf="@+id/resultsStep4IMC"
-                app:layout_constraintWidth_max="350dp"
+                app:layout_constraintWidth_max="400dp"
                 tools:ignore="TextContrastCheck" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

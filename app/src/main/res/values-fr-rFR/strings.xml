@@ -63,7 +63,7 @@
     <string name="review">BILAN</string>
     <string name="ReviewStep2Title">Etape 2 - MON COEUR</string>
     <string name="ReviewStep3Title">Etape 3 - MON SUIVI CARDIAQUE</string>
-    <string name="ReviewStep4Title">Etape 4 - INDICE DE MASSE CORPORELLE</string>
+    <string name="ReviewStep4Title">Etape 4 - IMC</string>
     <string name="ReviewStep2Q1">Problème cardiaque ?</string>
     <string name="ReviewStep2Q2">Cholestérol ?</string>
     <string name="ReviewStep2Q3">Diabète ?</string>

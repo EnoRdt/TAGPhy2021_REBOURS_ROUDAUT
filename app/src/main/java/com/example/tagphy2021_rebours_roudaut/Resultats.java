@@ -75,10 +75,26 @@ public class Resultats extends AppCompatActivity {
         infosPersos.setText(person.getName()+", "+person.getAge()+" ans");
 
         // Step 2 - MY HEART management
-        resultsStep2Q1Rep.setText(this.person.getStep2Q1().toString());
-        resultsStep2Q2Rep.setText(this.person.getStep2Q2().toString());
-        resultsStep2Q3Rep.setText(this.person.getStep2Q3().toString());
-        resultsStep2Q4Rep.setText(this.person.getStep2Q4().toString());
+        if (this.person.getStep2Q1().toString() == "YES") {
+            resultsStep2Q1Rep.setText(R.string.RbYes);
+        } else {
+            resultsStep2Q1Rep.setText(R.string.RbNo);
+        }
+        if (this.person.getStep2Q2().toString() == "YES") {
+            resultsStep2Q2Rep.setText(R.string.RbYes);
+        } else {
+            resultsStep2Q2Rep.setText(R.string.RbNo);
+        }
+        if (this.person.getStep2Q3().toString() == "YES") {
+            resultsStep2Q3Rep.setText(R.string.RbYes);
+        } else {
+            resultsStep2Q3Rep.setText(R.string.RbNo);
+        }
+        if (this.person.getStep2Q4().toString() == "YES") {
+            resultsStep2Q4Rep.setText(R.string.RbYes);
+        } else {
+            resultsStep2Q4Rep.setText(R.string.RbNo);
+        }
         resultsStep2Q5Rep.setText(person.getStep2Q5());
         if (this.person.getStep2Q1().toString().equals("NO")
                 && this.person.getStep2Q2().toString().equals("NO")
