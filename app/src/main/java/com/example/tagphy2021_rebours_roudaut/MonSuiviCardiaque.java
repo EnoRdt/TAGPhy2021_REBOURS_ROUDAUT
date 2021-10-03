@@ -73,7 +73,7 @@ public class MonSuiviCardiaque extends AppCompatActivity {
         Log.d(TAG, "next_test: ");
         Intent intent = new Intent(this, Imc.class);
         intent.putExtra(KEY_TRANSFER, this.person);
-        MonSuiviCardiaque.this.finish();
+        MonSuiviCardiaque.super.finish();
         startActivity(intent);
     }
 

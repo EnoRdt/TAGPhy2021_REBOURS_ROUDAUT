@@ -148,7 +148,7 @@ public class MonCoeur extends AppCompatActivity {
             Log.d(TAG, "next_test: ");
             Intent intent = new Intent(this, MonSuiviCardiaque.class);
             intent.putExtra(KEY_TRANSFER, this.person);
-            MonCoeur.this.finish();
+            MonCoeur.super.finish();
             startActivity(intent);
         }
         else {

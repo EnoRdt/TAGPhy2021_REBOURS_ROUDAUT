@@ -95,8 +95,6 @@ public class Profil extends AppCompatActivity {
     }
 
     public void next(View v){
-
-
         if (step1Q1RadioGroup.getCheckedRadioButtonId() != -1
             && !step1Q2EditText.getText().toString().isEmpty())
         {
@@ -110,7 +108,7 @@ public class Profil extends AppCompatActivity {
             Intent intent = new Intent(this, MonCoeur.class);
             Log.d(TAG, "next_test: " );
             intent.putExtra(KEY_TRANSFER, this.person);
-            Profil.this.finish();
+            Profil.super.finish();
             startActivity(intent);
         }
         else {

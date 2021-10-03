@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
             Log.d(TAG, "start_test: " );
             Intent intent = new Intent(this, Profil.class);
             intent.putExtra(KEY_TRANSFER, this.person);
-            MainActivity.this.finish();
+            MainActivity.super.finish();
             startActivity(intent);
         }
     }

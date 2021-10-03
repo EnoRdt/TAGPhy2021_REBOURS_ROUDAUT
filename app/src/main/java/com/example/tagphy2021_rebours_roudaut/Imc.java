@@ -183,7 +183,7 @@ public class Imc extends AppCompatActivity {
                     Log.d(TAG, "next_test: ");
                     Intent intent = new Intent(this, Resultats.class);
                     intent.putExtra(KEY_TRANSFER, this.person);
-                    Imc.this.finish();
+                    Imc.super.finish();
                     startActivity(intent);
                 }
             }
@@ -198,7 +198,7 @@ public class Imc extends AppCompatActivity {
                     Log.d(TAG, "next_test: ");
                     Intent intent = new Intent(this, Resultats.class);
                     intent.putExtra(KEY_TRANSFER, this.person);
-                    Imc.this.finish();
+                    Imc.super.finish();
                     startActivity(intent);
                 }
             }

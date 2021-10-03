@@ -150,7 +150,7 @@ public class Resultats extends AppCompatActivity {
         resBtnFinish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Resultats.super.finish();
+                Resultats.super.finishAffinity();
             }
         });
 
