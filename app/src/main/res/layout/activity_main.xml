@@ -12,18 +12,19 @@
         android:layout_width="355dp"
         android:layout_height="210dp"
         android:layout_marginTop="80dp"
+        android:contentDescription="@string/accimg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/imageaccueilpng" />
+        app:srcCompat="@drawable/imageaccueilpng"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/accTextViewName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:labelFor="@id/accEditName"
         android:text="@string/msg_name"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/black"
@@ -48,6 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:autofillHints="@string/inputName"
         android:ems="10"
         android:hint="@string/inputName"
         android:inputType="textPersonName"
@@ -56,6 +58,7 @@
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/accTextViewName" />
+        app:layout_constraintTop_toBottomOf="@+id/accTextViewName"
+        tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

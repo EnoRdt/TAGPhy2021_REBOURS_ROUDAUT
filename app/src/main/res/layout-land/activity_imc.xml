@@ -15,9 +15,11 @@
         android:layout_height="76dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:contentDescription="@string/imgstep4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/imc" />
+        app:srcCompat="@drawable/imc"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/step4"
@@ -29,7 +31,8 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/step4Title"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/step4Title"
@@ -41,7 +44,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/step4Img"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/step4Img" />
+        app:layout_constraintStart_toEndOf="@+id/step4Img"
+        tools:ignore="TextContrastCheck" />
 
     <ScrollView
         android:id="@+id/scrollView3"
@@ -67,7 +71,7 @@
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="-5dp"
                 android:background="#FFFFFF"
-                android:text="1"
+                android:text="@string/_1"
                 android:textAlignment="center"
                 android:textColor="#D3D803"
                 android:textSize="20sp"
@@ -90,7 +94,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/step4Q1"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintWidth_max="330dp" />
+                app:layout_constraintWidth_max="330dp"
+                tools:ignore="TextContrastCheck" />
 
             <RadioGroup
                 android:id="@+id/step4Q1RadioGroup"
@@ -109,7 +114,8 @@
                     android:buttonTint="#FFFFFF"
                     android:onClick="check"
                     android:text="@string/RbYes"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="#FFFFFF"
+                    tools:ignore="TextContrastCheck" />
 
                 <RadioButton
                     android:id="@+id/step4Q1RbNo"
@@ -118,7 +124,8 @@
                     android:buttonTint="#FFFFFF"
                     android:onClick="check"
                     android:text="@string/RbNo"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="#FFFFFF"
+                    tools:ignore="TextContrastCheck" />
 
             </RadioGroup>
 
@@ -178,7 +185,7 @@
                 android:layout_height="30dp"
                 android:layout_marginTop="4dp"
                 android:background="#FFFFFF"
-                android:text="4"
+                android:text="@string/_4"
                 android:textAlignment="center"
                 android:textColor="#D3D803"
                 android:textSize="20sp"
@@ -193,7 +200,7 @@
                 android:layout_width="87dp"
                 android:layout_height="33dp"
                 android:layout_marginTop="8dp"
-                android:text="RESULT"
+                android:text="@string/result"
                 android:textAlignment="center"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -207,6 +214,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
+                android:contentDescription="@string/btnimc"
                 android:onClick="calculImc"
                 android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="@+id/step4Q3Size"
@@ -239,7 +247,7 @@
                 android:layout_height="30dp"
                 android:layout_marginTop="4dp"
                 android:background="#FFFFFF"
-                android:text="2"
+                android:text="@string/_2"
                 android:textAlignment="center"
                 android:textColor="#D3D803"
                 android:textSize="20sp"
@@ -254,7 +262,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:background="#FFFFFF"
-                android:text="2"
+                android:text="@string/_2"
                 android:textAlignment="center"
                 android:textColor="#D3D803"
                 android:textSize="20sp"
@@ -269,8 +277,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
+                android:autofillHints="Weight"
                 android:ems="10"
-                android:hint="ex : 56"
+                android:hint="@string/ex_56"
                 android:inputType="number"
                 android:labelFor="@id/step4Q2Ask"
                 android:minHeight="48dp"
@@ -284,8 +293,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
+                android:autofillHints="Size"
                 android:ems="10"
-                android:hint="ex : 168"
+                android:hint="@string/ex_168"
                 android:inputType="number"
                 android:labelFor="@id/step4Q3Ask"
                 android:minHeight="48dp"
@@ -300,7 +310,7 @@
                 android:layout_height="30dp"
                 android:layout_marginTop="-5dp"
                 android:background="#FFFFFF"
-                android:text="3"
+                android:text="@string/_3"
                 android:textAlignment="center"
                 android:textColor="#D3D803"
                 android:textSize="20sp"
@@ -315,8 +325,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
+                android:autofillHints="BMI"
                 android:ems="10"
-                android:hint="ex : 19,6"
+                android:hint="@string/ex_19_6"
                 android:inputType="numberDecimal"
                 android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="@+id/step4Q2AskBis"
@@ -336,7 +347,8 @@
         android:onClick="previous"
         android:text="@string/BtnPrevious"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/step4BtnNext"
@@ -347,6 +359,7 @@
         android:onClick="next"
         android:text="@string/BtnNext"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3"
+        tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

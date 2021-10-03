@@ -36,4 +36,20 @@
     <string name="step4Q4Rep">"Votre IMC est "</string>
     <string name="step4Q2AskBis">Quel est votre IMC?</string>
     <string name="toast">"Complétez tous les champs "</string>
+    <string name="_1">1</string>
+    <string name="ex_56">ex : 56</string>
+    <string name="result">RESULTAT</string>
+    <string name="imgstep4">ImgStep4</string>
+    <string name="btnimc">btnImc</string>
+    <string name="_4">4</string>
+    <string name="_2">2</string>
+    <string name="ex_168">ex : 168</string>
+    <string name="ex_19_6">ex : 19,6</string>
+    <string name="accimg">accImg</string>
+    <string name="_5">5</string>
+    <string name="imgstep2">imgStep2</string>
+    <string name="_3">3</string>
+    <string name="imgstep3">imgstep3</string>
+    <string name="ex_22">ex : 22</string>
+    <string name="imgstep1">imgstep1</string>
 </resources>

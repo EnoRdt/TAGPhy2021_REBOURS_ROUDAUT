@@ -12,11 +12,13 @@
         android:layout_width="355dp"
         android:layout_height="210dp"
         android:layout_marginStart="20dp"
+        android:contentDescription="@string/accimg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.502"
-        app:srcCompat="@drawable/imageaccueilpng" />
+        app:srcCompat="@drawable/imageaccueilpng"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/accTextViewName"
@@ -47,15 +49,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
+        android:autofillHints="@string/inputName"
         android:ems="10"
+        android:hint="@string/inputName"
         android:inputType="textPersonName"
         android:labelFor="@id/accTextViewName"
         android:minHeight="48dp"
-        android:text="@string/inputName"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toEndOf="@+id/accImage"
-        app:layout_constraintTop_toBottomOf="@+id/accTextViewName" />
+        app:layout_constraintTop_toBottomOf="@+id/accTextViewName"
+        tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

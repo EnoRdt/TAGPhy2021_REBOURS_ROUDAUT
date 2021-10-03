@@ -17,7 +17,8 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/step1Img"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/step1BtnNext"
@@ -28,7 +29,8 @@
         android:onClick="next"
         android:text="@string/BtnNext"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView4" />
+        app:layout_constraintTop_toBottomOf="@+id/scrollView4"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/step1BtnPrevious"
@@ -39,7 +41,8 @@
         android:onClick="previous"
         android:text="@string/BtnPrevious"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView4" />
+        app:layout_constraintTop_toBottomOf="@+id/scrollView4"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/step1Title"
@@ -53,7 +56,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/step1Img"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/step1Img" />
+        app:layout_constraintStart_toEndOf="@+id/step1Img"
+        tools:ignore="TextContrastCheck" />
 
     <ImageView
         android:id="@+id/step1Img"
@@ -61,9 +65,11 @@
         android:layout_height="79dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:contentDescription="@string/imgstep1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/monprofil" />
+        app:srcCompat="@drawable/monprofil"
+        tools:ignore="ImageContrastCheck" />
 
     <ScrollView
         android:id="@+id/scrollView4"
@@ -87,7 +93,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
-                android:labelFor="@id/step1Q2EditText"
                 android:text="@string/step1Q2Ask"
                 android:textAlignment="viewStart"
                 android:textColor="#FFFFFF"
@@ -96,7 +101,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/step1Q"
                 app:layout_constraintTop_toBottomOf="@+id/step1Q1RadioGroup"
-                app:layout_constraintWidth_max="330dp" />
+                app:layout_constraintWidth_max="330dp"
+                tools:ignore="TextContrastCheck" />
 
             <TextView
                 android:id="@+id/step1Q1Ask"
@@ -112,7 +118,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/step1Q1"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintWidth_max="330dp" />
+                app:layout_constraintWidth_max="330dp"
+                tools:ignore="TextContrastCheck" />
 
             <TextView
                 android:id="@+id/step1Q1"
@@ -121,7 +128,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="-5dp"
                 android:background="#FFFFFF"
-                android:text="1"
+                android:text="@string/_1"
                 android:textAlignment="center"
                 android:textColor="#7986CB"
                 android:textSize="20sp"
@@ -135,7 +142,7 @@
                 android:layout_height="30dp"
                 android:layout_marginTop="-5dp"
                 android:background="#FFFFFF"
-                android:text="2"
+                android:text="@string/_2"
                 android:textAlignment="center"
                 android:textColor="#7986CB"
                 android:textSize="20sp"
@@ -159,7 +166,8 @@
                     android:layout_weight="0"
                     android:buttonTint="#FFFFFF"
                     android:text="@string/step1Q1RbMan"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="#FFFFFF"
+                    tools:ignore="TextContrastCheck" />
 
                 <RadioButton
                     android:id="@+id/step1Q1RbWoman"
@@ -168,7 +176,8 @@
                     android:layout_weight="0"
                     android:buttonTint="#FFFFFF"
                     android:text="@string/step1Q1RbWoman"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="#FFFFFF"
+                    tools:ignore="TextContrastCheck" />
 
                 <RadioButton
                     android:id="@+id/step1Q1RbOther"
@@ -177,15 +186,17 @@
                     android:layout_weight="0"
                     android:buttonTint="#FFFFFF"
                     android:text="@string/step1Q1RbOther"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="#FFFFFF"
+                    tools:ignore="TextContrastCheck" />
             </RadioGroup>
 
             <EditText
                 android:id="@+id/step1Q2EditText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:autofillHints="age"
                 android:ems="10"
-                android:hint="ex : 22"
+                android:hint="@string/ex_22"
                 android:inputType="number"
                 android:labelFor="@id/step1Q2Ask"
                 android:minHeight="48dp"
@@ -193,7 +204,7 @@
                 app:layout_constraintEnd_toEndOf="@+id/step1Q2Ask"
                 app:layout_constraintStart_toStartOf="@+id/step1Q2Ask"
                 app:layout_constraintTop_toBottomOf="@+id/step1Q2Ask"
-                tools:ignore="SpeakableTextPresentCheck" />
+                tools:ignore="SpeakableTextPresentCheck,TextContrastCheck,DuplicateSpeakableTextCheck" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:contentDescription="@string/imgstep2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/moncoeur" />
@@ -65,7 +66,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="-5dp"
                 android:background="#FFFFFF"
-                android:text="1"
+                android:text="@string/_1"
                 android:textAlignment="center"
                 android:textColor="#E8426E"
                 android:textSize="20sp"
@@ -105,7 +106,8 @@
                     android:layout_weight="0"
                     android:buttonTint="#FFFFFF"
                     android:text="@string/RbYes"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="#FFFFFF"
+                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
                 <RadioButton
                     android:id="@+id/step2Q1RbNo"
@@ -113,7 +115,8 @@
                     android:layout_height="wrap_content"
                     android:buttonTint="#FFFFFF"
                     android:text="@string/RbNo"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="#FFFFFF"
+                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
             </RadioGroup>
 
@@ -123,7 +126,7 @@
                 android:layout_height="30dp"
                 android:layout_marginTop="-5dp"
                 android:background="#FFFFFF"
-                android:text="2"
+                android:text="@string/_2"
                 android:textAlignment="center"
                 android:textColor="#E8426E"
                 android:textSize="20sp"
@@ -161,7 +164,8 @@
                     android:layout_height="wrap_content"
                     android:buttonTint="#FFFFFF"
                     android:text="@string/RbYes"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="#FFFFFF"
+                    tools:ignore="TextContrastCheck" />
 
                 <RadioButton
                     android:id="@+id/step2Q2RbNo"
@@ -169,7 +173,8 @@
                     android:layout_height="wrap_content"
                     android:buttonTint="#FFFFFF"
                     android:text="@string/RbNo"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="#FFFFFF"
+                    tools:ignore="TextContrastCheck" />
             </RadioGroup>
 
             <TextView
@@ -178,7 +183,7 @@
                 android:layout_height="30dp"
                 android:layout_marginTop="-5dp"
                 android:background="#FFFFFF"
-                android:text="3"
+                android:text="@string/_3"
                 android:textAlignment="center"
                 android:textColor="#E8426E"
                 android:textSize="20sp"
@@ -233,7 +238,7 @@
                 android:layout_height="30dp"
                 android:layout_marginTop="-5dp"
                 android:background="#FFFFFF"
-                android:text="4"
+                android:text="@string/_4"
                 android:textAlignment="center"
                 android:textColor="#E8426E"
                 android:textSize="20sp"
@@ -288,7 +293,7 @@
                 android:layout_height="30dp"
                 android:layout_marginTop="-5dp"
                 android:background="#FFFFFF"
-                android:text="5"
+                android:text="@string/_5"
                 android:textAlignment="center"
                 android:textColor="#E8426E"
                 android:textSize="20sp"
@@ -331,14 +336,15 @@
         android:id="@+id/step2BtnPrevious"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="60dp"
         android:backgroundTint="#BEAEAEAE"
         android:onClick="previous"
         android:text="@string/BtnPrevious"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView4"
-        app:layout_constraintVertical_bias="0.279" />
+        app:layout_constraintVertical_bias="0.279"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/step2BtnNext"
@@ -351,6 +357,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView4"
-        app:layout_constraintVertical_bias="0.279" />
+        app:layout_constraintVertical_bias="0.279"
+        tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,9 +14,11 @@
         android:layout_height="75dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:contentDescription="@string/imgstep3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/monsuivicardiaque" />
+        app:srcCompat="@drawable/monsuivicardiaque"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/step3"
@@ -28,7 +30,8 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/step3Title"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/step3Title"
@@ -40,7 +43,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/step3Img"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/step3Img" />
+        app:layout_constraintStart_toEndOf="@+id/step3Img"
+        tools:ignore="TextContrastCheck" />
 
     <ScrollView
         android:id="@+id/scrollView4"
@@ -64,7 +68,7 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="-5dp"
                 android:background="#FFFFFF"
-                android:text="1"
+                android:text="@string/_1"
                 android:textAlignment="center"
                 android:textColor="#0097A7"
                 android:textSize="20sp"
@@ -85,20 +89,22 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/step3Q1"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintWidth_max="330dp" />
+                app:layout_constraintWidth_max="330dp"
+                tools:ignore="TextContrastCheck" />
 
             <Switch
                 android:id="@+id/step3Q1Switch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:minHeight="48dp"
-                android:text="Oui"
+                android:text="@string/RbYes"
                 android:textAlignment="viewStart"
                 android:textColor="#FFFFFF"
                 app:layout_constraintEnd_toEndOf="@+id/step3Q1Ask"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/step3Q1Ask"
-                app:layout_constraintTop_toBottomOf="@+id/step3Q1Ask" />
+                app:layout_constraintTop_toBottomOf="@+id/step3Q1Ask"
+                tools:ignore="DuplicateSpeakableTextCheck" />
 
             <TextView
                 android:id="@+id/step3Q2"
@@ -106,7 +112,7 @@
                 android:layout_height="30dp"
                 android:layout_marginTop="-5dp"
                 android:background="#FFFFFF"
-                android:text="2"
+                android:text="@string/_2"
                 android:textAlignment="center"
                 android:textColor="#0097A7"
                 android:textSize="20sp"
@@ -127,14 +133,15 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/step3Q2"
                 app:layout_constraintTop_toBottomOf="@+id/step3Q1Switch"
-                app:layout_constraintWidth_max="330dp" />
+                app:layout_constraintWidth_max="330dp"
+                tools:ignore="TextContrastCheck" />
 
             <Switch
                 android:id="@+id/step3Q2Switch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:minHeight="48dp"
-                android:text="Oui"
+                android:text="@string/RbYes"
                 android:textAlignment="viewStart"
                 android:textColor="#FFFFFF"
                 app:layout_constraintEnd_toEndOf="@+id/step3Q2Ask"
@@ -148,7 +155,7 @@
                 android:layout_height="30dp"
                 android:layout_marginTop="-5dp"
                 android:background="#FFFFFF"
-                android:text="3"
+                android:text="@string/_3"
                 android:textAlignment="center"
                 android:textColor="#0097A7"
                 android:textSize="20sp"
@@ -169,14 +176,15 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/step3Q3"
                 app:layout_constraintTop_toBottomOf="@+id/step3Q2Switch"
-                app:layout_constraintWidth_max="330dp" />
+                app:layout_constraintWidth_max="330dp"
+                tools:ignore="TextContrastCheck" />
 
             <Switch
                 android:id="@+id/step3Q3Switch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:minHeight="48dp"
-                android:text="Oui"
+                android:text="@string/RbYes"
                 android:textAlignment="viewStart"
                 android:textColor="#FFFFFF"
                 app:layout_constraintEnd_toEndOf="@+id/step3Q3Ask"
@@ -199,7 +207,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView4"
-        app:layout_constraintVertical_bias="0.19999999" />
+        app:layout_constraintVertical_bias="0.19999999"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/step3BtnNext"
@@ -212,6 +221,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView4"
-        app:layout_constraintVertical_bias="0.19999999" />
+        app:layout_constraintVertical_bias="0.19999999"
+        tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
